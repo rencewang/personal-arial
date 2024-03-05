@@ -1,4 +1,3 @@
-rence.la v5.0
+rence.la v6.0
 
-with three.js, times new roman
- 
+with three.js, arial
