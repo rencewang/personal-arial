@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'SimSun';
+  src: url(./SIMSUN.ttf) format('truetype');
+}
+
+:root {
+  --text-color: #c7000d;
+  --highlight-color: transparent;
+  --background-color: #f8f8f8;
+  --select-color: #000;
+}
+
+$bodyColor: var(--text-color);
+$highlightColor: var(--highlight-color);
+$backgroundColor: var(--background-color);
+$selectColor: var(--select-color);
+$bodyFont: 'Times New Roman', 'SimSun', serif;
+
+// Main Colors: Blue #1E1CD8 Red #E91C23 Yellow #EAA206 Crimson #ac0611
+// Try Colors: Light Blue #cdedee Mint Blue #ade4ee Off White #e5d5cc Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
+// More Try Colors: BV Green #009D48 BV Orange #F25B1D
+
+// GENERAL STYLES ****************************************************
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
+  color: $bodyColor;
+  font-family: $bodyFont;
+  font-size: 20px;
+}
+
+::-moz-selection {
+  color: $selectColor;
+  background: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  color: $selectColor;
+  background: rgba(0, 0, 0, 0);
+}
+
+a,
+.link-button {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  &:active {
+    background-color: transparent;
+  }
+}
+
+@media (hover: hover) {
+  a:hover,
+  .link-button:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+// LAYOUT STYLES ****************************************************
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: $backgroundColor;
+}
+
+#canvas {
+  z-index: -500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/staticblue.png');
+  background-color: #cdedee;
+}
+
+#background {
+  z-index: -400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url('../images/noise.gif');
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  #top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .navigation {
+      display: flex;
+      justify-content: flex-end;
+      nav {
+        padding-left: 20px;
+        .layout-nav {
+          background: $highlightColor !important;
+          @media (max-width: 700px) {
+            background: transparent !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  #bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    #greeting {
+      margin-left: 15px;
+      text-align: right;
+    }
+    @media (max-width: 500px) {
+      margin-top: 20px;
+    }
+  }
+}
+
+#content {
+  z-index: 500;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  margin-right: 10px;
+  max-width: 500px;
+  max-height: calc(100% - 120px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @media (max-width: 500px) {
+    max-height: calc(100% - 130px);
+  }
+}
+
+// DETAILS SUMMARY STYLES ****************************************************
+details {
+  summary {
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+  a {
+    display: block;
+  }
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.year-group {
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid $bodyColor;
+  }
+}
+
+// MARKDOWN STYLES ****************************************************
+
+blockquote {
+  border-left: 2px solid $bodyColor;
+  padding: 0 10px;
+}
+
+sup {
+  vertical-align: top;
+  font-size: 12px;
+  a.footnote-ref {
+    font-size: 15px;
+    margin-left: 0px;
+  }
+}
+
+.footnotes {
+  margin-top: 50px;
+  hr {
+    border: none;
+  }
+  ol {
+    padding-left: 20px;
+  }
+  ol li p {
+    margin-bottom: 0;
+  }
+  a {
+    padding-left: 5px;
+  }
+}
+
+// BLOG STYLES ****************************************************
+
+.postnav {
+  width: 100%;
+  display: flex;
+  div:first-child {
+    flex-basis: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  div:last-child {
+    width: auto;
+  }
+  &:first-of-type {
+    margin-top: 20px;
+  }
+}
+
+.category {
+  margin-bottom: 20px;
+  line-height: 1.3;
+  > * {
+    width: fit-content;
+  }
+}
+
+.postcontent {
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+// ART STYLES ****************************************************
+
+.gallery-image {
+  z-index: 999;
+  margin: 20px 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+// FUNCTIONAL STYLES ****************************************************
+
+.hidden {
+  opacity: 0;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.title {
+  font-size: 40px;
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
+}
+
+.highlight {
+  color: $bodyColor !important;
+  background: $highlightColor !important;
+}
