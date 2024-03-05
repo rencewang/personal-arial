@@ -2,23 +2,15 @@ module.exports = {
   siteMetadata: {
     title: 'Lawrence Wang',
     description:
-      'Personal site for Lawrence Wang, currently a student at Yale University, intereted in art, economics, and computer science, aspiring to become a designer and developer for the world wide web.',
+      'Personal site for Lawrence Wang, currently an engineer at ART19, previously student at Yale University, intereted in art, economics, and computer science, aspiring to become a writer, designer, traveler, and developer for the world wide web.',
     author: 'Lawrence Wang',
   },
   plugins: [
-    'gatsby-plugin-netlify',
     'gatsby-plugin-sass',
-    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/threelayout.js`),
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-156829821-2',
       },
     },
     'gatsby-plugin-react-helmet',
