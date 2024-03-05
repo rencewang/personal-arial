@@ -6,7 +6,7 @@ import '../styles/general.scss';
 const Index = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title={'Home'} />
       <div id="text">
         <details>
           <summary>
@@ -19,7 +19,6 @@ const Index = () => {
           >
             <span className="highlight">Instagram</span>
           </a>
-
           <a
             href="https://www.linkedin.com/in/lawrence-c-w/"
             target="_blank"

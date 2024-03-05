@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Canvas, extend, useThree, useFrame } from '@react-three/fiber';
+// import { Bloom, EffectComposer } from '@react-three/postprocessing';
 
 import '../styles/general.scss';
 
@@ -44,7 +45,11 @@ const Star = () => {
   return (
     <mesh position={[x, y, z]}>
       <sphereGeometry args={[size, 25, 25]} />
-      <meshStandardMaterial color="#EAA206" />
+      <meshStandardMaterial
+        emissive="red"
+        emissiveIntensity={2}
+        toneMapped={false}
+      />
     </mesh>
   );
 };
@@ -117,6 +122,7 @@ const greetingArray = [
   'Remember that they may be behind you.',
   "I'm gonna start again.",
   "There's still a lot I haven't put into words yet.",
+  'What do you want to be remembered for?',
 ];
 
 // Main render function
@@ -153,31 +159,31 @@ const Layout = ({ children }) => {
   // Add option to strip or fill background
   const canvasRef = useRef();
   const [stripButtonText, changeStripButtonText] = useState('Fill');
-  const StripSite = () => {
-    if (canvasRef.current.style.display === 'none') {
-      changeStripButtonText('Strip');
-      canvasRef.current.style.display = 'block';
-      document.documentElement.style.setProperty(
-        '--highlight-color',
-        '#ffc131'
-      );
-      document.documentElement.style.setProperty(
-        '--background-color',
-        '#cdedee'
-      );
-    } else {
-      canvasRef.current.style.display = 'none';
-      changeStripButtonText('Fill');
-      document.documentElement.style.setProperty(
-        '--highlight-color',
-        'transparent'
-      );
-      document.documentElement.style.setProperty(
-        '--background-color',
-        '#f8f8f8'
-      );
-    }
-  };
+  // const StripSite = () => {
+  //   if (canvasRef.current.style.display === 'none') {
+  //     changeStripButtonText('Strip');
+  //     canvasRef.current.style.display = 'block';
+  //     document.documentElement.style.setProperty(
+  //       '--highlight-color',
+  //       '#ffc131'
+  //     );
+  //     document.documentElement.style.setProperty(
+  //       '--background-color',
+  //       '#cdedee'
+  //     );
+  //   } else {
+  //     canvasRef.current.style.display = 'none';
+  //     changeStripButtonText('Fill');
+  //     document.documentElement.style.setProperty(
+  //       '--highlight-color',
+  //       'transparent'
+  //     );
+  //     document.documentElement.style.setProperty(
+  //       '--background-color',
+  //       '#f8f8f8'
+  //     );
+  //   }
+  // };
 
   return (
     <main>
@@ -189,15 +195,13 @@ const Layout = ({ children }) => {
         <div id="top">
           <div
             className="link-button"
-            onClick={() => StripSite(canvasRef)}
+            // onClick={() => StripSite(canvasRef)}
             aria-hidden="true"
           >
-            {stripButtonText}
+            <Link to="/">Lawrence Wang</Link>
+            {/* {stripButtonText} */}
           </div>
           <div className="navigation">
-            <nav>
-              <Link to="/">info</Link>
-            </nav>
             <nav>
               <Link to="/blog">writing</Link>
             </nav>
@@ -227,7 +231,7 @@ const Layout = ({ children }) => {
       <section id="background"></section>
 
       {isBrowser && (
-        <section id="canvas" ref={canvasRef} style={{ display: 'none' }}>
+        <section id="canvas" ref={canvasRef} style={{ display: 'block' }}>
           <Canvas
             camera={{ position: [0, 0, 90], fov: fov, near: 0.1, far: 1000 }}
             onCreated={({ gl }) => {
@@ -243,6 +247,10 @@ const Layout = ({ children }) => {
               castShadow
             />
             <Controls />
+
+            {/* <EffectComposer>
+              <Bloom mipmapBlur luminanceThreshold={1} />
+            </EffectComposer> */}
 
             <mesh rotation={[20, 10, 50]}>
               <sphereGeometry args={[15, 100, 100]} />
