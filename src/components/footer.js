@@ -54,6 +54,7 @@ const greetingArray = [
   "I'm gonna start again.",
   "There's still a lot I haven't put into words yet.",
   'What do you want to be remembered for?',
+  "I'll keep my lanterns on.",
 ];
 
 const Clock = () => {

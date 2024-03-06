@@ -94,23 +94,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  // background: url('../images/staticblue.png');
-  background-color: #0b0b0b;
+  background-color: $backgroundColor;
 }
-
-// #background {
-//   z-index: -400;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   opacity: 0.5;
-//   mix-blend-mode: multiply;
-//   background-image: url('../images/noise.gif');
-//   background-repeat: repeat;
-//   pointer-events: none;
-// }
 
 header {
   position: fixed;
@@ -157,9 +142,9 @@ footer {
       margin-left: 15px;
       text-align: right;
     }
-    @media (max-width: 500px) {
-      margin-top: 20px;
-    }
+    // @media (max-width: 500px) {
+    //   margin-top: 20px;
+    // }
   }
 }
 
