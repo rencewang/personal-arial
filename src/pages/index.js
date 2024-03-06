@@ -20,22 +20,25 @@ const Index = () => {
             <span className="highlight">Instagram</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/lawrence-c-w/"
+            href="https://www.linkedin.com/in/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <span className="highlight">Linkedin</span>
           </a>
+          <br />
+
+          <span className="highlight">
+            B.S. Computer Science and Economics, Yale University <br />
+            B.A. Political Science, Yale University
+          </span>
         </details>
 
         <details open>
           <summary>
-            <span className="title highlight">Studies</span>
+            <span className="title highlight">Is Listening To</span>
           </summary>
-          <span className="highlight">
-            Computer Science and Economics <br />
-            Political Science
-          </span>
+          <span className="highlight">Spotify</span>
         </details>
 
         <details open>
@@ -44,33 +47,39 @@ const Index = () => {
           </summary>
           <span className="highlight">
             Architecture <br />
-            Chinese poems and fiction <br />
+            Aviation <br />
+            Chinese poems and novels <br />
             Cities Skylines <br />
+            Everybody else's business <br />
             Fantasy world building <br />
             Floor plans <br />
             Genshin Impact <br />
             Grand strategy games <br />
+            Hotels <br />
             Interior design <br />
-            Intersection between design and computing <br />
+            Origin stories <br />
             Perfume <br />
             Political economy of China <br />
+            Science fiction <br />
             Singing <br />
             Song lyrics <br />
             Taylor Swift's discography <br />
+            Tea <br />
             The European Union <br />
             Web design <br />
           </span>
         </details>
 
-        <details open>
+        <details>
           <summary>
-            <span className="title highlight">Hopes To Become</span>
+            <span className="title highlight">Wishes He Could Be</span>
           </summary>
           <span className="highlight">
-            Aspirational world traveller <br />
-            Drawer, writer, and coder <br />
-            Good at Ruby <br />
+            A world traveller <br />
+            Faster <br />
+            Good at Ruby on Rails <br />
             Taller <br />
+            Writing more <br />
           </span>
         </details>
       </div>
