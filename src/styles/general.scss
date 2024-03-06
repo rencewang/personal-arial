@@ -1,19 +1,24 @@
+// Color Bank
+// Blue #1E1CD8 Red #E91C23 Yellow #EAA206 Crimson #ac0611
+// Light Blue #cdedee Mint Blue #ade4ee Off White #e5d5cc
+// Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
+// BV Green #009D48 BV Orange #F25B1D
+
 :root {
   --text-color: #f3f3f3;
-  --highlight-color: transparent;
+  --highlight-color: #000000;
   --background-color: #000000;
-  --select-color: #efefef;
+  --select-color: #f3f3f3;
+  --select-background-color: #1e1cd8;
 }
 
 $bodyColor: var(--text-color);
 $highlightColor: var(--highlight-color);
 $backgroundColor: var(--background-color);
 $selectColor: var(--select-color);
-$bodyFont: 'Arial', sans-serif;
+$selectBackgroundColor: var(--select-background-color);
 
-// Main Colors: Blue #1E1CD8 Red #E91C23 Yellow #EAA206 Crimson #ac0611
-// Try Colors: Light Blue #cdedee Mint Blue #ade4ee Off White #e5d5cc Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
-// More Try Colors: BV Green #009D48 BV Orange #F25B1D
+$bodyFont: 'Arial', sans-serif;
 
 // GENERAL STYLES ****************************************************
 
@@ -35,12 +40,12 @@ $bodyFont: 'Arial', sans-serif;
 
 ::-moz-selection {
   color: $selectColor;
-  background: #1e1cd8;
+  background: $selectBackgroundColor;
 }
 
 ::selection {
   color: $selectColor;
-  background: #1e1cd8;
+  background: $selectBackgroundColor;
 }
 
 a,
@@ -93,19 +98,19 @@ body {
   background-color: #0b0b0b;
 }
 
-#background {
-  z-index: -400;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.5;
-  mix-blend-mode: multiply;
-  background-image: url('../images/noise.gif');
-  background-repeat: repeat;
-  pointer-events: none;
-}
+// #background {
+//   z-index: -400;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   opacity: 0.5;
+//   mix-blend-mode: multiply;
+//   background-image: url('../images/noise.gif');
+//   background-repeat: repeat;
+//   pointer-events: none;
+// }
 
 header {
   position: fixed;
