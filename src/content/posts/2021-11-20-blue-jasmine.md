@@ -3,10 +3,11 @@ title: Blue Jasmine&#58; Pride and Justice
 updated: 2021-11-20 17:32
 year: 2021
 published: true
-category: Movie and TV
-tag: []
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/blue-jasmine'
 type: post
+defaultExpanded: false
 description: 'Finally, don’t forget that “the harder working the luckier.” Having put in the hard work means being better prepared for chance occurrences, for slips in the wheel of fortune, which, when aggregated, roughly equals to being luckier.'
 ---
 

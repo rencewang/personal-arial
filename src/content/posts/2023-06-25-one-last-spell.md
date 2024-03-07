@@ -3,10 +3,11 @@ title: One Last Spell
 updated: 2023-06-25 21:24
 year: 2023
 published: true
-category: Personal
+category: Essay
 tag: [Reflection]
 permalink: '/blog/one-last-spell'
 type: post
+defaultExpanded: true
 description: 'I wish I had the chance to scribble on Grandma’s hand and blow onto her forehead. Put a spell on her, keep her here a little longer, ease the discomfort from weeks of illness, make sure she wasn’t scared during those nights alone on the hospital bed. '
 ---
 

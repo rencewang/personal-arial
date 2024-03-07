@@ -3,10 +3,11 @@ title: More Will Go With Age
 updated: 2023-02-16 22:57
 year: 2023
 published: true
-category: Personal
+category: Essay
 tag: [Reflection]
-permalink: '/blog/age'
+permalink: '/blog/more-will-go-with-age'
 type: post
+defaultExpanded: false
 description: 'I didn’t want to cry — it felt like a self-important gesture, crossing a line of sorts, assuming the place of someone close to him. But even with this distance, for someone who I’ve simply admired from our simple interactions, I felt my defenses crumbling. Death broke the truce in a smug triumph.'
 ---
 

@@ -1,12 +1,13 @@
 ---
-title: Crazy Rich Asians&#58; Socioeconomic Mismatch and The Farewell
+title: Crazy Rich Asians&#58; East and West
 updated: 2019-08-03 20:08
 year: 2019
 published: true
-category: Movie and TV
-tag: []
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/crazy-rich-asians'
 type: post
+defaultExpanded: false
 description: 'What we have to understand, is that although Rachel is modeled as the 21st century Cinderella, the plot should not be confined to the imagination of Cinderella. '
 ---
 

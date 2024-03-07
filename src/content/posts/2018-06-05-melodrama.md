@@ -3,10 +3,11 @@ title: Melodrama&#58; The Glamour and Trauma Became Us
 updated: 2018-06-05 23:37
 year: 2018
 published: true
-category: Music
-tag: [Lorde, Pop, sticky]
+category: Review
+tag: [Music]
 permalink: '/blog/melodrama'
 type: post
+defaultExpanded: true
 description: 'So many melodrama will end up being supercuts. So many hard feelings will lead to exclamation of what the fuck are perfect places. Perhaps this youth is imperfect, but its stubborn, tenacious, yet sinister vitality is precious and impossible to compound.'
 ---
 

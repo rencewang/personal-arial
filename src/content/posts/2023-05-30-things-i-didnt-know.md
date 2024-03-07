@@ -3,10 +3,11 @@ title: The Things I Didn't Know
 updated: 2023-05-30 15:30
 year: 2023
 published: true
-category: Personal
+category: Essay
 tag: [Reflection]
-permalink: '/blog/know'
+permalink: '/blog/things-I-didnt-know'
 type: post
+defaultExpanded: false
 description: 'The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart. '
 ---
 

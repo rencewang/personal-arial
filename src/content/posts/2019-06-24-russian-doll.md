@@ -3,11 +3,12 @@ title: Russian Doll&#58; It's Hard to Stay Alive
 updated: 2019-06-24 23:43
 year: 2019
 published: true
-category: Movie and TV
-tag: [Netflix]
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/russian-doll'
 type: post
-description: 'Sometimes, the mediocrity of daily chores and the pressure from expectations can make life feel like pure hell, purgatory on earth. Sometimes, the anxiety of simply being alive strikes impossible blows on us. But as Russian Doll reminds us, we are not alone in this world.'
+defaultExpanded: true
+description: "Sometimes, the mediocrity of daily chores and the pressure from others' expectations can make life feel like pure hell, purgatory on earth. Sometimes, the anxiety of simply being alive places burdens that feel unbearable. But as Russian Doll reminds us, we are not alone in this world."
 ---
 
 You would think that after an entire school year of Nietzsche, Meursault, Godot, Kafka, Hemingway, and _Like Water for Chocolate_ in International Baccalaureate English would be enough absurdist discussion for a while, if not an entire lifetime. But _Russian Doll_, the extremely odd, extremely beautiful, and extremely thought-provoking delight, proved to be just that piece of existentialism I never knew I needed.
@@ -34,7 +35,7 @@ Perhaps that’s her defense mechanism, of closing herself off from the world, t
 
 The ending is a beautiful moment. It has a quality that is as promising as _Groundhog Day_, but not quite _Groundhog Day_. The two protagonists reappear in front of their bathroom mirrors one last time and realize they are in different dimensions — the other person is back in cycle #1 and has no recollection of the death-defying adventures they shared together. Now, they have to look for the other person and convince them that all those hundreds of attempts at living and dying were actually real. As the screen splits in half, the audience witnesses a hopeful Alan assisting the turbulent Nadia, and a patient Nadia comforting the confused Alan. And as they walk through the winter New York streets, the two screens merge into one, with a renewed Nadia holding a torch, finally, again, pushing to be a part of this world.
 
-Sometimes, the mediocrity of daily chores and the pressure from expectations can make life feel like pure hell, purgatory on earth. Sometimes, the anxiety of simply being alive strikes impossible blows on us. But as _Russian Doll_ reminds us, **we are not alone in this world**. We still have each other, can find each other, and save each other. Just like in the end when Nadia and Alan march, joining Horse’s parade of monsters, passing the shoulders of their alternative selves — _they have not given up on each other_.
+Sometimes, the mediocrity of daily chores and the pressure from others' expectations can make life feel like pure hell, purgatory on earth. Sometimes, the anxiety of simply being alive places burdens that feel unbearable. But as _Russian Doll_ reminds us, **we are not alone in this world**. We still have each other, can find each other, and save each other. Just like in the end when Nadia and Alan march, joining Horse’s parade of monsters, passing the shoulders of their alternative selves — _they have not given up on each other_.
 
 The world out there can be a vile one. A lonely one. A troubled one. One in which it’s hard to stay alive. But if we can all dig into our hearts, see ourselves for who we are, and learn to forgive and reconcile, maybe we can also let go of the cold, exoskeletal shells of protective covers; let go of the habit of keeping people at a distance; let go of the need to hide our insecurities and conceal our mistakes. In doing so, perhaps we might rediscover the fine world that is worth fighting for.
 

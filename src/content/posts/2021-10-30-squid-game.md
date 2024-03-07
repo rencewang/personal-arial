@@ -3,10 +3,11 @@ title: Squid Game&#58; BREAKING! All My Homies Hate It
 updated: 2021-10-30 08:57
 year: 2021
 published: true
-category: Movie and TV
-tag: []
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/squid-game'
 type: post
+defaultExpanded: false
 description: "I can't say that Squid Game was a complete waste of time because at the very least it was a social exercise the way I watched it with friends in Boston, but it’s pretty damn close to one."
 ---
 

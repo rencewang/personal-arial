@@ -3,10 +3,11 @@ title: Reputation&#58; The End of Taylor Swift?
 updated: 2018-09-20 12:46
 year: 2018
 published: false
-category: Music
-tag: [Taylor Swift, Pop]
+category: Review
+tag: [Music]
 permalink: '/blog/reputation'
 type: post
+defaultExpanded: false
 description: ''
 ---
 

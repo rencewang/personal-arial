@@ -3,10 +3,11 @@ title: The Prestige&#58; Twisted Obsessions
 updated: 2018-04-04 14:16
 year: 2018
 published: true
-category: Movie and TV
-tag: [Christopher Nolan, Thriller]
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/the-prestige'
 type: post
+defaultExpanded: false
 description: 'They were both convinced that they found each other’s secret. But did they? They believed what they wanted to believe. In other words, they wanted to be fooled.'
 ---
 

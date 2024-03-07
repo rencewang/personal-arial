@@ -3,10 +3,11 @@ title: Nocturnal Girl and Gone Animals&#58; A Comparison
 updated: 2018-07-22 19:41
 year: 2018
 published: true
-category: Movie and TV
-tag: [Tom Ford, David Fincher]
+category: Review
+tag: [Movie and TV]
 permalink: '/blog/gone-girl-nocturnal-animals'
 type: post
+defaultExpanded: false
 description: 'What she never considers is that, perhaps, she doesn’t need to be the cool girl, and Nick doesn’t have to be a model husband. Her life can be saved from the lies. But no, that’s not what the Gone Girl wants. Truth? Happiness? Who cares. It’s only for show anyway.'
 ---
 

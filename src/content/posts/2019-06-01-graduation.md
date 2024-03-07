@@ -3,10 +3,11 @@ title: Commencement Address&#58; Lessons I Learned
 updated: 2019-06-01 12:01
 year: 2019
 published: true
-category: Personal
-tag: [Featured, Reflection]
-permalink: '/blog/graduation'
+category: Essay
+tag: [Reflection]
+permalink: '/blog/commencement-address'
 type: post
+defaultExpanded: true
 description: "So don't become discouraged when the suffocating reality comes crashing down. Sometimes dreams are broken to make space for new ones."
 ---
 

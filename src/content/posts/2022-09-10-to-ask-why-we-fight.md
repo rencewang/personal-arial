@@ -3,10 +3,11 @@ title: To Ask Why We Fight
 updated: 2022-09-10 13:23
 year: 2022
 published: true
-category: Personal
+category: Essay
 tag: [Reflection]
-permalink: '/blog/fight'
+permalink: '/blog/to-ask-why-we-fight'
 type: post
+defaultExpanded: true
 description: "I always wondered if anyone actually reads these rambles of mine. After all, my writing isn't particularly literary. Does it matter if it's perceived? Does it matter who reads these?"
 ---
 

@@ -3,10 +3,11 @@ title: Bye Bye, Baby
 updated: 2022-03-14 16:04
 year: 2022
 published: true
-category: Personal
+category: Essay
 tag: [Reflection]
-permalink: '/blog/21'
+permalink: '/blog/bye-bye-baby'
 type: post
+defaultExpanded: false
 description: 'It really is tragic, when one day you feel like you are finally ready to free the grand romantic in you, but the romantic in you is gone after many years of wear and tear, struggling and crawling in the dire reality.'
 ---
 

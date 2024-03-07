@@ -3,10 +3,11 @@ title: Norman Fucking Rockwell!&#58; Coexisting Hope &amp; Despair
 updated: 2020-05-17 15:14
 year: 2020
 published: true
-category: Music
-tag: [Lana, Pop, Featured]
-permalink: '/blog/nfr'
+category: Review
+tag: [Music]
+permalink: '/blog/norman-fucking-rockwell'
 type: post
+defaultExpanded: true
 description: 'After all, it''s not just you and me who are not going anywhere: "no one''s going anywhere," and as Lana famously said: "the culture is lit."'
 ---
 
@@ -27,6 +28,6 @@ It paints a comforting picture, one of yearning and promise — it makes me feel
 
 California is the more complete version of The Next Best American Record, with similar qualities and lyrics that actually tell a story this time. "You don't ever have to be stronger than you really are, you don't ever have to act cooler than you think you should" conveys, through the contrast between an extravagant welcome-back party and someone long gone, a message of carpe diem. Lana misses a lot of things in _Norman Fucking Rockwell!_: Long Beach, New York, the music. She misses a "crazy love" and someone who hates the heat and got the blues. It's not hard to understand: she's now in her thirties, no longer the girl who writes solely about decadent youth and superfluous melancholy, so perhaps the album deserves praise from this perspective — growth. It's her Best American Record, her personal masterpiece, her passion and truth, memories and wishes.
 
-I've been thinking about _Norman Fucking Rockwell!_ a lot lately, and I guess it's partly because I need help falling asleep when days start to blend together, and partly because the album feels especially present. The songwriting is, no doubt, as lush and smart as I had known, but it's only now that I've started to grapple an important by-product of the psychedelic sound, a world descending into chaos, a one-last sentimental look back at what life used to be and what's no longer there. The subdued yearning for the past mirrors the urge for normalcy in a global crisis: a lot to miss in both instances. But I guess it's not just the despair that resonates with the current times, it's also the hope. It's getting warmer in Los Angeles (which makes me miss, somewhat, the chilly mornings when I had to wake up at 6 to attend Zoom University — how masochistic of me). Summer is coming, the best batch of loquat is ready for picking, the six-feet-apart-crosses-marked line at Costco, well, probably hasn't shrunk but subconsciously seems shorter. After all, it's not just you and me who are not going anywhere: "no one's going anywhere,"  as Lana famously said, "the culture is lit."
+I've been thinking about _Norman Fucking Rockwell!_ a lot lately, and I guess it's partly because I need help falling asleep when days start to blend together, and partly because the album feels especially present. The songwriting is, no doubt, as lush and smart as I had known, but it's only now that I've started to grapple an important by-product of the psychedelic sound, a world descending into chaos, a one-last sentimental look back at what life used to be and what's no longer there. The subdued yearning for the past mirrors the urge for normalcy in a global crisis: a lot to miss in both instances. But I guess it's not just the despair that resonates with the current times, it's also the hope. It's getting warmer in Los Angeles (which makes me miss, somewhat, the chilly mornings when I had to wake up at 6 to attend Zoom University — how masochistic of me). Summer is coming, the best batch of loquat is ready for picking, the six-feet-apart-crosses-marked line at Costco, well, probably hasn't shrunk but subconsciously seems shorter. After all, it's not just you and me who are not going anywhere: "no one's going anywhere," as Lana famously said, "the culture is lit."
 
 "And if this is it, I had a ball."
