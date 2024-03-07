@@ -55,7 +55,7 @@ const BlogPage = () => {
   );
 
   // create component with posts in a given category, or return all posts if category is 'All'
-  const selectPosts = (category) =>
+  const filterPosts = (category) =>
     data.allMarkdownRemark.year
       .slice(0)
       .reverse()
@@ -66,11 +66,13 @@ const BlogPage = () => {
               return onePost(post, postIndex);
             } else if (post.node.frontmatter.category.includes(category)) {
               return onePost(post, postIndex);
+            } else {
+              return null;
             }
           })}
         </div>
       ));
-  const [selectedCategory, setSelectedCategory] = useState(selectPosts('All'));
+  const [displayedPosts, setDisplayedPosts] = useState(filterPosts('All'));
 
   return (
     <>
@@ -80,8 +82,9 @@ const BlogPage = () => {
           <div className="link-button" aria-hidden="true">
             <span
               className="highlight"
+              role="presentation"
               onClick={() => {
-                setSelectedCategory(selectPosts('All'));
+                setDisplayedPosts(filterPosts('All'));
               }}
             >
               All
@@ -91,8 +94,9 @@ const BlogPage = () => {
           <div className="link-button" aria-hidden="true">
             <span
               className="highlight"
+              role="presentation"
               onClick={() => {
-                setSelectedCategory(selectPosts('Essay'));
+                setDisplayedPosts(filterPosts('Essay'));
               }}
             >
               Essays
@@ -102,8 +106,9 @@ const BlogPage = () => {
           <div className="link-button" aria-hidden="true">
             <span
               className="highlight"
+              role="presentation"
               onClick={() => {
-                setSelectedCategory(selectPosts('Review'));
+                setDisplayedPosts(filterPosts('Review'));
               }}
             >
               Reviews
@@ -114,7 +119,7 @@ const BlogPage = () => {
             <span
               className="highlight"
               onClick={() => {
-                setSelectedCategory(selectPosts('Analysis'));
+                setDisplayedPosts(filterPosts('Analysis'));
               }}
             >
               Analysis
@@ -122,7 +127,7 @@ const BlogPage = () => {
           </div> */}
         </div>
 
-        <div className="displayed-posts">{selectedCategory}</div>
+        <div className="displayed-posts">{displayedPosts}</div>
       </section>
     </>
   );

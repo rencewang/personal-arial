@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
@@ -18,14 +18,7 @@ const BlogTemplate = ({ data, pageContext }) => {
     .replace(/<h2[^>]*>/g, "<h2><span class='highlight'>")
     .replace(/<\/h2>/g, '</span></h2>');
 
-  const contentRef = useRef();
-  const changeFontSize = (size) => {
-    if (size === 'small') {
-      contentRef.current.classList.remove('large-font');
-    } else if (size === 'large') {
-      contentRef.current.classList.add('large-font');
-    }
-  };
+  const [contentFontSize, setContentFontSize] = useState('1.5rem');
 
   return (
     <>
@@ -35,16 +28,43 @@ const BlogTemplate = ({ data, pageContext }) => {
       />
 
       <article className="post">
-        <div className="page-nav">
+        <div className="page-filter">
           <div className="link-button" aria-hidden="true">
-            <span className="highlight">Small font</span>
+            <span
+              className="highlight"
+              role="presentation"
+              onClick={() => {
+                setContentFontSize('1rem');
+              }}
+            >
+              Small
+            </span>
           </div>
           <div className="link-button" aria-hidden="true">
-            <span className="highlight">Large font</span>
+            <span
+              className="highlight"
+              role="presentation"
+              onClick={() => {
+                setContentFontSize('1.5rem');
+              }}
+            >
+              Medium
+            </span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span
+              className="highlight"
+              role="presentation"
+              onClick={() => {
+                setContentFontSize('2rem');
+              }}
+            >
+              Large
+            </span>
           </div>
         </div>
 
-        <div style={{ marginTop: '10px' }}>
+        <div>
           <span className="title highlight">
             {title.replace('&#58;', ':').replace('&amp;', '&')}
           </span>
@@ -72,6 +92,7 @@ const BlogTemplate = ({ data, pageContext }) => {
             </div>
           </div>
         ) : null}
+
         {previous != null ? (
           <div className="postnav">
             <div>
@@ -89,7 +110,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </div>
         ) : null}
 
-        <div ref={contentRef} className="postcontent large-font">
+        <div className="postcontent" style={{ fontSize: contentFontSize }}>
           <div dangerouslySetInnerHTML={{ __html: newhtml }} />
         </div>
 

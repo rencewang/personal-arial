@@ -83,7 +83,6 @@ const Footer = () => {
   const footerRef = useRef();
   useEffect(() => {
     footerRef.current.style.display = 'block';
-    console.log('changed');
   }, []);
 
   return (

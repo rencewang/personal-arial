@@ -62,7 +62,7 @@ const ThreeCanvas = () => {
 
   return (
     <Canvas
-      camera={{ position: [0, 0, 0], fov: 50 }}
+      camera={{ position: [0, 100, 90], fov: 50 }}
       gl={{
         powerPreference: 'high-performance',
       }}

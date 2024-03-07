@@ -13,6 +13,7 @@ const Index = () => {
             href="https://www.instagram.com/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '20px' }}
           >
             <span className="highlight">Instagram</span>
           </a>
@@ -60,7 +61,13 @@ const Index = () => {
             Fantasy world building <br />
             Floor plans <br />
             Genshin Impact <br />
-            Grand strategy games <br />
+            <a
+              href="https://eu4.paradoxwikis.com/Burgundy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Grand strategy games
+            </a>
             Hotels <br />
             Interior design <br />
             Origin stories <br />
