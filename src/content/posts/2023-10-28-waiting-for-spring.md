@@ -8,7 +8,7 @@ tag: [Reflection, Music]
 permalink: '/blog/waiting-for-spring'
 type: post
 defaultExpand: false
-description: 'Now, the windows at my sublease stare directly into the United Nations headquarters. If it’s not raining, I can see the brightly lit Manhattan skyline at night. I’m sure, in fact, I know magic is happening. Politics is happening. Sex in the City is happening, in real life, in one of those squares of light in the sea of squares of light. But I am not witnessing, uncovering, or holding. None of those belong to me.'
+description: 'Now, the window at my sublease stare directly into the United Nations headquarters. If it’s not raining, I can see the brightly lit Manhattan skyline at night. I’m sure, in fact, I know magic is happening. Politics is happening. Sex in the City is happening, in real life, in one of those squares of light in the sea of squares of light. But I am not witnessing, uncovering, or holding. None of those belong to me.'
 ---
 
 Fall in New York really is bleak. Never would I have imagined that no amount of rain in New Haven could have prepared me for even more, weekly rain that punctually shrouded the weekends. I thought days would stretch with boredom. My unemployment proved otherwise. I would like to absolve my 1pm wake up. How could I live with myself if not for the constant self-forgiveness. But a part of the blame has to be placed on the shortening days and, yes, the rain.
@@ -19,7 +19,7 @@ But it hits me that _1989_ was not even Taylor Swift’s own life, let alone for
 
 It was Fall when I won the lottery to go to a musical paid for by my college. The show was nothing spectacular, but strolling the metropolitan streets to find boba was the first dose of adulthood for that freshman. The city seemed to have unlimited stories waiting to be told. Magic to be witnessed, tricks to be uncovered, fiction to be held as truth.
 
-Now, the windows at my sublease stare directly into the United Nations headquarters. If it’s not raining, I can see the brightly lit Manhattan skyline at night. I’m sure, in fact, I know magic is happening. Politics is happening. _Sex in the City_ is happening, in real life, in one of those squares of light in the sea of squares of light. But I am not witnessing, uncovering, or holding. None of those belong to me.
+Now, the window at my sublease stare directly into the United Nations headquarters. If it’s not raining, I can see the brightly lit Manhattan skyline at night. I’m sure, in fact, I know magic is happening. Politics is happening. _Sex in the City_ is happening, in real life, in one of those squares of light in the sea of squares of light. But I am not witnessing, uncovering, or holding. None of those belong to me.
 
 Or perhaps I don’t belong in this world. I should be in a monastery in the mountains north of Kathmandu. Because I don’t mind the spatial and temporal isolation from the city’s pulsing dynamics. I don't want my edges to sound intentional — after all, I am beyond the age to claim them without embarrassment — but increasingly I feel ready to embrace my anti-social self.
 

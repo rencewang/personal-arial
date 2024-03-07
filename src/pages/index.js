@@ -8,7 +8,7 @@ const Index = () => {
     <>
       <Seo title={'Home'} />
       <div id="text">
-        <div className="page-nav">
+        <div className="page-filter">
           <a
             href="https://www.instagram.com/rencewang/"
             target="_blank"

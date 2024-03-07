@@ -10,7 +10,7 @@ const ProjectPage = () => {
       <Seo title="Projects" />
 
       <section id="project">
-        <div className="page-nav">
+        <div className="page-filter">
           <div className="link-button" aria-hidden="true">
             <span className="highlight">All</span>
           </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
@@ -21,6 +21,8 @@ const BlogPage = () => {
                 permalink
                 updated(formatString: "YYYY")
                 description
+                defaultExpanded
+                category
               }
               id
             }
@@ -30,55 +32,97 @@ const BlogPage = () => {
     }
   `);
 
+  const onePost = (post, postIndex) => (
+    <details key={postIndex} open={post.node.frontmatter.defaultExpanded}>
+      <summary>
+        <span className="title highlight">
+          {post.node.frontmatter.title
+            .replace('&#58;', ':')
+            .replace('&amp;', '&')}
+        </span>
+        &nbsp;
+        <span className="highlight bold italic">
+          {post.node.frontmatter.updated}
+        </span>
+      </summary>
+
+      <span className="highlight">{post.node.frontmatter.description}</span>
+
+      <Link to={post.node.frontmatter.permalink}>
+        <span className="highlight">Read More</span>
+      </Link>
+    </details>
+  );
+
+  // create component with posts in a given category, or return all posts if category is 'All'
+  const selectPosts = (category) =>
+    data.allMarkdownRemark.year
+      .slice(0)
+      .reverse()
+      .map((year, index) => (
+        <div key={index} className="year-group">
+          {year.edges.map((post, postIndex) => {
+            if (category === 'All') {
+              return onePost(post, postIndex);
+            } else if (post.node.frontmatter.category.includes(category)) {
+              return onePost(post, postIndex);
+            }
+          })}
+        </div>
+      ));
+  const [selectedCategory, setSelectedCategory] = useState(selectPosts('All'));
+
   return (
     <>
       <Seo title="Blog" />
       <section>
-        <div className="page-nav">
+        <div className="page-filter">
           <div className="link-button" aria-hidden="true">
-            <span className="highlight">All</span>
+            <span
+              className="highlight"
+              onClick={() => {
+                setSelectedCategory(selectPosts('All'));
+              }}
+            >
+              All
+            </span>
           </div>
+
           <div className="link-button" aria-hidden="true">
-            <span className="highlight">Essays</span>
+            <span
+              className="highlight"
+              onClick={() => {
+                setSelectedCategory(selectPosts('Essay'));
+              }}
+            >
+              Essays
+            </span>
           </div>
+
           <div className="link-button" aria-hidden="true">
-            <span className="highlight">Reviews</span>
+            <span
+              className="highlight"
+              onClick={() => {
+                setSelectedCategory(selectPosts('Review'));
+              }}
+            >
+              Reviews
+            </span>
           </div>
-          <div className="link-button" aria-hidden="true">
-            <span className="highlight">Analysis</span>
-          </div>
+
+          {/* <div className="link-button" aria-hidden="true">
+            <span
+              className="highlight"
+              onClick={() => {
+                setSelectedCategory(selectPosts('Analysis'));
+              }}
+            >
+              Analysis
+            </span>
+          </div> */}
         </div>
 
-        {data.allMarkdownRemark.year
-          .slice(0)
-          .reverse()
-          .map((year, index) => (
-            <div key={index} className="year-group">
-              {year.edges.map((post, postIndex) => (
-                <details key={postIndex} open={index === 0 && postIndex < 3}>
-                  <summary>
-                    <span className="title highlight">
-                      {post.node.frontmatter.title
-                        .replace('&#58;', ':')
-                        .replace('&amp;', '&')}
-                    </span>
-                    &nbsp;
-                    <span className="highlight bold italic">
-                      {post.node.frontmatter.updated}
-                    </span>
-                  </summary>
-
-                  <span className="highlight">
-                    {post.node.frontmatter.description}
-                  </span>
-
-                  <Link to={post.node.frontmatter.permalink}>
-                    <span className="highlight">Read More</span>
-                  </Link>
-                </details>
-              ))}
-            </div>
-          ))}
+        <div className="displayed-posts">{selectedCategory}</div>
       </section>
     </>
   );
