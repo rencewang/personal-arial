@@ -49,6 +49,7 @@ $bodyFont: 'Arial', sans-serif;
 
 a,
 .link-button {
+  display: inline-block;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -75,8 +76,6 @@ p {
   margin-bottom: 0;
 }
 
-// LAYOUT STYLES ****************************************************
-
 body {
   width: 100%;
   margin: 0;
@@ -85,7 +84,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+  }
 }
+
+// LAYOUT STYLES ****************************************************
 
 #canvas {
   z-index: -500;
@@ -152,7 +156,7 @@ footer {
   left: 10px;
   margin-right: 10px;
   width: 100%;
-  max-height: calc(100% - 120px);
+  max-height: calc(100% - 110px);
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -160,11 +164,18 @@ footer {
     max-width: min(500px, calc(100% - 20px));
   }
   @media (max-width: 500px) {
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 120px);
+  }
+}
+
+.page-nav {
+  .link-button {
+    margin-right: 20px;
   }
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
+
 details {
   summary {
     cursor: pointer;

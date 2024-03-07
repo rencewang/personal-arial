@@ -25,9 +25,8 @@ const Layout = ({ children }) => {
 
       <header>
         <div id="top">
-          <div className="link-button" aria-hidden="true">
-            <Link to="/">Lawrence Wang</Link>
-          </div>
+          <Link to="/">Lawrence Wang</Link>
+
           <div className="navigation">
             <nav>
               <Link to="/blog">writing</Link>

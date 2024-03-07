@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
@@ -11,11 +11,21 @@ const BlogTemplate = ({ data, pageContext }) => {
   } = data.markdownRemark;
   const { next, previous } = pageContext;
 
+  // Ensure that the <p> and <h2> tags are wrapped in a span with the class 'highlight'
   let newhtml = html
     .replace(/<p[^>]*>/g, "<p><span class='highlight'>")
     .replace(/<\/p>/g, '</span></p>')
     .replace(/<h2[^>]*>/g, "<h2><span class='highlight'>")
     .replace(/<\/h2>/g, '</span></h2>');
+
+  const contentRef = useRef();
+  const changeFontSize = (size) => {
+    if (size === 'small') {
+      contentRef.current.classList.remove('large-font');
+    } else if (size === 'large') {
+      contentRef.current.classList.add('large-font');
+    }
+  };
 
   return (
     <>
@@ -25,12 +35,22 @@ const BlogTemplate = ({ data, pageContext }) => {
       />
 
       <article className="post">
-        <div>
+        <div className="page-nav">
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Small font</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Large font</span>
+          </div>
+        </div>
+
+        <div style={{ marginTop: '10px' }}>
           <span className="title highlight">
             {title.replace('&#58;', ':').replace('&amp;', '&')}
           </span>
         </div>
-        <div style={{ marginBottom: '20px' }}>
+
+        <div style={{ marginTop: '10px' }}>
           <span className="highlight">{updated}</span>
           <span className="highlight"> in </span>
           <span className="highlight">{category}</span>
@@ -69,7 +89,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </div>
         ) : null}
 
-        <div className="postcontent large-font">
+        <div ref={contentRef} className="postcontent large-font">
           <div dangerouslySetInnerHTML={{ __html: newhtml }} />
         </div>
 

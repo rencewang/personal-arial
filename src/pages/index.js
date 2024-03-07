@@ -8,10 +8,7 @@ const Index = () => {
     <>
       <Seo title={'Home'} />
       <div id="text">
-        <details>
-          <summary>
-            <span className="title highlight">Lawrence Wang</span>
-          </summary>
+        <div className="page-nav">
           <a
             href="https://www.instagram.com/rencewang/"
             target="_blank"
@@ -26,9 +23,18 @@ const Index = () => {
           >
             <span className="highlight">Linkedin</span>
           </a>
-          <br />
+        </div>
 
+        <details>
+          <summary>
+            <span className="title highlight">Lawrence Wang</span>
+          </summary>
           <span className="highlight">
+            I write and code and sing and draw and float in space and stare into
+            walls and fly and listen to Taylor Swift and turn on all the lights
+            and eat leftovers and drink milk and wine and whiskey and Kahlua and
+            practice acceptance <br /> <br />
+            Software Development Engineer, ART19 <br />
             B.S. Computer Science and Economics, Yale University <br />
             B.A. Political Science, Yale University
           </span>
@@ -61,9 +67,7 @@ const Index = () => {
             Perfume <br />
             Political economy of China <br />
             Science fiction <br />
-            Singing <br />
             Song lyrics <br />
-            Taylor Swift's discography <br />
             Tea <br />
             The European Union <br />
             Web design <br />
@@ -76,10 +80,11 @@ const Index = () => {
           </summary>
           <span className="highlight">
             A world traveller <br />
-            Faster <br />
-            Good at Ruby on Rails <br />
-            Taller <br />
-            Writing more <br />
+            Better at singing <br />
+            Faster in the head <br />
+            More prolific <br />
+            Never bald <br />
+            Skilled in Ruby on Rails <br />
           </span>
         </details>
       </div>

@@ -34,6 +34,21 @@ const BlogPage = () => {
     <>
       <Seo title="Blog" />
       <section>
+        <div className="page-nav">
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">All</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Essays</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Reviews</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Analysis</span>
+          </div>
+        </div>
+
         {data.allMarkdownRemark.year
           .slice(0)
           .reverse()

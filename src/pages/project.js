@@ -10,6 +10,21 @@ const ProjectPage = () => {
       <Seo title="Projects" />
 
       <section id="project">
+        <div className="page-nav">
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">All</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Tools</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Nothings</span>
+          </div>
+          <div className="link-button" aria-hidden="true">
+            <span className="highlight">Research</span>
+          </div>
+        </div>
+
         {projects.map((project, index) => (
           <details key={index} open={index < 3}>
             <summary>
