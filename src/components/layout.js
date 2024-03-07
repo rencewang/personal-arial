@@ -42,8 +42,8 @@ const Layout = ({ children }) => {
         </div>
       </header>
 
-      <section id="content" ref={contentRef}>
-        {children}
+      <section className="content-container" ref={contentRef}>
+        <div id="content">{children}</div>
       </section>
 
       <Footer />

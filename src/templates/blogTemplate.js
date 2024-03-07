@@ -69,7 +69,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </div>
         ) : null}
 
-        <div className="postcontent">
+        <div className="postcontent large-font">
           <div dangerouslySetInnerHTML={{ __html: newhtml }} />
         </div>
 
