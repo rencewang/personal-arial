@@ -13,7 +13,6 @@ const Index = () => {
             href="https://www.instagram.com/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginRight: '20px' }}
           >
             <span className="highlight">Instagram</span>
           </a>
@@ -32,9 +31,9 @@ const Index = () => {
           </summary>
           <span className="highlight">
             I write and code and sing and draw and float in space and stare into
-            walls and fly and listen to Taylor Swift and turn on all the lights
-            and eat leftovers and drink milk and wine and whiskey and Kahlua and
-            practice acceptance <br /> <br />
+            walls and listen to Taylor Swift and turn on all the lights and live
+            in a monastery and drink milk and fly and practice acceptance
+            <br /> <br />
             Software Development Engineer, ART19 <br />
             B.S. Computer Science and Economics, Yale University <br />
             B.A. Political Science, Yale University
@@ -60,7 +59,6 @@ const Index = () => {
             Everybody else's business <br />
             Fantasy world building <br />
             Floor plans <br />
-            Genshin Impact <br />
             <a
               href="https://eu4.paradoxwikis.com/Burgundy"
               target="_blank"
@@ -91,9 +89,19 @@ const Index = () => {
             Faster in the head <br />
             More prolific <br />
             Never bald <br />
-            Skilled in Ruby on Rails <br />
           </span>
         </details>
+
+        {/* <details open>
+          <summary>
+            <span className="title highlight">Recommends</span>
+          </summary>
+          <span className="highlight">
+            Snapchat <br />
+            Crying <br />
+            Genshin Impact <br />
+          </span>
+        </details> */}
       </div>
     </>
   );

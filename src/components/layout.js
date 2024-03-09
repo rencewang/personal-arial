@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
       <header>
         <div id="top">
-          <Link to="/">Lawrence Wang</Link>
+          <Link to="/">rence.la</Link>
 
           <div className="navigation">
             <nav>
