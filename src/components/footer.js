@@ -83,7 +83,6 @@ const Footer = () => {
     setGreetingText(
       greetingArray[Math.floor(Math.random() * greetingArray.length)]
     );
-    greeting.innerHTML = greetingText;
   }, []);
 
   // Ensure footer does not pre-render at build time
