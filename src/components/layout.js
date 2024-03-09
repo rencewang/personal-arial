@@ -9,7 +9,7 @@ import '../styles/general.scss';
 
 // Main render function
 const Layout = ({ children }) => {
-  const isBrowser = typeof window !== 'undefined';
+  // const isBrowser = typeof window !== 'undefined';
 
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
@@ -47,11 +47,11 @@ const Layout = ({ children }) => {
 
       <Footer />
 
-      {isBrowser && (
-        <section id="canvas" style={{ display: 'block' }}>
-          <ThreeCanvas />
-        </section>
-      )}
+      {/* {isBrowser && ( */}
+      <section id="canvas" style={{ display: 'block' }}>
+        <ThreeCanvas />
+      </section>
+      {/* )} */}
     </main>
   );
 };
