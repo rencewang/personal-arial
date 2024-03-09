@@ -68,6 +68,7 @@ const Index = () => {
             >
               Grand strategy games
             </a>
+            <br />
             Hotels <br />
             Interior design <br />
             Origin stories <br />

@@ -133,7 +133,7 @@ header {
 }
 
 footer {
-  display: none;
+  // display: none;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -204,9 +204,6 @@ details {
   }
   > span {
     line-height: 1.25;
-  }
-  a {
-    display: block;
   }
   margin-bottom: 10px;
 }

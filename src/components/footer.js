@@ -82,9 +82,9 @@ const Footer = () => {
 
   // Ensure footer does not pre-render at build time
   const footerRef = useRef();
-  useEffect(() => {
-    footerRef.current.style.display = 'block';
-  }, []);
+  // useEffect(() => {
+  //   footerRef.current.style.display = 'block';
+  // }, []);
 
   return (
     <footer ref={footerRef}>
