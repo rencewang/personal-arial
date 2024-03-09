@@ -72,9 +72,19 @@ const Clock = () => {
 };
 
 const Footer = () => {
-  const [greetingText] = useState(
-    greetingArray[Math.floor(Math.random() * greetingArray.length)]
-  );
+  // const [greetingText] = useState(
+  //   greetingArray[Math.floor(Math.random() * greetingArray.length)]
+  // );
+
+  // use effect to get random greeting
+  const [greetingText, setGreetingText] = useState('');
+  useEffect(() => {
+    console.log('hiii');
+    setGreetingText(
+      greetingArray[Math.floor(Math.random() * greetingArray.length)]
+    );
+    greeting.innerHTML = greetingText;
+  }, []);
 
   // Ensure footer does not pre-render at build time
   const footerRef = useRef();
