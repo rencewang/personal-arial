@@ -21,110 +21,112 @@ const BlogTemplate = ({ data, pageContext }) => {
   const [contentFontSize, setContentFontSize] = useState('1.5rem');
 
   return (
-    <>
-      <Seo
-        title={title.replace('&#58;', ':').replace('&amp;', '&')}
-        description={autoExcerpt}
-      />
-
-      <article className="post">
-        <div className="page-filter">
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setContentFontSize('1rem');
-              }}
-            >
-              Small
-            </span>
-          </div>
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setContentFontSize('1.5rem');
-              }}
-            >
-              Medium
-            </span>
-          </div>
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setContentFontSize('2rem');
-              }}
-            >
-              Large
-            </span>
-          </div>
-        </div>
-
-        <div>
-          <span className="title highlight">
-            {title.replace('&#58;', ':').replace('&amp;', '&')}
+    <article className="post">
+      <div className="page-filter">
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setContentFontSize('1rem');
+            }}
+          >
+            Small
           </span>
         </div>
-
-        <div style={{ marginTop: '10px' }}>
-          <span className="highlight">{updated}</span>
-          <span className="highlight"> in </span>
-          <span className="highlight">{category}</span>
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setContentFontSize('1.5rem');
+            }}
+          >
+            Medium
+          </span>
         </div>
-
-        {next != null ? (
-          <div className="postnav">
-            <div>
-              <span className="highlight">Previous:</span>
-            </div>
-            <div>
-              <Link to={next.frontmatter.permalink}>
-                <span className="highlight">
-                  {next.frontmatter.title
-                    .replace('&#58;', ':')
-                    .replace('&amp;', '&')}
-                </span>
-              </Link>
-            </div>
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setContentFontSize('2rem');
+            }}
+          >
+            Large
+          </span>
+        </div>
+      </div>
+      <div>
+        <span className="title highlight">
+          {title.replace('&#58;', ':').replace('&amp;', '&')}
+        </span>
+      </div>
+      <div style={{ marginTop: '10px' }}>
+        <span className="highlight">{updated}</span>
+        <span className="highlight"> in </span>
+        <span className="highlight">{category}</span>
+      </div>
+      {next != null ? (
+        <div className="postnav">
+          <div>
+            <span className="highlight">Previous:</span>
           </div>
-        ) : null}
-
-        {previous != null ? (
-          <div className="postnav">
-            <div>
-              <span className="highlight">Next:</span>
-            </div>
-            <div>
-              <Link to={previous.frontmatter.permalink}>
-                <span className="highlight">
-                  {previous.frontmatter.title
-                    .replace('&#58;', ':')
-                    .replace('&amp;', '&')}
-                </span>
-              </Link>
-            </div>
+          <div>
+            <Link to={next.frontmatter.permalink}>
+              <span className="highlight">
+                {next.frontmatter.title
+                  .replace('&#58;', ':')
+                  .replace('&amp;', '&')}
+              </span>
+            </Link>
           </div>
-        ) : null}
-
-        <div className="postcontent" style={{ fontSize: contentFontSize }}>
-          <div dangerouslySetInnerHTML={{ __html: newhtml }} />
         </div>
-
-        <div>
-          <Link to="/blog">
-            <span className="highlight">Back to All Posts</span>
-          </Link>
+      ) : null}
+      {previous != null ? (
+        <div className="postnav">
+          <div>
+            <span className="highlight">Next:</span>
+          </div>
+          <div>
+            <Link to={previous.frontmatter.permalink}>
+              <span className="highlight">
+                {previous.frontmatter.title
+                  .replace('&#58;', ':')
+                  .replace('&amp;', '&')}
+              </span>
+            </Link>
+          </div>
         </div>
-      </article>
-    </>
+      ) : null}
+      <div className="postcontent" style={{ fontSize: contentFontSize }}>
+        <div dangerouslySetInnerHTML={{ __html: newhtml }} />
+      </div>
+      <div>
+        <Link to="/blog">
+          <span className="highlight">Back to All Posts</span>
+        </Link>
+      </div>
+    </article>
   );
 };
 
 export default BlogTemplate;
+
+export const Head = ({ data }) => {
+  const {
+    frontmatter: { title },
+    excerpt: autoExcerpt,
+  } = data.markdownRemark;
+  const seoExcerpt = autoExcerpt;
+
+  return (
+    <Seo
+      title={title.replace('&#58;', ':').replace('&amp;', '&')}
+      description={seoExcerpt}
+    />
+  );
+};
 
 export const postQuery = graphql`
   query ($permalink: String!) {

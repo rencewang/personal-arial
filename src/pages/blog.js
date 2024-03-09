@@ -74,47 +74,45 @@ const BlogPage = () => {
   const [displayedPosts, setDisplayedPosts] = useState(filterPosts('All'));
 
   return (
-    <>
-      <Seo title="Blog" />
-      <section>
-        <div className="page-filter">
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setDisplayedPosts(filterPosts('All'));
-              }}
-            >
-              All
-            </span>
-          </div>
+    <section>
+      <div className="page-filter">
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setDisplayedPosts(filterPosts('All'));
+            }}
+          >
+            All
+          </span>
+        </div>
 
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setDisplayedPosts(filterPosts('Essay'));
-              }}
-            >
-              Essays
-            </span>
-          </div>
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setDisplayedPosts(filterPosts('Essay'));
+            }}
+          >
+            Essays
+          </span>
+        </div>
 
-          <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              role="presentation"
-              onClick={() => {
-                setDisplayedPosts(filterPosts('Review'));
-              }}
-            >
-              Reviews
-            </span>
-          </div>
+        <div className="link-button" aria-hidden="true">
+          <span
+            className="highlight"
+            role="presentation"
+            onClick={() => {
+              setDisplayedPosts(filterPosts('Review'));
+            }}
+          >
+            Reviews
+          </span>
+        </div>
 
-          {/* <div className="link-button" aria-hidden="true">
+        {/* <div className="link-button" aria-hidden="true">
             <span
               className="highlight"
               onClick={() => {
@@ -124,12 +122,13 @@ const BlogPage = () => {
               Analysis
             </span>
           </div> */}
-        </div>
+      </div>
 
-        <div className="displayed-posts">{displayedPosts}</div>
-      </section>
-    </>
+      <div className="displayed-posts">{displayedPosts}</div>
+    </section>
   );
 };
 
 export default BlogPage;
+
+export const Head = () => <Seo title="Writing" />;

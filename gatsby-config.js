@@ -8,6 +8,8 @@ module.exports = {
     description:
       'Personal blog and project directory of Lawrence Wang. Currently a software engineer at ART19, previously student at Yale University. Intereted in art, economics, and computer science. Aspiring to become a writer, designer, traveler, and developer for the world wide web.',
     author: 'Lawrence Wang',
+    username: '@rencewang',
+    siteUrl: 'https://rence.la',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -21,6 +23,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: 'rence.la',
         icon: 'src/images/favicon.ico',
       },
     },

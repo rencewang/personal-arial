@@ -55,26 +55,24 @@ const ArtPage = () => {
   let artNames = ['Painting & Drawing', 'Design', 'Digital'];
 
   return (
-    <>
-      <Seo title="Art" />
+    <section className="gallery">
+      {allArt.map((category, index) => (
+        <details key={index} open={index === allArt.length - 1}>
+          <summary>
+            <span className="title highlight">{artNames[index]}</span>
+          </summary>
 
-      <section className="gallery">
-        {allArt.map((category, index) => (
-          <details key={index} open={index === allArt.length - 1}>
-            <summary>
-              <span className="title highlight">{artNames[index]}</span>
-            </summary>
-
-            {category.map((data, index) => (
-              <div className="gallery-image" key={index}>
-                <GatsbyImage image={data} alt={data.name} />
-              </div>
-            ))}
-          </details>
-        ))}
-      </section>
-    </>
+          {category.map((data, index) => (
+            <div className="gallery-image" key={index}>
+              <GatsbyImage image={data} alt={data.name} />
+            </div>
+          ))}
+        </details>
+      ))}
+    </section>
   );
 };
 
 export default ArtPage;
+
+export const Head = () => <Seo title="Art" />;

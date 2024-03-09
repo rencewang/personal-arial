@@ -1,16 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
 import ThreeCanvas from './canvas';
 import '../styles/general.scss';
 
-// Main render function
 const Layout = ({ children }) => {
-  // const isBrowser = typeof window !== 'undefined';
-
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
   useEffect(() => {
@@ -19,10 +15,6 @@ const Layout = ({ children }) => {
 
   return (
     <main>
-      <Helmet>
-        <body style={{ overflow: 'hidden' }} />
-      </Helmet>
-
       <header>
         <div id="top">
           <Link to="/">rence.la</Link>
@@ -47,11 +39,9 @@ const Layout = ({ children }) => {
 
       <Footer />
 
-      {/* {isBrowser && ( */}
       <section id="canvas" style={{ display: 'block' }}>
         <ThreeCanvas />
       </section>
-      {/* )} */}
     </main>
   );
 };

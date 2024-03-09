@@ -87,6 +87,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
+  overflow: hidden;
 
   @media (max-width: $mediaRule) {
     font-size: 0.8rem;
@@ -186,7 +187,7 @@ footer {
     }
   }
   @media (max-width: $mediaRule) {
-    margin-bottom: 10px;
+    margin: 5px 0 10px 0;
   }
 }
 
@@ -226,16 +227,18 @@ blockquote {
 
 sup {
   vertical-align: top;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 
   a.footnote-ref {
-    font-size: 0.7rem;
-    margin-left: 0px;
+    pointer-events: none;
+    font-size: 0.9rem;
+    margin-left: 2px;
   }
 }
 
 .footnotes {
   margin-top: 50px;
+  font-size: 0.8rem;
   hr {
     border: none;
   }
