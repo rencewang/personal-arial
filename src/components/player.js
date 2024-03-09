@@ -8,13 +8,13 @@ const Player = () => {
       method: 'POST',
       headers: {
         Authorization: `Basic ${btoa(
-          `${process.env.SPOTIFY_ID}:${process.env.SPOTIFY_SECRET}`
+          `${process.env.GATSBY_SPOTIFY_ID}:${process.env.GATSBY_SPOTIFY_SECRET}`
         )}`,
       },
       body: new URLSearchParams({
         grant_type: 'refresh_token',
-        refresh_token: process.env.SPOTIFY_REFRESH,
-        client_id: process.env.SPOTIFY_ID,
+        refresh_token: process.env.GATSBY_SPOTIFY_REFRESH,
+        client_id: process.env.GATSBY_SPOTIFY_ID,
       }),
     });
   };
