@@ -45,9 +45,8 @@ const BlogPage = () => {
           {post.node.frontmatter.updated}
         </span>
       </summary>
-
       <span className="highlight">{post.node.frontmatter.description}</span>
-
+      <br />
       <Link to={post.node.frontmatter.permalink}>
         <span className="highlight">Read More</span>
       </Link>

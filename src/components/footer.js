@@ -62,15 +62,11 @@ const Clock = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    var timerID = setInterval(() => tick(), 1000);
+    var timerID = setInterval(() => setTime(new Date()), 1000);
     return () => {
       clearInterval(timerID);
     };
   });
-
-  function tick() {
-    setTime(new Date());
-  }
 
   return <span>{time.toLocaleTimeString()}</span>;
 };
@@ -89,9 +85,7 @@ const Footer = () => {
   return (
     <footer ref={footerRef}>
       <div id="bottom">
-        <div id="clock">
-          <Clock />
-        </div>
+        <div id="clock">{/* <Clock /> */}</div>
         <div id="greeting">&ldquo;{greetingText}&rdquo;</div>
       </div>
     </footer>
