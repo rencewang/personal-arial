@@ -76,26 +76,24 @@ const Footer = () => {
   //   greetingArray[Math.floor(Math.random() * greetingArray.length)]
   // );
 
-  // use effect to get random greeting
+  const footerRef = useRef();
   const [greetingText, setGreetingText] = useState('');
+
+  // use effect to get random greeting
   useEffect(() => {
-    console.log('hiii');
+    console.log('good morning good evening good afternoon');
     setGreetingText(
       greetingArray[Math.floor(Math.random() * greetingArray.length)]
     );
   }, []);
 
-  // Ensure footer does not pre-render at build time
-  const footerRef = useRef();
-  // useEffect(() => {
-  //   footerRef.current.style.display = 'block';
-  // }, []);
-
   return (
     <footer ref={footerRef}>
       <div id="bottom">
-        <div id="clock">{/* <Clock /> */}</div>
-        <div id="greeting">&ldquo;{greetingText}&rdquo;</div>
+        <div id="clock">
+          <Clock />
+        </div>
+        <div id="greeting">{greetingText}</div>
       </div>
     </footer>
   );

@@ -133,9 +133,9 @@ header {
 }
 
 footer {
-  // display: none;
   position: fixed;
   width: 100%;
+  min-height: 40px;
   bottom: 0;
   left: 0;
   padding: 10px;
