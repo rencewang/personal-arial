@@ -297,6 +297,35 @@ sup {
   }
 }
 
+// PLAYER STYLES ****************************************************
+
+#player {
+  width: fit-content;
+  margin: 10px 0 0 0;
+  border-radius: 10px;
+  border: 1px solid $bodyColor;
+  position: relative;
+
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  .player-content,
+  .spotify-logo {
+    margin: 8px 10px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    path {
+      fill: $bodyColor;
+    }
+  }
+}
+
 // FUNCTIONAL STYLES ****************************************************
 
 .hidden {

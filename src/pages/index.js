@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Player from '../components/player';
 import Seo from '../components/seo';
 import '../styles/general.scss';
 
@@ -25,14 +26,15 @@ const Index = () => {
           </a>
         </div>
 
-        <details>
+        <details open>
           <summary>
             <span className="title highlight">Lawrence Wang</span>
           </summary>
           <span className="highlight">
             I write and code and sing and draw and float in space and stare into
             walls and listen to Taylor Swift and turn on all the lights and live
-            in a monastery and drink milk and fly and practice acceptance
+            in a monastery and drink milk and believe and pray and fly and
+            practice acceptance
             <br /> <br />
             Software Development Engineer, ART19 <br />
             B.S. Computer Science and Economics, Yale University <br />
@@ -40,11 +42,11 @@ const Index = () => {
           </span>
         </details>
 
-        <details open>
+        <details>
           <summary>
             <span className="title highlight">Is Listening To</span>
           </summary>
-          <span className="highlight">Spotify</span>
+          <Player />
         </details>
 
         <details open>
