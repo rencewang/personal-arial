@@ -31,10 +31,10 @@ const Index = () => {
             <span className="title highlight">Lawrence Wang</span>
           </summary>
           <span className="highlight">
-            I write and code and sing and draw and float in space and stare into
-            walls and listen to Taylor Swift and turn on all the lights and live
-            in a monastery and drink milk and believe and pray and fly and
-            practice acceptance
+            writes and codes and sings and draws and floats in space and stares
+            into walls and listens to Taylor Swift and turns on all the lights
+            and lives in a monastery and drinks milk and believes and prays and
+            practices acceptance
             <br /> <br />
             Software Development Engineer, ART19 <br />
             B.S. Computer Science and Economics, Yale University <br />

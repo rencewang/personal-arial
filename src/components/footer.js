@@ -66,7 +66,7 @@ const Clock = () => {
     return () => {
       clearInterval(timerID);
     };
-  });
+  }, []);
 
   return <span>{time.toLocaleTimeString()}</span>;
 };
