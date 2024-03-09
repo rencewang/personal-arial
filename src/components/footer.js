@@ -72,10 +72,6 @@ const Clock = () => {
 };
 
 const Footer = () => {
-  // const [greetingText] = useState(
-  //   greetingArray[Math.floor(Math.random() * greetingArray.length)]
-  // );
-
   const footerRef = useRef();
   const [greetingText, setGreetingText] = useState('');
 
@@ -90,9 +86,7 @@ const Footer = () => {
   return (
     <footer ref={footerRef}>
       <div id="bottom">
-        <div id="clock">
-          <Clock />
-        </div>
+        <div id="clock">Arial © 2024</div>
         <div id="greeting">{greetingText}</div>
       </div>
     </footer>
