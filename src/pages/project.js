@@ -1,65 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Seo from '../components/seo';
+import Dropdown from '../components/dropdown';
 import projects from '../content/projects/projects';
 
 const ProjectPage = () => {
+  const projectCategories = ['All Projects', 'Tool', 'Creative', 'Research'];
+  const defaultCategory = 'All Projects';
+
+  const [category, setCategory] = useState(defaultCategory);
   const [displayedProjects, setDisplayedProjects] = useState(projects);
-  const filterProjects = (category) => {
-    if (category === 'All') {
+
+  const filterProjects = () => {
+    if (category === defaultCategory) {
       return projects;
     }
     return projects.filter((project) => project.category === category);
   };
 
+  useEffect(() => {
+    setDisplayedProjects(filterProjects());
+  }, [category]);
+
   return (
     <section id="project">
-      <div className="page-filter">
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedProjects(filterProjects('All'));
-            }}
-          >
-            All
-          </span>
-        </div>
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedProjects(filterProjects('Tool'));
-            }}
-          >
-            Tools
-          </span>
-        </div>
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedProjects(filterProjects('Creative'));
-            }}
-          >
-            Creative
-          </span>
-        </div>
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedProjects(filterProjects('Research'));
-            }}
-          >
-            Research
-          </span>
-        </div>
-      </div>
+      <Dropdown
+        options={projectCategories}
+        selected={category}
+        setSelected={setCategory}
+      />
 
       {displayedProjects.map((project, index) => (
         <details key={index} open={index < 3}>

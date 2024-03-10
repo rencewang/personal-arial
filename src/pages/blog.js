@@ -87,13 +87,10 @@ const BlogPage = () => {
         </div>
       ));
   };
+
   const [displayedPosts, setDisplayedPosts] = useState(
     filterPosts(defaultCategory, defaultYear)
   );
-
-  // handle dropdown menu changes to selected states
-  const handleCategoryChange = (category) => setSelectedCategory(category);
-  const handleYearChange = (year) => setSelectedYear(year);
 
   useEffect(() => {
     setDisplayedPosts(filterPosts());
@@ -101,8 +98,16 @@ const BlogPage = () => {
 
   return (
     <section>
-      <Dropdown options={categories} onSelect={handleCategoryChange} />
-      <Dropdown options={years} onSelect={handleYearChange} />
+      <Dropdown
+        options={categories}
+        selected={selectedCategory}
+        setSelected={setSelectedCategory}
+      />
+      <Dropdown
+        options={years}
+        selected={selectedYear}
+        setSelected={setSelectedYear}
+      />
 
       <div className="displayed-posts">{displayedPosts}</div>
     </section>
