@@ -1,5 +1,5 @@
 ---
-title: The Prestige&#58; Tale of Obsession
+title: 'The Prestige: Tale of Obsession'
 updated: 2018-04-04 14:16
 year: 2018
 published: true

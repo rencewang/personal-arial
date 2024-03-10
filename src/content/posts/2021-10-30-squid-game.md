@@ -1,5 +1,5 @@
 ---
-title: Squid Game&#58; All of My Friends Hate It
+title: 'Squid Game: All of My Friends Hate It'
 updated: 2021-10-30 08:57
 year: 2021
 published: true

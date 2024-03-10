@@ -1,5 +1,5 @@
 ---
-title: Blue Jasmine&#58; Pride and Justice
+title: 'Blue Jasmine: Pride and Justice'
 updated: 2021-11-20 17:32
 year: 2021
 published: true

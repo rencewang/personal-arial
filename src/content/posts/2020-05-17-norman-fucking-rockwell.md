@@ -1,5 +1,5 @@
 ---
-title: Norman Fucking Rockwell!&#58; Coexisting Hope &amp; Despair
+title: 'Norman Fucking Rockwell!: Coexisting Hope & Despair'
 updated: 2020-05-17 15:14
 year: 2020
 published: true

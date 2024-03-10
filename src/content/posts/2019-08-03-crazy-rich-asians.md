@@ -1,5 +1,5 @@
 ---
-title: Crazy Rich Asians&#58; East Meets West
+title: 'Crazy Rich Asians: East Meets West'
 updated: 2019-08-03 20:08
 year: 2019
 published: true

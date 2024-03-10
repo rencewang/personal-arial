@@ -1,5 +1,5 @@
 ---
-title: Russian Doll&#58; It's Hard to Stay Alive
+title: "Russian Doll: It's Hard to Stay Alive"
 updated: 2019-06-24 23:43
 year: 2019
 published: true

@@ -1,5 +1,5 @@
 ---
-title: Nocturnal Girl and Gone Animals&#58; A Comparison
+title: 'Gone Girl and Nocturnal Animals: A Comparison'
 updated: 2018-07-22 19:41
 year: 2018
 published: true
