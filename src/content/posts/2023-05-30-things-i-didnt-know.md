@@ -9,6 +9,7 @@ permalink: '/blog/things-I-didnt-know'
 type: post
 defaultExpanded: false
 description: 'The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart. '
+seoDescription: "Diary from Yale: Knowing is fun, but sometimes, as is not knowing. As I reflect on graduating from Yale as part of the class of 2023, some memories suddenly rush back to my head. But still, I believe there is no need for goodbye. There'll only be more opportunities ahead."
 ---
 
 They say that when a story is about to end, we are always reminded of its beginning.

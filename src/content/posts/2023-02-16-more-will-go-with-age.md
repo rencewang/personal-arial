@@ -9,6 +9,7 @@ permalink: '/blog/more-will-go-with-age'
 type: post
 defaultExpanded: false
 description: 'I didn’t want to cry — it felt like a self-important gesture, crossing a line of sorts, assuming the place of someone close to him. But even with this distance, for someone who I’ve simply admired from our simple interactions, I felt my defenses crumbling. Death broke the truce in a smug triumph.'
+seoDescription: 'Diary from Yale: Who thought the passing of someone who is more like a stranger than a dear friend can do so much to me. In mourning, I contemplate about my personal battle and peace with death.'
 ---
 
 I can still feel the burn of teardrops that streamed down my face on that night in Freshman year. I was lamenting my own fate then. I felt it again today. I am mourning the passing of someone I knew now.

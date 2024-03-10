@@ -9,6 +9,7 @@ permalink: '/blog/norman-fucking-rockwell'
 type: post
 defaultExpanded: true
 description: 'After all, it''s not just you and me who are not going anywhere: "no one''s going anywhere," and as Lana famously said: "the culture is lit."'
+seoDescription: "Music Review: Lana Del Rey's Norman Fucking Rockwell feels especially present in these pandemic days. A one last sentimental look back at a life that is no longer there. But it's ok, because there is hope in despair. Because as Lana famously said: the culture is lit."
 ---
 
 For me, a good Lana song does two things: 1) makes me fall asleep and 2) gives me edgy inspiration upon further examination (the next morning, as it usually turns out). So it should come as no surprise that The Next Best American Record happened to be the first song from _Norman Fucking Rockwell!_ that I fell for — the nonsensical lyrics are so fun to decode, though they probably mean nothing, and the song drags on and on and on until it leaves me in the perfect slumber — enviable merits, I know.

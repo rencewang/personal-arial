@@ -1,5 +1,5 @@
 ---
-title: The Prestige&#58; Twisted Obsessions
+title: The Prestige&#58; Tale of Obsession
 updated: 2018-04-04 14:16
 year: 2018
 published: true
@@ -9,6 +9,7 @@ permalink: '/blog/the-prestige'
 type: post
 defaultExpanded: false
 description: 'They were both convinced that they found each other’s secret. But did they? They believed what they wanted to believe. In other words, they wanted to be fooled.'
+seoDescription: "Film Review: Christopher Nolan's often overlooked 2006 classic, The Prestige, represent the most iconic piece of his story telling. The audience is drawn into a tale of twisted obsession, and arrive at the conclusion: aren't we simply concealing the delicate truth from ourselves? Aren't we all fooled?"
 ---
 
 When people think of Christopher Nolan, the first movies that pop into mind are probably the likes of _Inception_ or _Interstellar_ or _The Dark Knight_, the high-grossing international sensations that constructed the fan base of his cinematic empire. But to many people, the often overlooked 2006 classic, The Prestige, represent the most iconic piece of Nolan’s story telling.
@@ -39,7 +40,7 @@ Yet in the end, however, it’s hard to say that they are not human. The competi
 
 ## Final Words
 
-My favorite part is the monologue:
+My favorite part of the whole film is the monologue:
 
 > “Now you're looking for the secret... but you won't find it, because of course you're not really looking. You don't really want to know. You want to be fooled.”
 

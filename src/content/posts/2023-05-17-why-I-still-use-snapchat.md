@@ -9,6 +9,7 @@ permalink: '/blog/why-I-still-use-snapchat'
 type: post
 defaultExpanded: true
 description: 'One day, I got drenched in the Spring rain on the way back, with osmanthus oil still lingering in my hair from when I put it on after swimming. It teleported me to Fall in Shanghai. Wrong season, I know; not that I’ve ever been to Shanghai in the Fall, I know. But this, somehow, felt exactly how it’s supposed to be.'
+seoDescription: "Diary from Yale: I have Snapchat to thank for capturing my four years at Yale University, as I recount in this commencement reflection. This incoherent web of snaps is the best thing that's ever been mine. Hope it's yours too. Published as part of the Commencement Issue of the Yale Daily News Magazine, in May 2023. "
 ---
 
 I know Snapchat is not cool anymore.

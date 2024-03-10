@@ -33,7 +33,7 @@ const BlogPage = () => {
   `);
 
   const onePost = (post, postIndex) => (
-    <details key={postIndex} open={post.node.frontmatter.defaultExpanded}>
+    <details key={postIndex} open>
       <summary>
         <span className="title highlight">
           {post.node.frontmatter.title

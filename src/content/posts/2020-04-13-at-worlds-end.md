@@ -9,6 +9,7 @@ permalink: '/blog/at-worlds-end'
 type: post
 defaultExpanded: true
 description: 'The quarantine has made me realize that, in these tumultuous times, that monotonous routine contains familiar joy. Having a roof over your head and being able to see your family every day — so much to love already.'
+seoDescription: "Diary from Yale: I didn't know I had such as close encounter with Covid in China, in Wuhan, in my hometown. The pain that the people there bore during the initial days of the lockdown, I cannot imagine. But I think about my childhood, my memories, the sun and stars by East Lake. And how fortunate we were to have a life that was once deemed too ordinary. Now I want those ordinary pleasures back. "
 ---
 
 When I was home, I didn’t know Covid was already there. Now, a couple of months later, everyone knows Covid traces back to my hometown. To me, however, those "couple of months" feel like a lifetime. Memories of my last trip to Wuhan are surreal, if I think about it. They document a vanishing way of life, a life in which I was concerned with ordinary matters — getting dinner and meeting with friends, that sort of thing — rather than world peace. I remember going to a temple with my mom. It was raining that day, and the monks cooked excellent green pepper stir-fried eggplants. I also rode the subway from my hotel to the airport just for fun. Weeks later, the airport was shut down, and the hotel became a field hospital.

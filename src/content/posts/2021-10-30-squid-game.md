@@ -9,6 +9,7 @@ permalink: '/blog/squid-game'
 type: post
 defaultExpanded: false
 description: "I can't say that Squid Game was a complete waste of time because at the very least it was a social exercise the way I watched it with friends in Boston, but it’s pretty damn close to one."
+seoDescription: "TV Review: This is a non-exhaustive list of all the problems I find with Squid Game, because there are simply too many. I can't say that Squid Game was a complete waste of time because at the very least it was a social exercise the way I watched it with friends in Boston -- but it’s pretty damn close to one."
 ---
 
 I can't say that Squid Game was a complete waste of time because at the very least it was a social exercise the way I watched it with friends in Boston, but it’s pretty damn close to one. As a result, this is less of a review than it is a reminder (an emotional one, as I realized after writing it) so that I don’t forget my grievances, which there are many, when people ask me what’s wrong with the show. It is completely subjective, though, so take it however you will.

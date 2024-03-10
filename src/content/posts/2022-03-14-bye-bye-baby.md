@@ -9,6 +9,7 @@ permalink: '/blog/bye-bye-baby'
 type: post
 defaultExpanded: false
 description: 'It really is tragic, when one day you feel like you are finally ready to free the grand romantic in you, but the romantic in you is gone after many years of wear and tear, struggling and crawling in the dire reality.'
+seoDescription: "Diary from Yale: What does it mean to grow up? Why is there so much significance on this one day that isn't fundamentally different from any other day? Happy birthday to myself. Happy birthday, you're alone. "
 ---
 
 I turn 21 today. The funny thing is that I don’t feel like doing anything. Eating, drinking, planning anything special, none of that. I wonder if it’s because old age has finally crept into my soul. Last year, when people called me old for entering the third decade of my life, I was still joking “what are you talking about? I'm still three, and I’ll always be three!” Now I'm not in the joking mood anymore. I don’t even feel like having moods or expressions or emotions.

@@ -9,6 +9,7 @@ permalink: '/blog/melodrama'
 type: post
 defaultExpanded: true
 description: 'So many melodrama will end up being supercuts. So many hard feelings will lead to exclamation of what the fuck are perfect places. Perhaps this youth is imperfect, but its stubborn, tenacious, yet sinister vitality is precious and impossible to compound.'
+seoDescription: "Music Review: In Lorde's Melodrama, the end-of-adolescence feels like an ongoing party. It reminds us that while this youth is imperfect, its stubborn, tenacious, yet sinister vitality is precious and impossible to compound."
 ---
 
 If _Pure Heroine_ was about teenage Lorde’s idea of maturity, her imagination of what the adult world must be like, then her sophomore album is precisely the opposite. _Melodrama_ is cool— the toned quality materializes through the predominantly blue album art. And with this record, the brilliant facade of the adult world peels off layer by layer, until all that’s left is the delicate, jaded, melancholic core.

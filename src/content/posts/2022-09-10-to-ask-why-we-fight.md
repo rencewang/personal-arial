@@ -9,6 +9,7 @@ permalink: '/blog/to-ask-why-we-fight'
 type: post
 defaultExpanded: true
 description: "I always wondered if anyone actually reads these rambles of mine. After all, my writing isn't particularly literary. Does it matter if it's perceived? Does it matter who reads these?"
+seoDescription: "Diary from Yale: Does it matter who reads these personal rambles of mine? What does it mean to write for me? If something was never perceived, did it actually happen? It's ok, at least, I perceive both the process and the result. "
 ---
 
 If something was never perceived, did it actually happen?

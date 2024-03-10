@@ -1,5 +1,5 @@
 ---
-title: Crazy Rich Asians&#58; East and West
+title: Crazy Rich Asians&#58; East Meets West
 updated: 2019-08-03 20:08
 year: 2019
 published: true
@@ -9,6 +9,7 @@ permalink: '/blog/crazy-rich-asians'
 type: post
 defaultExpanded: false
 description: 'What we have to understand, is that although Rachel is modeled as the 21st century Cinderella, the plot should not be confined to the imagination of Cinderella. '
+seoDescription: "Film Review: While Crazy Rich Asians succeeds in propelling Asian elements into an international blockbuster, I wish the film's Cinderella story had a more modern core. Although Rachel is modeled as a 21st century Cinderella, the plot should not be confined to the imagination of Cinderella. "
 ---
 
 _Crazy Rich Asians_ got many things right. The drama is great (albeit unrealistic at times), the performances by Constance Wu, Awkwafina, and Michelle Yeoh (soon debuting her own _Star Trek_ series!) are outstanding, the soundtrack — with heavy Asian-influenced curation (particularly the mandarin version of Yellow) — is touching. But it is also a movie that got a couple of key things wrong, and those significant flaws result in an identity crisis that diminishes the overall message.

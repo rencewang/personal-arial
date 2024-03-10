@@ -9,9 +9,8 @@ permalink: '/blog/being-earnest'
 type: post
 defaultExpanded: true
 description: 'You cannot decide what other people think of you, or what they see in you, but you can change how you act. It is our own responsibility to lead a genuine life, to be earnest.'
+seoDescription: "Diary from Yale: I re-read The Importance of Being Earnest on one late night. And honestly, the Oscar Wilde quotes that I've chosen to live by have never been truer in this college-world. And the solution to imposter syndrome? That would be to be earnest. (English 120 ORLO Prize)"
 ---
-
-<div style="height: 15px;"></div>
 
 #### _“I don't like novels that end happily. They depress me so much.”_
 

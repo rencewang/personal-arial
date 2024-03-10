@@ -9,6 +9,7 @@ permalink: '/blog/commencement-address'
 type: post
 defaultExpanded: true
 description: "So don't become discouraged when the suffocating reality comes crashing down. Sometimes dreams are broken to make space for new ones."
+seoDescription: 'Commencement Address: At the 2019 graduation for Troy High School (Fullerton, California), I share some lessons that I learned through academics and integration to the United States as am immigrant.'
 ---
 
 Ladies and gentlemen, teachers, administrators, Class of 2019: <br><br>
@@ -32,6 +33,6 @@ So don't become discouraged when the suffocating reality comes crashing down. So
 
 Thank you for all the memories, Class of 2019, I am so glad to have had all of you.
 
-![Cover](/blogimages/graduation.jpg)
+![Lawrence Wang speaking at the Troy High School graduation in 2019](/blogimages/graduation.jpg)
 
 _Delivered May 31, 2019 at Troy High School's Commencement Ceremony as valedictorian for the Class of 2019._

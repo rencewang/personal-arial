@@ -113,15 +113,15 @@ export default BlogTemplate;
 
 export const Head = ({ data }) => {
   const {
-    frontmatter: { title },
+    frontmatter: { title, seoDescription },
     excerpt: autoExcerpt,
   } = data.markdownRemark;
-  const seoExcerpt = autoExcerpt;
+  const excerpt = autoExcerpt || seoDescription;
 
   return (
     <Seo
       title={title.replace('&#58;', ':').replace('&amp;', '&')}
-      description={seoExcerpt}
+      description={excerpt}
     />
   );
 };
@@ -135,6 +135,7 @@ export const postQuery = graphql`
         tag
         category
         permalink
+        seoDescription
       }
       id
       html

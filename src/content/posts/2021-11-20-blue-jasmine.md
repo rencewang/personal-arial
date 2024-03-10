@@ -9,6 +9,7 @@ permalink: '/blog/blue-jasmine'
 type: post
 defaultExpanded: false
 description: 'Finally, don’t forget that “the harder working the luckier.” Having put in the hard work means being better prepared for chance occurrences, for slips in the wheel of fortune, which, when aggregated, roughly equals to being luckier.'
+seoDescription: "Movie Review: I don't quite know how to put into words what I feel about Woody Allen's Blue Jasmine, perhaps because for all the crazy babbling lady’s flaws, played by Cate Blanchett, a part of her reminds me of my once (and perhaps still) ambitious self."
 ---
 
 I had wanted to write something about _Blue Jasmine_ for a while, but was never sure how to put my thoughts into words — maybe it’s because for all the crazy babbling lady’s flaws, a part of her reminds me of my once (and perhaps still) ambitious self. The contrast between the elegant Jasmine when she could maintain the pretense of pride, and the shattered, wet-haired, shaking on a park bench but still Chanel wearing Jasmine after her pride has crumbled, is a cautionary tale. Ambition motivates us to explore further, the race to the top encourages us to climb faster — to want to become something substantial is no crime. Pride, whether as a precondition for or byproduct of ambition, breaks down in the absence of support, whether in the form of wealth, social status, or a firm mindset. For Jasmine, who holds pride and ambition dear to her personality, the loss of pride beats her down, and the presence of pride hinders her attempts to get back up.

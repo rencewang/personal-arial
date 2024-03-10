@@ -9,11 +9,12 @@ permalink: '/blog/gone-girl-nocturnal-animals'
 type: post
 defaultExpanded: false
 description: 'What she never considers is that, perhaps, she doesn’t need to be the cool girl, and Nick doesn’t have to be a model husband. Her life can be saved from the lies. But no, that’s not what the Gone Girl wants. Truth? Happiness? Who cares. It’s only for show anyway.'
+seoDescription: "Film Review: David Fincher's Gone Girl and Tom Ford's Nocturnal Animals share some fundamental elements but branching into different stories. Intrinsic to both is a the discussion of love and revenge: when it comes to love, everyone is to blame."
 ---
 
 _Gone Girl_ and _Nocturnal Animals_ — released two years apart, one by the legendary David Fincher, the other by the fashion mongol Tom Ford — are strikingly similar in many ways. Both contain wonderful shots, such as when Ben Affleck’s fingers run through Rosamund Pike’s hair and when Amy Adams stands in front of the mirror in her green dress as A Table For Two plays in the background. _Gone Girl_ describes the aftermath of a girl losing the perfect guy she was promised, whereas _Nocturnal Animals_ describes that of a guy losing his wife and child. Now, maybe Tom Ford’s use of color and treatment of silence makes his work the more artsy of the two, but we should all be able to agree that the two share a common discussion of love and revenge.
 
-![Cover](/blogimages/NA1.jpg)
+![Gone Girl and Nocturnal Animals share similar discussion of love and revenge](/blogimages/NA1.jpg)
 
 ## Two Perspectives
 

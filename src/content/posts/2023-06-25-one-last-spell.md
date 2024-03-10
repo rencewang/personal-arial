@@ -9,6 +9,7 @@ permalink: '/blog/one-last-spell'
 type: post
 defaultExpanded: true
 description: 'I wish I had the chance to scribble on Grandma’s hand and blow onto her forehead. Put a spell on her, keep her here a little longer, ease the discomfort from weeks of illness, make sure she wasn’t scared during those nights alone on the hospital bed. '
+seoDescription: "Diary from China: My grandma passed away last night. I think of the nights in my childhood when she would put a spell on me when I was frightened, for a sound night's sleep. How I wish I could do the same to her now. Ease her discomfort. Make sure she wasn't scared."
 ---
 
 I thought yesterday was safe.
