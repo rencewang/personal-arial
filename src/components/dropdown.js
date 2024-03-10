@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import '../styles/general.scss';
-
 // options should be an array of strings, with default being the first element
 const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);

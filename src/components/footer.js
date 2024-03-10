@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import '../styles/general.scss';
-
 const greetingArray = [
   'The waves come after midnight.',
   "Isn't it pretty to think so?",

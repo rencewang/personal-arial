@@ -7,22 +7,7 @@ import '../styles/general.scss';
 const Index = () => {
   return (
     <div id="text">
-      <div className="page-filter">
-        <a
-          href="https://www.instagram.com/rencewang/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="highlight">Instagram</span>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/rencewang/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="highlight">Linkedin</span>
-        </a>
-      </div>
+      <div className="page-filter"></div>
 
       <details open>
         <summary>
@@ -37,6 +22,21 @@ const Index = () => {
           Software Development Engineer, ART19 <br />
           B.S. Computer Science and Economics, Yale University <br />
           B.A. Political Science, Yale University
+          <br /> <br />
+          <a
+            href="https://www.instagram.com/rencewang/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="highlight">Instagram</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rencewang/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="highlight">Linkedin</span>
+          </a>
         </span>
       </details>
 

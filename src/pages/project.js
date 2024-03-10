@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import Seo from '../components/seo';
 import projects from '../content/projects/projects';
-import '../styles/general.scss';
 
 const ProjectPage = () => {
   const [displayedProjects, setDisplayedProjects] = useState(projects);

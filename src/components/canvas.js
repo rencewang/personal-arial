@@ -12,8 +12,6 @@ import {
 } from '@react-three/postprocessing';
 import { KernelSize } from 'postprocessing';
 
-import '../styles/general.scss';
-
 extend({ OrbitControls });
 
 const Controls = () => {

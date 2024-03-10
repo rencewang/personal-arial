@@ -184,6 +184,7 @@ details {
   summary {
     cursor: pointer;
     outline: none;
+    margin: 20px 0 10px 0;
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -248,6 +249,11 @@ details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    &:hover > :first-child {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
   }
 
   .dropdown-options {
@@ -420,6 +426,7 @@ sup {
 .title {
   font-size: 4rem;
   letter-spacing: -0.25rem;
+  line-height: 0.8;
 
   @media (max-width: $mediaRule) {
     font-size: 3rem;

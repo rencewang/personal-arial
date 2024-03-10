@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
 
       <Footer />
 
-      <section id="canvas" style={{ display: 'block' }}>
+      <section id="canvas">
         <ThreeCanvas />
       </section>
     </main>
