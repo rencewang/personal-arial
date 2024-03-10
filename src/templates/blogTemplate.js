@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
+import Dropdown from '../components/dropdown';
 
 const BlogTemplate = ({ data, pageContext }) => {
   const {
@@ -18,52 +19,31 @@ const BlogTemplate = ({ data, pageContext }) => {
     .replace(/<h2[^>]*>/g, "<h2><span class='highlight'>")
     .replace(/<\/h2>/g, '</span></h2>');
 
-  const [contentFontSize, setContentFontSize] = useState('1.5rem');
+  const fontSizeOptions = { Small: '1rem', Medium: '1.5rem', Large: '2rem' };
+  const defaultFontSize = 'Medium';
+  const [contentFontSize, setContentFontSize] = useState(
+    fontSizeOptions[defaultFontSize]
+  );
+
+  const handleContentFontSizeChange = (option) => {
+    setContentFontSize(fontSizeOptions[option]);
+  };
 
   return (
     <article className="post">
-      <div className="page-filter">
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setContentFontSize('1rem');
-            }}
-          >
-            Small
-          </span>
-        </div>
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setContentFontSize('1.5rem');
-            }}
-          >
-            Medium
-          </span>
-        </div>
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setContentFontSize('2rem');
-            }}
-          >
-            Large
-          </span>
-        </div>
-      </div>
+      <Dropdown
+        options={Object.keys(fontSizeOptions)}
+        selected={defaultFontSize}
+        setSelected={handleContentFontSizeChange}
+      />
+
       <h1 className="title highlight">{title}</h1>
       <div style={{ marginTop: '10px' }}>
         <span className="highlight">{updated}</span>
         <span className="highlight"> in </span>
         <span className="highlight">{category}</span>
       </div>
-      {next != null ? (
+      {next && (
         <div className="postnav">
           <div>
             <span className="highlight">Previous:</span>
@@ -74,8 +54,9 @@ const BlogTemplate = ({ data, pageContext }) => {
             </Link>
           </div>
         </div>
-      ) : null}
-      {previous != null ? (
+      )}
+
+      {previous && (
         <div className="postnav">
           <div>
             <span className="highlight">Next:</span>
@@ -86,7 +67,8 @@ const BlogTemplate = ({ data, pageContext }) => {
             </Link>
           </div>
         </div>
-      ) : null}
+      )}
+
       <div className="postcontent" style={{ fontSize: contentFontSize }}>
         <div dangerouslySetInnerHTML={{ __html: newhtml }} />
       </div>

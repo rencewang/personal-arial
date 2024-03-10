@@ -16,17 +16,18 @@ const Index = () => {
         <span className="highlight">
           writes and codes and sings and draws and floats in space and stares
           into walls and listens to Taylor Swift and turns on all the lights and
-          lives in a monastery and drinks milk and believes and schemes and
-          prays and practices acceptance
+          lives in a monastery and drinks milk and schemes and believes and
+          practices acceptance
           <br /> <br />
           Software Development Engineer, ART19 <br />
           B.S. Computer Science and Economics, Yale University <br />
           B.A. Political Science, Yale University
-          <br /> <br />
+          <br />
           <a
             href="https://www.instagram.com/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '10px' }}
           >
             <span className="highlight">Instagram</span>
           </a>

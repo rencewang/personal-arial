@@ -40,6 +40,7 @@ const BlogPage = () => {
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [selectedYear, setSelectedYear] = useState(defaultYear);
+  const [displayedPosts, setDisplayedPosts] = useState();
 
   const onePost = (post, postIndex) => (
     <details key={postIndex} open={post.node.frontmatter.defaultExpanded}>
@@ -58,42 +59,38 @@ const BlogPage = () => {
     </details>
   );
 
-  // create component with posts in a given category, and given year
-  // or return all posts if category and year is 'All'
-  const filterPosts = () => {
-    // first, filter by year
-    let filteredYear = data.allMarkdownRemark.year;
-    if (selectedYear !== defaultYear) {
-      filteredYear = filteredYear.filter((year) => year.year === selectedYear);
-    }
-
-    // then, filter by category and return posts
-    return filteredYear
-      .slice(0)
-      .reverse()
-      .map((year, index) => (
-        <div key={index} className="year-group">
-          {year.edges.map((post, postIndex) => {
-            if (selectedCategory === defaultCategory) {
-              return onePost(post, postIndex);
-            } else if (
-              post.node.frontmatter.category.includes(selectedCategory)
-            ) {
-              return onePost(post, postIndex);
-            } else {
-              return null;
-            }
-          })}
-        </div>
-      ));
-  };
-
-  const [displayedPosts, setDisplayedPosts] = useState(
-    filterPosts(defaultCategory, defaultYear)
-  );
-
   useEffect(() => {
-    setDisplayedPosts(filterPosts());
+    // change displayedPosts to posts in a given category, and given year
+    // or return all posts if category and year is 'All'
+    setDisplayedPosts(() => {
+      // first, filter by year
+      let filteredYear = data.allMarkdownRemark.year;
+      if (selectedYear !== defaultYear) {
+        filteredYear = filteredYear.filter(
+          (year) => year.year === selectedYear
+        );
+      }
+
+      // then, filter by category and return posts
+      return filteredYear
+        .slice(0)
+        .reverse()
+        .map((year, index) => (
+          <div key={index} className="year-group">
+            {year.edges.map((post, postIndex) => {
+              if (selectedCategory === defaultCategory) {
+                return onePost(post, postIndex);
+              } else if (
+                post.node.frontmatter.category.includes(selectedCategory)
+              ) {
+                return onePost(post, postIndex);
+              } else {
+                return null;
+              }
+            })}
+          </div>
+        ));
+    });
   }, [selectedCategory, selectedYear]);
 
   return (

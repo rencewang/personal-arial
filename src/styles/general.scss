@@ -300,10 +300,13 @@ sup {
 
 // BLOG STYLES ****************************************************
 
-.post h1 {
-  margin: 20px 0 15px 0;
-  line-height: 0.8;
-  font-weight: 500;
+.post {
+  margin-bottom: 20px;
+  h1 {
+    margin: 10px 0;
+    line-height: 0.8;
+    font-weight: 500;
+  }
 }
 
 .postnav {
@@ -402,7 +405,7 @@ sup {
 .title {
   font-size: 4rem;
   letter-spacing: -0.25rem;
-  line-height: 0.8;
+  line-height: 0.85;
 
   @media (max-width: $mediaRule) {
     font-size: 3rem;
