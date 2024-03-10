@@ -156,11 +156,11 @@ footer {
 .content-container {
   z-index: 500;
   position: fixed;
-  top: 50px;
+  top: 40px;
   left: 10px;
   margin-right: 10px;
   width: 100%;
-  max-height: calc(100% - 100px);
+  max-height: calc(100% - 80px);
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -175,19 +175,6 @@ footer {
   @media (max-width: $mediaRule) {
     top: 40px;
     max-height: calc(100% - 100px);
-  }
-}
-
-.page-filter {
-  .link-button,
-  a {
-    margin-right: 20px;
-    @media (max-width: $mediaRule) {
-      margin-right: 10px;
-    }
-  }
-  @media (max-width: $mediaRule) {
-    margin: 5px 0 10px 0;
   }
 }
 
@@ -215,6 +202,82 @@ details {
   }
   &:not(:last-child) {
     border-bottom: 1px solid $bodyColor;
+  }
+}
+
+.page-filter {
+  .link-button,
+  a {
+    margin-right: 20px;
+    @media (max-width: $mediaRule) {
+      margin-right: 10px;
+    }
+  }
+  @media (max-width: $mediaRule) {
+    margin: 5px 0 10px 0;
+  }
+
+  select {
+    background: $backgroundColor;
+    color: $bodyColor;
+    border: 1px solid $bodyColor;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    @media (max-width: $mediaRule) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  width: fit-content;
+  min-width: 130px;
+  display: inline-block;
+  margin: 10px 10px 5px 0;
+
+  .dropdown-header {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid $bodyColor;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dropdown-options {
+    display: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0 0 0;
+    position: absolute;
+    border: 1px solid $bodyColor;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+
+    li {
+      padding: 5px 10px;
+      cursor: pointer;
+      border-bottom: 1px solid $bodyColor;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
+    }
+  }
+  &.is-open .dropdown-options {
+    display: block;
   }
 }
 

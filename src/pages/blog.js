@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
+import Dropdown from '../components/dropdown';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +14,7 @@ const BlogPage = () => {
         sort: { frontmatter: { updated: DESC } }
       ) {
         year: group(field: { frontmatter: { year: SELECT } }) {
-          fieldValue
+          year: fieldValue
           edges {
             node {
               frontmatter {
@@ -32,14 +33,19 @@ const BlogPage = () => {
     }
   `);
 
+  const defaultCategory = 'All Category';
+  const defaultYear = 'All Year';
+  const years = data.allMarkdownRemark.year.map((year) => year.year);
+  years.reverse().unshift(defaultYear);
+  const categories = ['All Category', 'Essay', 'Review'];
+
+  const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
+  const [selectedYear, setSelectedYear] = useState(defaultYear);
+
   const onePost = (post, postIndex) => (
     <details key={postIndex} open>
       <summary>
-        <span className="title highlight">
-          {post.node.frontmatter.title
-            .replace('&#58;', ':')
-            .replace('&amp;', '&')}
-        </span>
+        <span className="title highlight">{post.node.frontmatter.title}</span>
         &nbsp;
         <span className="highlight bold italic">
           {post.node.frontmatter.updated}
@@ -53,15 +59,16 @@ const BlogPage = () => {
     </details>
   );
 
-  // create component with posts in a given category, or return all posts if category is 'All'
-  const filterPosts = (category) =>
+  // create component with posts in a given category, and given year
+  // or return all posts if category and year is 'All'
+  const filterPosts = (category, year) =>
     data.allMarkdownRemark.year
       .slice(0)
       .reverse()
       .map((year, index) => (
         <div key={index} className="year-group">
           {year.edges.map((post, postIndex) => {
-            if (category === 'All') {
+            if (category === defaultCategory) {
               return onePost(post, postIndex);
             } else if (post.node.frontmatter.category.includes(category)) {
               return onePost(post, postIndex);
@@ -71,17 +78,31 @@ const BlogPage = () => {
           })}
         </div>
       ));
-  const [displayedPosts, setDisplayedPosts] = useState(filterPosts('All'));
+
+  const [displayedPosts, setDisplayedPosts] = useState(
+    filterPosts(defaultCategory, defaultYear)
+  );
+
+  // handle dropdown menu changes to selected states
+  const handleCategoryChange = (category) => setSelectedCategory(category);
+  const handleYearChange = (year) => setSelectedYear(year);
+
+  useEffect(() => {
+    setDisplayedPosts(filterPosts(selectedCategory, selectedYear));
+  }, [selectedCategory, selectedYear]);
 
   return (
     <section>
-      <div className="page-filter">
+      <Dropdown options={categories} onSelect={handleCategoryChange} />
+      <Dropdown options={years} onSelect={handleYearChange} />
+
+      {/* <div className="page-filter">
         <div className="link-button" aria-hidden="true">
           <span
             className="highlight"
             role="presentation"
             onClick={() => {
-              setDisplayedPosts(filterPosts('All'));
+              setDisplayedCategory(filterPosts('All'));
             }}
           >
             All
@@ -93,7 +114,7 @@ const BlogPage = () => {
             className="highlight"
             role="presentation"
             onClick={() => {
-              setDisplayedPosts(filterPosts('Essay'));
+              setDisplayedCategory(filterPosts('Essay'));
             }}
           >
             Essays
@@ -105,14 +126,14 @@ const BlogPage = () => {
             className="highlight"
             role="presentation"
             onClick={() => {
-              setDisplayedPosts(filterPosts('Review'));
+              setDisplayedCategory(filterPosts('Review'));
             }}
           >
             Reviews
           </span>
         </div>
 
-        {/* <div className="link-button" aria-hidden="true">
+        <div className="link-button" aria-hidden="true">
             <span
               className="highlight"
               onClick={() => {
@@ -121,8 +142,8 @@ const BlogPage = () => {
             >
               Analysis
             </span>
-          </div> */}
-      </div>
+          </div> 
+      </div> */}
 
       <div className="displayed-posts">{displayedPosts}</div>
     </section>

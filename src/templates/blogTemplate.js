@@ -57,9 +57,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </span>
         </div>
       </div>
-      <h1 className="title highlight">
-        {title.replace('&#58;', ':').replace('&amp;', '&')}
-      </h1>
+      <h1 className="title highlight">{title}</h1>
       <div style={{ marginTop: '10px' }}>
         <span className="highlight">{updated}</span>
         <span className="highlight"> in </span>
@@ -72,11 +70,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </div>
           <div>
             <Link to={next.frontmatter.permalink}>
-              <span className="highlight">
-                {next.frontmatter.title
-                  .replace('&#58;', ':')
-                  .replace('&amp;', '&')}
-              </span>
+              <span className="highlight">{next.frontmatter.title}</span>
             </Link>
           </div>
         </div>
@@ -88,11 +82,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           </div>
           <div>
             <Link to={previous.frontmatter.permalink}>
-              <span className="highlight">
-                {previous.frontmatter.title
-                  .replace('&#58;', ':')
-                  .replace('&amp;', '&')}
-              </span>
+              <span className="highlight">{previous.frontmatter.title}</span>
             </Link>
           </div>
         </div>
@@ -118,12 +108,7 @@ export const Head = ({ data }) => {
   } = data.markdownRemark;
   const excerpt = autoExcerpt || seoDescription;
 
-  return (
-    <Seo
-      title={title.replace('&#58;', ':').replace('&amp;', '&')}
-      description={excerpt}
-    />
-  );
+  return <Seo title={title} description={excerpt} />;
 };
 
 export const postQuery = graphql`
