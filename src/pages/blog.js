@@ -35,15 +35,14 @@ const BlogPage = () => {
 
   const defaultCategory = 'All Category';
   const defaultYear = 'All Year';
-  const years = data.allMarkdownRemark.year.map((year) => year.year);
-  years.reverse().unshift(defaultYear);
+  const years = ['All Year', '2023', '2022', '2021', '2020', '2019', '2018'];
   const categories = ['All Category', 'Essay', 'Review'];
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [selectedYear, setSelectedYear] = useState(defaultYear);
 
   const onePost = (post, postIndex) => (
-    <details key={postIndex} open>
+    <details key={postIndex} open={post.node.frontmatter.defaultExpanded}>
       <summary>
         <span className="title highlight">{post.node.frontmatter.title}</span>
         &nbsp;
@@ -61,16 +60,25 @@ const BlogPage = () => {
 
   // create component with posts in a given category, and given year
   // or return all posts if category and year is 'All'
-  const filterPosts = (category, year) =>
-    data.allMarkdownRemark.year
+  const filterPosts = () => {
+    // first, filter by year
+    let filteredYear = data.allMarkdownRemark.year;
+    if (selectedYear !== defaultYear) {
+      filteredYear = filteredYear.filter((year) => year.year === selectedYear);
+    }
+
+    // then, filter by category and return posts
+    return filteredYear
       .slice(0)
       .reverse()
       .map((year, index) => (
         <div key={index} className="year-group">
           {year.edges.map((post, postIndex) => {
-            if (category === defaultCategory) {
+            if (selectedCategory === defaultCategory) {
               return onePost(post, postIndex);
-            } else if (post.node.frontmatter.category.includes(category)) {
+            } else if (
+              post.node.frontmatter.category.includes(selectedCategory)
+            ) {
               return onePost(post, postIndex);
             } else {
               return null;
@@ -78,7 +86,7 @@ const BlogPage = () => {
           })}
         </div>
       ));
-
+  };
   const [displayedPosts, setDisplayedPosts] = useState(
     filterPosts(defaultCategory, defaultYear)
   );
@@ -88,62 +96,13 @@ const BlogPage = () => {
   const handleYearChange = (year) => setSelectedYear(year);
 
   useEffect(() => {
-    setDisplayedPosts(filterPosts(selectedCategory, selectedYear));
+    setDisplayedPosts(filterPosts());
   }, [selectedCategory, selectedYear]);
 
   return (
     <section>
       <Dropdown options={categories} onSelect={handleCategoryChange} />
       <Dropdown options={years} onSelect={handleYearChange} />
-
-      {/* <div className="page-filter">
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedCategory(filterPosts('All'));
-            }}
-          >
-            All
-          </span>
-        </div>
-
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedCategory(filterPosts('Essay'));
-            }}
-          >
-            Essays
-          </span>
-        </div>
-
-        <div className="link-button" aria-hidden="true">
-          <span
-            className="highlight"
-            role="presentation"
-            onClick={() => {
-              setDisplayedCategory(filterPosts('Review'));
-            }}
-          >
-            Reviews
-          </span>
-        </div>
-
-        <div className="link-button" aria-hidden="true">
-            <span
-              className="highlight"
-              onClick={() => {
-                setDisplayedPosts(filterPosts('Analysis'));
-              }}
-            >
-              Analysis
-            </span>
-          </div> 
-      </div> */}
 
       <div className="displayed-posts">{displayedPosts}</div>
     </section>
