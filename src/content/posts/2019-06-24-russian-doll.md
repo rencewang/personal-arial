@@ -29,8 +29,6 @@ Nadia is not a completely good person. Sometimes she’s not kind enough, or pro
 
 Perhaps that’s her defense mechanism, of closing herself off from the world, thus eliminating the possibility of getting hurt and hurting other people. Or perhaps that’s who we all are — _incompletely good_ — as a result of our tendency to avoid pain and discomfort. But may I suggest to you that the experiences of bruising, the pain inherent to love, hate, and betrayal are the most real, human things, and that when we insulate ourselves from the world, we lose parts of what make us human in the first place.
 
-![Cover](/blogimages/RD2.jpg)
-
 ## It Is Not The End
 
 The ending is a beautiful moment. It has a quality that is as promising as _Groundhog Day_, but not quite _Groundhog Day_. The two protagonists reappear in front of their bathroom mirrors one last time and realize they are in different dimensions — the other person is back in cycle #1 and has no recollection of the death-defying adventures they shared together. Now, they have to look for the other person and convince them that all those hundreds of attempts at living and dying were actually real. As the screen splits in half, the audience witnesses a hopeful Alan assisting the turbulent Nadia, and a patient Nadia comforting the confused Alan. And as they walk through the winter New York streets, the two screens merge into one, with a renewed Nadia holding a torch, finally, again, pushing to be a part of this world.

@@ -255,6 +255,12 @@ sup {
 
 // BLOG STYLES ****************************************************
 
+.post h1 {
+  margin: 20px 0 15px 0;
+  line-height: 0.8;
+  font-weight: 500;
+}
+
 .postnav {
   width: 100%;
   display: flex;
@@ -365,13 +371,4 @@ sup {
 
 .large-font {
   font-size: 1.5rem;
-}
-
-.pill {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  border: 1px solid $bodyColor;
-  color: $selectColor;
 }

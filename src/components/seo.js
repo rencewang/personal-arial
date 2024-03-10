@@ -30,7 +30,7 @@ function Seo({ description, lang, title, children }) {
 
   return (
     <>
-      <title>{`${title} | Lawrence Wang`}</title>
+      <title>{`${title} | RENCELA`}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />

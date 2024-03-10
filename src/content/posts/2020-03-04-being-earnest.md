@@ -13,7 +13,7 @@ description: 'You cannot decide what other people think of you, or what they see
 
 <div style="height: 15px;"></div>
 
-## _“I don't like novels that end happily. They depress me so much.”_
+#### _“I don't like novels that end happily. They depress me so much.”_
 
 I first learned about Oscar Wilde through his fairy tales.[^1] At a time when I was devouring kid’s books and graphic novels, his stories, with their tragic undertones, stood out to me among the likes of Cinderella and Thumbelina and especially Snow White, whom I absolutely despised because I thought she was useless and had no skills besides talking to animals. On the other hand, the Happy Prince with his jewels ripped away, blind and alone in the winter cold, the Nightingale with her chest pierced, dying of blood loss — their suffering resonated with me and inspired me.
 
@@ -21,13 +21,13 @@ As you can see, my inclination for tragedy emerged at a young age. In fact, I’
 
 All of this means there was no logical reason for me to read _The Importance of Being Earnest_ because, let’s be honest, few plays are more comedic. Yet, as fate would have it, I had just finished _Long Day’s Journey into Night_, and although I appreciated O’Neill’s autobiographical masterpiece immensely, I found myself needing something to overturn the desolate cloud of hopelessness that would otherwise surely launch me into a depressive episode. That’s how I picked up this play. At the time, it did the job. I found it to be genuinely funny and incredibly witty, and it reminded me of the Dowager Countess of Grantham in _Downton Abbey_ (whose roasts and comebacks I idolize), but that’s as much as I thought about it — upon finishing, I went straight back to my marathon of depressing literature with _The Glass Menagerie_.
 
-## _“I hope you have not been leading a double life, pretending to be wicked and being good all the time. That would be hypocrisy.”_
+#### _“I hope you have not been leading a double life, pretending to be wicked and being good all the time. That would be hypocrisy.”_
 
 On a rare, serene, work-free night, I finally watched _The Talented Mr. Ripley_. During the film, I couldn’t help but notice the similarities between Matt Damon’s impersonation of the rich playboy and pretending to be Ernest, so I made the midnight decision to read _The Importance of Being Earnest_ again. This time around, no longer the palate cleanser between two dismal plays, it brought me, in addition to subdued chuckles as I tried not to wake my roommate, considerations of my own hypocrisy.
 
 I hated the first couple of weeks of college. I hated being herded like cattle in our froco groups (please, we just graduated and know how school works). I hated never having the time to collect my thoughts since we were either at some random workshop or on the way to a random workshop. I hated the fact that all of this mandatory socialization has a name — “Camp Yale” — as if it’s so glorious. Now, after two semesters of refamiliarizing myself with the fast-paced cycle of lectures-homework-exam which reminds me, more than anything, of the terrors of high school, I miss it and think I was an idiot for hating weeks of having no work whatsoever.
 
-## _“To be natural is such a very difficult pose to keep up.”_
+#### _“To be natural is such a very difficult pose to keep up.”_
 
 What I have only recently noticed, as I started reminiscing the good old days, is how social I had been during Camp Yale. I was eager to meet new people through childish scavenger hunts and enthusiastic to introduce myself in awkward icebreakers, and it’s not until my introverted self began to show, as the cordiality receded like an ebb tide, that I realized it might have been nothing more than a grand façade— the outgoingness grossly unrepresentative of me in my natural habitat. In retrospect, it was tiring to seem naturally versed in social functions. Talking to people was mentally draining, going out was physical exhausting, and having people forget your name every time you see them was draining and exhausting. It was all an overwhelming burden on my less-than-expressive self.
 
@@ -35,7 +35,7 @@ How I survived those weeks as a high-spirited creature remains a mystery to me, 
 
 I wouldn’t exactly term it “imposter syndrome,” but I feel like one sometimes, when I pretend like I care, or that I’m nice, or that I’m actually interested in what the person sitting across from me in the dining hall is saying. One life lesson I’ve learned over the years is that once in a while, you have to “fake it till you make it.” Not exactly a positive idea, but one that has worked, one that has earned me labels of being nice and social and helpful. The side effect, however, is becoming addicted to pretense. You lose focus, because for as long as you haven’t made it, you would be faking it, because lies lead to lies lead to more lies.
 
-## _“The truth is rarely pure and never simple.”_
+#### _“The truth is rarely pure and never simple.”_
 
 The truth is, a lot of times, people don’t see you for who you are, rather, they see you for who they need you to be. Consequently, masking yourself in protective veneers is not going to be bothersome for other people as it would be for you: they don’t have the time nor the effort to discover the real you. Other people may never know that I was introverted, or that I loathed socialization— I was the one under pressure. You cannot decide what other people think of you, or what they see in you, but you can change how you act. It is our own responsibility to lead a genuine life, to be earnest.
 

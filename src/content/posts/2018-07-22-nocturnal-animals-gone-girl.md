@@ -31,8 +31,6 @@ In _Nocturnal Animals_, the key conflict can be boiled down to the socioeconomic
 
 As such, the social construct is a common factor in both tragedies. One shatters the American Dream with its nuclear-family-happiness and exposes the hypocrisy of middle class elites who indulge in intricate illusions out of boredom and encourage media carnivals after every borderline societal crisis. The other one confirms the doom of socioeconomic mismatch even in a society where the effects of such are said to be negligible.
 
-![Cover](/blogimages/NA2.jpg)
-
 ## No One Comes Out Clean
 
 When Prince Charming is no longer and Cool Girl becomes Gone Girl, the two have to collect their wreck of a marriage and carry on. Cool Girl does not care about the delicateness of a marriage, she acts with minimal considerations of the circumstances because she knows she’s smarter than the rest of them. She cried, demanded, threatened, provoked. She taints herself with blood. She uses anyone and everyone she could. By doing so, she ends up securing the illusory love and marriage.

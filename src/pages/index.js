@@ -31,8 +31,8 @@ const Index = () => {
         <span className="highlight">
           writes and codes and sings and draws and floats in space and stares
           into walls and listens to Taylor Swift and turns on all the lights and
-          lives in a monastery and drinks milk and believes and prays and
-          practices acceptance
+          lives in a monastery and drinks milk and believes and schemes and
+          prays and practices acceptance
           <br /> <br />
           Software Development Engineer, ART19 <br />
           B.S. Computer Science and Economics, Yale University <br />

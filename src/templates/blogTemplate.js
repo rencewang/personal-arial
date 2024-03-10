@@ -57,11 +57,9 @@ const BlogTemplate = ({ data, pageContext }) => {
           </span>
         </div>
       </div>
-      <div>
-        <span className="title highlight">
-          {title.replace('&#58;', ':').replace('&amp;', '&')}
-        </span>
-      </div>
+      <h1 className="title highlight">
+        {title.replace('&#58;', ':').replace('&amp;', '&')}
+      </h1>
       <div style={{ marginTop: '10px' }}>
         <span className="highlight">{updated}</span>
         <span className="highlight"> in </span>
