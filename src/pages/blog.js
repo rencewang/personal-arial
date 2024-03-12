@@ -53,8 +53,9 @@ const BlogPage = () => {
       </summary>
       <span className="highlight">{post.node.frontmatter.description}</span>
       <br />
+
       <Link to={post.node.frontmatter.permalink}>
-        <span className="highlight">Read More</span>
+        <div className="pill">Read More</div>
       </Link>
     </details>
   );

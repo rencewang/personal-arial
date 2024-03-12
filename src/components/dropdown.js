@@ -25,7 +25,7 @@ const Dropdown = ({ options, selected, setSelected }) => {
 
   return (
     <div className={`dropdown ${isOpen ? 'is-open' : ''}`} ref={dropdownRef}>
-      <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
+      <div className="dropdown-header pill" onClick={() => setIsOpen(!isOpen)}>
         <span>{selected}</span> <span>&#9662;</span>
       </div>
 

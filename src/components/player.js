@@ -47,7 +47,7 @@ const Player = () => {
   }, []);
 
   return (
-    <div id="player">
+    <div id="player" className="pill">
       <div className="player-content">
         {song.track ? `${song.track.name}, ${song.track.artists[0].name}` : ''}
       </div>

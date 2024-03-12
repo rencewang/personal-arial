@@ -72,6 +72,7 @@ const BlogTemplate = ({ data, pageContext }) => {
       <div className="postcontent" style={{ fontSize: contentFontSize }}>
         <div dangerouslySetInnerHTML={{ __html: newhtml }} />
       </div>
+
       <div>
         <Link to="/blog">
           <span className="highlight">Back to All Posts</span>

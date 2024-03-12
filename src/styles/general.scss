@@ -182,6 +182,7 @@ footer {
 // DETAILS SUMMARY STYLES ****************************************************
 
 details {
+  margin-bottom: 10px;
   &:not(:first-of-type) {
     margin-top: 20px;
   }
@@ -198,7 +199,12 @@ details {
   > span {
     line-height: 1.25;
   }
-  margin-bottom: 10px;
+  a {
+    text-decoration: none !important;
+  }
+  .pill {
+    margin-top: 5px;
+  }
 }
 
 .year-group:not(:empty) {
@@ -210,26 +216,20 @@ details {
   }
 }
 
+// DROPDOWN STYLES ****************************************************
+
 .dropdown {
   position: relative;
-  width: fit-content;
-  min-width: 130px;
   display: inline-block;
+  min-width: 130px;
   margin: 10px 10px 5px 0;
 
   .dropdown-header {
     cursor: pointer;
-    padding: 5px 10px;
-    border: 1px solid $bodyColor;
-    border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    &:hover > :first-child {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-    }
+    gap: 10px;
   }
 
   .dropdown-options {
@@ -252,9 +252,8 @@ details {
         border-bottom: none;
       }
       &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
+        background-color: $bodyColor;
+        color: $backgroundColor;
       }
     }
   }
@@ -355,9 +354,7 @@ sup {
 
 #player {
   width: fit-content;
-  margin: 10px 0 0 0;
-  border-radius: 10px;
-  border: 1px solid $bodyColor;
+  margin: 15px 0 0 0;
   position: relative;
 
   display: flex;
@@ -366,10 +363,6 @@ sup {
   align-items: center;
   flex-direction: row;
 
-  .player-content,
-  .spotify-logo {
-    margin: 8px 10px;
-  }
   a {
     display: flex;
     align-items: center;
@@ -378,6 +371,12 @@ sup {
       fill: $bodyColor;
     }
   }
+}
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 // FUNCTIONAL STYLES ****************************************************
@@ -420,4 +419,40 @@ sup {
 
 .large-font {
   font-size: 1.5rem;
+}
+
+.pill {
+  padding: 5px 10px;
+  border: 1px solid $bodyColor;
+  border-radius: 10px;
+
+  a {
+    text-decoration: none !important;
+  }
+  &:hover,
+  &:hover * {
+    color: $backgroundColor;
+    background-color: $bodyColor;
+    path {
+      fill: $backgroundColor !important;
+    }
+  }
+}
+
+.link-image {
+  span {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    top: 20%;
+    max-width: 500px;
+  }
+
+  &:hover span {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
 }
