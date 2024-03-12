@@ -51,14 +51,14 @@ const projects = [
     title: 'Spotlist',
     year: '2020-2021',
     description:
-      'Retrieve information about any Spotify playlist because Spotify makes it really hard to copy song names and I cannot type Korean. Built with React and Spotify API',
+      'Retrieve information about any Spotify playlist because Spotify makes it really hard to copy song names and I cannot type Korean. Built with React and Spotify API.',
     category: 'Tool',
     link: 'https://spotlist.netlify.app/',
   },
   {
     title: 'Planned Universe',
     year: '2020',
-    description: 'Blog for collecting floor plans. Built with Gatsby',
+    description: 'Blog for collecting floor plans. Built with Gatsby.',
     category: 'Tool',
     link: 'https://universe.rence.la/',
   },
@@ -66,7 +66,7 @@ const projects = [
     title: 'In My Defense',
     year: '2019',
     description:
-      'An ode to old age. Interactive poetry project that is actually a bunch of song lyrics pieced together.',
+      'An ode to old age. Interactive poetry project of a bunch of song lyrics pieced together.',
     category: 'Creative',
     link: 'https://inmydefense.rence.la/',
   },
@@ -74,7 +74,7 @@ const projects = [
     title: '10 Albums of 2010s',
     year: '2019',
     description:
-      'Showcase of book-binding project for ART 006: Art of the Printed Word, Fall 2019 Yale College. Brought online using the Last.fm API',
+      'Showcase of book-binding project for ART 006: Art of the Printed Word, Fall 2019 Yale College. Brought online using the Last.fm API.',
     category: 'Creative',
     link: 'https://10of10s.netlify.app/',
   },

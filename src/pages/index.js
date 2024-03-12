@@ -1,10 +1,34 @@
 import React from 'react';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import Player from '../components/player';
 import Seo from '../components/seo';
+import {
+  interestArray,
+  aspirationArray,
+  recommendationArray,
+} from '../content/index/index';
 import '../styles/general.scss';
 
 const Index = () => {
+  // Generate a pill block in a flex container
+  const PillBlock = ({ name, link, image }) => (
+    <div className="link-image pill" key={name}>
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      ) : (
+        name
+      )}
+      {image && (
+        <span>
+          <img src={image} alt={name} />
+        </span>
+      )}
+    </div>
+  );
+
   return (
     <div id="text">
       <div className="page-filter"></div>
@@ -52,57 +76,45 @@ const Index = () => {
         <summary>
           <span className="title highlight">Has Interests In</span>
         </summary>
-        <span className="highlight">
-          Architecture <br />
-          Aviation <br />
-          Chinese poems and novels <br />
-          Cities Skylines <br />
-          Everybody else's business <br />
-          Fantasy world building <br />
-          Floor plans <br />
-          <a
-            href="https://eu4.paradoxwikis.com/Burgundy"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Grand strategy games
-          </a>
-          <br />
-          Hotels <br />
-          Interior design <br />
-          Origin stories <br />
-          Perfume <br />
-          Political economy of China <br />
-          Science fiction <br />
-          Song lyrics <br />
-          Tea <br />
-          The European Union <br />
-          Web design <br />
-        </span>
+        <div className="pill-container">
+          {interestArray.map((interest) => (
+            <PillBlock
+              name={interest.name}
+              link={interest.link}
+              image={interest.image}
+            />
+          ))}
+        </div>
       </details>
 
       <details>
         <summary>
           <span className="title highlight">Wishes He Could Be</span>
         </summary>
-        <span className="highlight">
-          A world traveller <br />
-          Better at singing <br />
-          Faster in the head <br />
-          More prolific <br />
-          Never bald <br />
-        </span>
+        <div className="pill-container">
+          {aspirationArray.map((interest) => (
+            <PillBlock
+              name={interest.name}
+              link={interest.link}
+              image={interest.image}
+            />
+          ))}
+        </div>
       </details>
 
       {/* <details open>
           <summary>
             <span className="title highlight">Recommends</span>
           </summary>
-          <span className="highlight">
-            Snapchat <br />
-            Crying <br />
-            Genshin Impact <br />
-          </span>
+        <div className="pill-container">
+        {recommendationArray.map((interest) => (
+            <PillBlock
+              name={interest.name}
+              link={interest.link}
+              image={interest.image}
+            />
+          ))}
+        </div>
         </details> */}
     </div>
   );

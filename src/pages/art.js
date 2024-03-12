@@ -64,7 +64,7 @@ const ArtPage = () => {
 
           {category.map((data, index) => (
             <div className="gallery-image" key={index}>
-              <GatsbyImage image={data} alt={data.name} />
+              <GatsbyImage image={data} alt={data.name || ''} />
             </div>
           ))}
         </details>
