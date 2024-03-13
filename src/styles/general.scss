@@ -199,11 +199,12 @@ details {
   > span {
     line-height: 1.25;
   }
-  a {
+  .pill a {
     text-decoration: none !important;
   }
   .pill {
     margin-top: 5px;
+    width: fit-content;
   }
 }
 

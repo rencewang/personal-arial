@@ -21,19 +21,17 @@ const BlogTemplate = ({ data, pageContext }) => {
 
   const fontSizeOptions = { Small: '1rem', Medium: '1.5rem', Large: '2rem' };
   const defaultFontSize = 'Medium';
-  const [contentFontSize, setContentFontSize] = useState(
-    fontSizeOptions[defaultFontSize]
-  );
+  const [contentFontSize, setContentFontSize] = useState(defaultFontSize);
 
   const handleContentFontSizeChange = (option) => {
-    setContentFontSize(fontSizeOptions[option]);
+    setContentFontSize(option);
   };
 
   return (
     <article className="post">
       <Dropdown
         options={Object.keys(fontSizeOptions)}
-        selected={defaultFontSize}
+        selected={contentFontSize}
         setSelected={handleContentFontSizeChange}
       />
 
@@ -69,7 +67,10 @@ const BlogTemplate = ({ data, pageContext }) => {
         </div>
       )}
 
-      <div className="postcontent" style={{ fontSize: contentFontSize }}>
+      <div
+        className="postcontent"
+        style={{ fontSize: fontSizeOptions[contentFontSize] }}
+      >
         <div dangerouslySetInnerHTML={{ __html: newhtml }} />
       </div>
 

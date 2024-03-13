@@ -45,22 +45,21 @@ const Index = () => {
           <br /> <br />
           Software Development Engineer, ART19 <br />
           B.S. Computer Science and Economics, Yale University <br />
-          B.A. Political Science, Yale University
-          <br />
+          B.A. Political Science, Yale University <br />
           <a
             href="https://www.instagram.com/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginRight: '10px' }}
           >
-            <span className="highlight">Instagram</span>
+            Instagram
           </a>
           <a
             href="https://www.linkedin.com/in/rencewang/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="highlight">Linkedin</span>
+            LinkedIn
           </a>
         </span>
       </details>
