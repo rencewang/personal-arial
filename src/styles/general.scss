@@ -146,6 +146,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
     #greeting {
       margin-left: 15px;
       text-align: right;
@@ -282,7 +283,6 @@ sup {
 }
 
 .footnotes {
-  margin-top: 50px;
   font-size: 0.8rem;
   hr {
     border: none;
