@@ -35,7 +35,16 @@ const BlogPage = () => {
 
   const defaultCategory = 'All Category';
   const defaultYear = 'All Year';
-  const years = ['All Year', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const years = [
+    'All Year',
+    '2024',
+    '2023',
+    '2022',
+    '2021',
+    '2020',
+    '2019',
+    '2018',
+  ];
   const categories = ['All Category', 'Essay', 'Review'];
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
