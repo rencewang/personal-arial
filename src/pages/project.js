@@ -41,9 +41,11 @@ const ProjectPage = () => {
           <span className="highlight">{project.description}</span>
           <br />
 
-          <a href={project.link} target="_blank" rel="noreferrer">
-            <div className="pill">View</div>
-          </a>
+          <div className="pill">
+            <a href={project.link} target="_blank" rel="noreferrer">
+              View
+            </a>
+          </div>
         </details>
       ))}
     </section>
