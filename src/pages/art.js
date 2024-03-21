@@ -80,15 +80,26 @@ const ArtPage = () => {
         setSelected={setCategory}
       />
 
-      {displayedArt.map((piece, index) => (
-        <div className="separate gallery-piece">
-          {piece.title ? <div className="title">{piece.title}</div> : null}
-          <div className="gallery-image" key={index}>
-            <GatsbyImage image={piece.image} alt={piece.title || ''} />
+      {displayedArt.map((piece, index) =>
+        piece.title ? (
+          <details className="separate gallery-piece" key={index} open>
+            <summary>
+              <span className="title">{piece.title}</span>
+            </summary>
+            <div className="gallery-image">
+              <GatsbyImage image={piece.image} alt={piece.title || ''} />
+            </div>
+            {piece.medium ? renderMedium(piece.medium) : null}
+          </details>
+        ) : (
+          <div className="separate gallery-piece" key={index} open>
+            <div className="gallery-image">
+              <GatsbyImage image={piece.image} alt={piece.title || ''} />
+            </div>
+            {piece.medium ? renderMedium(piece.medium) : null}
           </div>
-          {piece.medium ? renderMedium(piece.medium) : null}
-        </div>
-      ))}
+        )
+      )}
     </section>
   );
 };
