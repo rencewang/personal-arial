@@ -69,32 +69,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'traditional',
-        path: `${__dirname}/static/artimages/traditional/`,
-      },
-      __key: 'traditional',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'digital',
-        path: `${__dirname}/static/artimages/digital/`,
-      },
-      __key: 'digital',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'design',
-        path: `${__dirname}/static/artimages/design/`,
-      },
-      __key: 'design',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'art',
-        path: './static/artimages/',
+        path: `${__dirname}/static/artimages/`,
       },
       __key: 'art',
     },

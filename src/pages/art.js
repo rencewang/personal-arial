@@ -1,35 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Seo from '../components/seo';
+import Dropdown from '../components/dropdown';
 
 const ArtPage = () => {
   const imageQuery = useStaticQuery(graphql`
     query {
-      traditional: allFile(
-        filter: { sourceInstanceName: { eq: "traditional" } }
-      ) {
-        edges {
-          node {
-            name
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-      design: allFile(filter: { sourceInstanceName: { eq: "design" } }) {
-        edges {
-          node {
-            name
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-      digital: allFile(filter: { sourceInstanceName: { eq: "digital" } }) {
+      art: allFile(filter: { sourceInstanceName: { eq: "art" } }) {
         edges {
           node {
             name
@@ -42,21 +21,58 @@ const ArtPage = () => {
     }
   `);
 
-  const traditional = [];
-  imageQuery.traditional.edges.map((data) =>
-    traditional.push(getImage(data.node))
-  );
-  const design = [];
-  imageQuery.design.edges.map((data) => design.push(getImage(data.node)));
-  const digital = [];
-  imageQuery.digital.edges.map((data) => digital.push(getImage(data.node)));
+  const defaultCategory = 'Drawing';
+  const artCategories = ['Painting', 'Design', 'Drawing'];
 
-  let allArt = [traditional, design, digital];
-  let artNames = ['Painting & Drawing', 'Design', 'Digital'];
+  const drawing = [];
+  const painting = [];
+  const art = [];
+  imageQuery.art.edges.map((piece) => {
+    const image = getImage(piece.node);
+    art.push({ title: piece.node.name, image });
+  });
+  // imageQuery.painting.edges.map((piece) => painting.push(getImage(piece.node)));
+  // imageQuery.design.edges.map((piece) => design.push(getImage(piece.node)));
+
+  console.log(drawing);
+
+  let artContent = {
+    'All Art': [...drawing, ...painting, ...art],
+    Drawing: art,
+    Painting: painting,
+    Design: art,
+  };
+
+  const [category, setCategory] = useState(defaultCategory);
+  const [displayedArt, setDisplayedArt] = useState(artContent[category]);
+
+  useEffect(() => {
+    setDisplayedArt(artContent[category]);
+  }, [category]);
+
+  // let allArt = [traditional, design, digital];
+  // let artNames = ['Painting', 'Design', 'Digital'];
 
   return (
     <section className="gallery">
-      {allArt.map((category, index) => (
+      <Dropdown
+        options={artCategories}
+        selected={category}
+        setSelected={setCategory}
+      />
+
+      {displayedArt.map((piece, index) => (
+        <div>
+          {piece.title ? (
+            <span className="title highlight">{piece.title}</span>
+          ) : null}
+          <div className="gallery-image" key={index}>
+            <GatsbyImage image={piece.image} alt={piece.title || ''} />
+          </div>
+        </div>
+      ))}
+
+      {/* {allArt.map((category, index) => (
         <details key={index} open={index === allArt.length - 1}>
           <summary>
             <span className="title highlight">{artNames[index]}</span>
@@ -68,7 +84,7 @@ const ArtPage = () => {
             </div>
           ))}
         </details>
-      ))}
+      ))} */}
     </section>
   );
 };

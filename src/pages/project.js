@@ -5,8 +5,11 @@ import Dropdown from '../components/dropdown';
 import projects from '../content/projects/projects';
 
 const ProjectPage = () => {
-  const projectCategories = ['All Projects', 'Tool', 'Creative', 'Research'];
   const defaultCategory = 'All Projects';
+  const projectCategories = [
+    defaultCategory,
+    ...new Set(projects.map((project) => project.category)),
+  ];
 
   const [category, setCategory] = useState(defaultCategory);
   const [displayedProjects, setDisplayedProjects] = useState(projects);

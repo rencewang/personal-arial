@@ -235,6 +235,7 @@ details {
   }
 
   .dropdown-options {
+    z-index: 1000;
     display: none;
     list-style: none;
     width: 100%;
@@ -243,6 +244,7 @@ details {
     position: absolute;
     border: 1px solid $bodyColor;
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     overflow: hidden;
 
@@ -343,7 +345,6 @@ sup {
 // ART STYLES ****************************************************
 
 .gallery-image {
-  z-index: 999;
   margin: 20px 0;
 
   &:first-of-type {
