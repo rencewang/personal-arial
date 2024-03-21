@@ -16,20 +16,18 @@ const Layout = ({ children }) => {
   return (
     <main>
       <header>
-        <div id="top">
-          <Link to="/">rence.la</Link>
+        <Link to="/">rence.la</Link>
 
-          <div className="navigation">
-            <nav>
-              <Link to="/blog">Writing</Link>
-            </nav>
-            <nav>
-              <Link to="/project">Project</Link>
-            </nav>
-            <nav>
-              <Link to="/art">Art</Link>
-            </nav>
-          </div>
+        <div className="navigation">
+          <nav>
+            <Link to="/blog">Writing</Link>
+          </nav>
+          <nav>
+            <Link to="/project">Project</Link>
+          </nav>
+          <nav>
+            <Link to="/art">Art</Link>
+          </nav>
         </div>
       </header>
 

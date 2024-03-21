@@ -29,10 +29,8 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef}>
-      <div id="bottom">
-        <div id="clock">Arial 6.1.1 © 2024</div>
-        <div id="greeting">{greetingText}</div>
-      </div>
+      <div id="clock">Arial 6.1.1 © 2024</div>
+      <div id="greeting">{greetingText}</div>
     </footer>
   );
 };
