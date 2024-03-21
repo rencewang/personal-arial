@@ -4,9 +4,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Seo from '../components/seo';
 import Dropdown from '../components/dropdown';
+import Art from '../content/art/art';
 
 const ArtPage = () => {
-  const imageQuery = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       art: allFile(filter: { sourceInstanceName: { eq: "art" } }) {
         edges {
@@ -21,37 +22,55 @@ const ArtPage = () => {
     }
   `);
 
-  const defaultCategory = 'Drawing';
-  const artCategories = ['Painting', 'Design', 'Drawing'];
+  const capitalize = (string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
 
-  const drawing = [];
-  const painting = [];
-  const art = [];
-  imageQuery.art.edges.map((piece) => {
-    const image = getImage(piece.node);
-    art.push({ title: piece.node.name, image });
+  // Add the queried GatsbyImage to each piece of art
+  const piecesWithGatsbyImage = Art.map((piece) => {
+    const imageData = data.art.edges.find(
+      (node) => node.node.name === piece.name
+    );
+
+    return {
+      ...piece,
+      category: capitalize(piece.category),
+      image: getImage(imageData.node),
+    };
   });
-  // imageQuery.painting.edges.map((piece) => painting.push(getImage(piece.node)));
-  // imageQuery.design.edges.map((piece) => design.push(getImage(piece.node)));
 
-  console.log(drawing);
-
-  let artContent = {
-    'All Art': [...drawing, ...painting, ...art],
-    Drawing: art,
-    Painting: painting,
-    Design: art,
-  };
+  const defaultCategory = 'All Art';
+  const artCategories = [
+    'All Art',
+    ...new Set(piecesWithGatsbyImage.map((piece) => piece.category)),
+  ];
 
   const [category, setCategory] = useState(defaultCategory);
-  const [displayedArt, setDisplayedArt] = useState(artContent[category]);
+  const [displayedArt, setDisplayedArt] = useState(piecesWithGatsbyImage);
+
+  // When category is set, filter the art pieces by category
+  const filterArt = () => {
+    if (category === defaultCategory) {
+      return piecesWithGatsbyImage;
+    }
+    return piecesWithGatsbyImage.filter((piece) => piece.category === category);
+  };
 
   useEffect(() => {
-    setDisplayedArt(artContent[category]);
+    setDisplayedArt(filterArt());
   }, [category]);
 
-  // let allArt = [traditional, design, digital];
-  // let artNames = ['Painting', 'Design', 'Digital'];
+  // return individual mediums from medium string (delimited by comma), and wrapped in a span
+  const renderMedium = (mediums) => {
+    return (
+      <div className="gallery-medium">
+        {mediums.split(',').map((medium, index) => (
+          <span className="pill" key={index}>
+            {medium.trim()}
+          </span>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section className="gallery">
@@ -62,29 +81,14 @@ const ArtPage = () => {
       />
 
       {displayedArt.map((piece, index) => (
-        <div>
-          {piece.title ? (
-            <span className="title highlight">{piece.title}</span>
-          ) : null}
+        <div className="separate gallery-piece">
+          {piece.title ? <div className="title">{piece.title}</div> : null}
           <div className="gallery-image" key={index}>
             <GatsbyImage image={piece.image} alt={piece.title || ''} />
           </div>
+          {piece.medium ? renderMedium(piece.medium) : null}
         </div>
       ))}
-
-      {/* {allArt.map((category, index) => (
-        <details key={index} open={index === allArt.length - 1}>
-          <summary>
-            <span className="title highlight">{artNames[index]}</span>
-          </summary>
-
-          {category.map((data, index) => (
-            <div className="gallery-image" key={index}>
-              <GatsbyImage image={data} alt={data.name || ''} />
-            </div>
-          ))}
-        </details>
-      ))} */}
     </section>
   );
 };

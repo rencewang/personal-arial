@@ -52,7 +52,11 @@ const BlogPage = () => {
   const [displayedPosts, setDisplayedPosts] = useState();
 
   const onePost = (post, postIndex) => (
-    <details key={postIndex} open={post.node.frontmatter.defaultExpanded}>
+    <details
+      className="separate"
+      key={postIndex}
+      open={post.node.frontmatter.defaultExpanded}
+    >
       <summary>
         <span className="title highlight">{post.node.frontmatter.title}</span>
         &nbsp;
@@ -86,7 +90,7 @@ const BlogPage = () => {
         .slice(0)
         .reverse()
         .map((year, index) => (
-          <div key={index} className="year-group">
+          <div key={index}>
             {year.edges.map((post, postIndex) => {
               if (selectedCategory === defaultCategory) {
                 return onePost(post, postIndex);

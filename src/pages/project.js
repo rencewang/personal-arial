@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 import Seo from '../components/seo';
 import Dropdown from '../components/dropdown';
-import projects from '../content/projects/projects';
+import Projects from '../content/projects/projects';
 
 const ProjectPage = () => {
   const defaultCategory = 'All Projects';
   const projectCategories = [
     defaultCategory,
-    ...new Set(projects.map((project) => project.category)),
+    ...new Set(Projects.map((project) => project.category)),
   ];
 
   const [category, setCategory] = useState(defaultCategory);
-  const [displayedProjects, setDisplayedProjects] = useState(projects);
+  const [displayedProjects, setDisplayedProjects] = useState(Projects);
 
   const filterProjects = () => {
     if (category === defaultCategory) {
-      return projects;
+      return Projects;
     }
-    return projects.filter((project) => project.category === category);
+    return Projects.filter((project) => project.category === category);
   };
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const ProjectPage = () => {
       />
 
       {displayedProjects.map((project, index) => (
-        <details key={index} open={index < 3}>
+        <details className="separate" key={index} open={index < 3}>
           <summary>
             <span className="title highlight">{project.title}</span>
             &nbsp;

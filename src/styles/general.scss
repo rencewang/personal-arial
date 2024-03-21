@@ -209,15 +209,6 @@ details {
   }
 }
 
-.year-group:not(:empty) {
-  &:not(:first-child) {
-    margin-top: 10px;
-  }
-  &:not(:last-child) {
-    border-bottom: 1px solid $bodyColor;
-  }
-}
-
 // DROPDOWN STYLES ****************************************************
 
 .dropdown {
@@ -344,11 +335,17 @@ sup {
 
 // ART STYLES ****************************************************
 
-.gallery-image {
-  margin: 20px 0;
+.gallery-piece {
+  margin-top: 20px;
 
-  &:first-of-type {
-    margin-top: 0;
+  .gallery-image {
+    margin: 10px 0;
+  }
+  .gallery-medium {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 }
 
@@ -457,4 +454,9 @@ sup {
       width: 100%;
     }
   }
+}
+
+.separate:not(:empty) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $bodyColor;
 }
