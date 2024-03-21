@@ -42,7 +42,6 @@ const ProjectPage = () => {
           </summary>
 
           <div>{project.description}</div>
-          <br />
 
           <div className="pill">
             <a href={project.link} target="_blank" rel="noreferrer">
