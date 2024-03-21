@@ -58,14 +58,11 @@ const BlogPage = () => {
       open={post.node.frontmatter.defaultExpanded}
     >
       <summary>
-        <span className="title highlight">{post.node.frontmatter.title}</span>
+        <span className="title">{post.node.frontmatter.title}</span>
         &nbsp;
-        <span className="highlight bold italic">
-          {post.node.frontmatter.updated}
-        </span>
+        <span className="bold italic">{post.node.frontmatter.updated}</span>
       </summary>
-      <span className="highlight">{post.node.frontmatter.description}</span>
-      <br />
+      <div>{post.node.frontmatter.description}</div>
 
       <div className="pill">
         <Link to={post.node.frontmatter.permalink}>Read More</Link>

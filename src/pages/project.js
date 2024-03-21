@@ -36,12 +36,12 @@ const ProjectPage = () => {
       {displayedProjects.map((project, index) => (
         <details className="separate" key={index} open={index < 3}>
           <summary>
-            <span className="title highlight">{project.title}</span>
+            <span className="title">{project.title}</span>
             &nbsp;
-            <span className="highlight bold italic">{project.year}</span>
+            <span className="bold italic">{project.year}</span>
           </summary>
 
-          <span className="highlight">{project.description}</span>
+          <div>{project.description}</div>
           <br />
 
           <div className="pill">

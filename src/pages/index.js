@@ -35,9 +35,9 @@ const Index = () => {
 
       <details open>
         <summary>
-          <span className="title highlight">Lawrence Wang</span>
+          <span className="title">Lawrence Wang</span>
         </summary>
-        <span className="highlight">
+        <div>
           writes and codes and sings and draws and floats in space and stares
           into walls and listens to Taylor Swift and turns on all the lights and
           lives in a monastery and drinks milk and schemes and believes and
@@ -61,19 +61,19 @@ const Index = () => {
           >
             LinkedIn
           </a>
-        </span>
+        </div>
       </details>
 
       <details>
         <summary>
-          <span className="title highlight">Is Listening To</span>
+          <span className="title">Is Listening To</span>
         </summary>
         <Player />
       </details>
 
       <details open>
         <summary>
-          <span className="title highlight">Has Interests In</span>
+          <span className="title">Has Interests In</span>
         </summary>
         <div className="pill-container">
           {interestArray.map((interest) => (
@@ -88,7 +88,7 @@ const Index = () => {
 
       <details>
         <summary>
-          <span className="title highlight">Wishes He Could Be</span>
+          <span className="title">Wishes He Could Be</span>
         </summary>
         <div className="pill-container">
           {aspirationArray.map((interest) => (
@@ -103,7 +103,7 @@ const Index = () => {
 
       {/* <details open>
           <summary>
-            <span className="title highlight">Recommends</span>
+            <span className="title">Recommends</span>
           </summary>
         <div className="pill-container">
         {recommendationArray.map((interest) => (
