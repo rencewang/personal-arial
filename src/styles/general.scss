@@ -10,6 +10,7 @@
   --background-color: #000000;
   --select-color: #f3f3f3;
   --select-background-color: #1e1cd8;
+  overscroll-behavior: none;
 }
 
 $bodyColor: var(--text-color);
