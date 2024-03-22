@@ -10,7 +10,6 @@
   --background-color: #000000;
   --select-color: #f3f3f3;
   --select-background-color: #1e1cd8;
-  overscroll-behavior: none;
 }
 
 $bodyColor: var(--text-color);
@@ -35,6 +34,7 @@ $mediaRule: 500px;
   }
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
 
   color: $bodyColor;
   font-family: $bodyFont;
