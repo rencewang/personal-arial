@@ -111,7 +111,8 @@ main {
   padding: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
   overflow: hidden;
 }
