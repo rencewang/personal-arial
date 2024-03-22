@@ -88,8 +88,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
   overflow: hidden;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100svh;
 
   @media (max-width: $mediaRule) {
     font-size: 0.8rem;
@@ -104,7 +103,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: $backgroundColor;
 }
 
@@ -150,6 +149,12 @@ footer {
     margin-left: 15px;
     text-align: right;
   }
+
+  // @media (max-width: $mediaRule) {
+  //   position: fixed;
+  //   bottom: 0;
+  //   width: 100%;
+  // }
 }
 
 .content-container {
