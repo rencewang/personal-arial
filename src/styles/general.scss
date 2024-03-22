@@ -88,6 +88,8 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
   overflow: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 
   @media (max-width: $mediaRule) {
     font-size: 0.8rem;
