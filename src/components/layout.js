@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
@@ -13,8 +13,24 @@ const Layout = ({ children }) => {
     contentRef.current.scrollTop = 0;
   }, [children]);
 
+  const [gridHeight, setGridHeight] = useState('100vh');
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const updateGridHeight = () => {
+        setGridHeight(window.innerHeight);
+      };
+
+      updateGridHeight();
+      window.addEventListener('scroll', updateGridHeight);
+
+      return () => {
+        window.removeEventListener('scroll', updateGridHeight);
+      };
+    }
+  }, []);
+
   return (
-    <main>
+    <main style={{ height: gridHeight }}>
       <header>
         <Link to="/">rence.la</Link>
 
