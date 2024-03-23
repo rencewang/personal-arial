@@ -123,9 +123,6 @@ main {
 }
 
 header {
-  // position: fixed;
-  // width: 100%;
-  // top: 0;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -157,12 +154,6 @@ footer {
     margin-left: 15px;
     text-align: right;
   }
-
-  // @media (max-width: $mediaRule) {
-  //   position: fixed;
-  //   bottom: 0;
-  //   width: 100%;
-  // }
 }
 
 .content-container {

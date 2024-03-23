@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
     contentRef.current.scrollTop = 0;
   }, [children]);
 
+  // Set grid height to window height
   const [gridHeight, setGridHeight] = useState('100vh');
   useEffect(() => {
     if (typeof window !== 'undefined') {
