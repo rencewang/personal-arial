@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef}>
-      <div id="clock">Arial 6.3.1 © 2024</div>
+      <div id="clock">Arial 6.3.3 © 2024</div>
       <div id="greeting">{greetingText}</div>
     </footer>
   );

@@ -1,3 +1,3 @@
-rence.la v6.0
+rence.la v6.x
 
 with three.js, arial
