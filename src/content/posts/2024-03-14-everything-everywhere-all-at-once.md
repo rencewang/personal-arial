@@ -14,7 +14,7 @@ seoDescription: 'Movie Review: The Daniels accomplishes a cinematic masterpiece 
 
 In New York, I knew the night was going to be an emotional rollercoaster when Specks of Time started playing. Just 90 minutes ago we were forced to chug two cups of boba in front of the security guard at the AMC. He looked as if he would rather have let us in than having to bear the awkwardness of that scene. And now I was crying.
 
-In Los Angeles, I had to apologize for my loud sniffling that only got worse through the screening at a friend's Airbnb. In Tokyo, I scavenged for toilet paper from bathroom stalls at the IMAX cinema to wipe my eyes after watching. In Phuket, I stared at the ceiling of the van, in a futile attempt to hold back my tears, as other cruise-bound tourists were shuffling in. The breaking news was just in: Michelle Yeoh became the first Asian to win Best Actress at the Oscars.
+In Los Angeles, I had to apologize for my loud sniffling that only got worse through the screening at a friend's Airbnb. In Tokyo, I scavenged for toilet paper from bathroom stalls at the IMAX cinema to wipe my eyes. In Phuket, I stared at the ceiling of the van, in a futile attempt to hold back my tears, as other cruise-bound tourists were shuffling in. The breaking news was just in: Michelle Yeoh became the first Asian to win Best Actress at the Oscars.
 
 Also in a bathtub in Bangkok, in my bed in San Francisco, in Edinburgh, the list goes on — too many tears have I shed for _Everything Everywhere All At Once_.
 
