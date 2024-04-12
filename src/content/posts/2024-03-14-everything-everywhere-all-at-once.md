@@ -16,7 +16,7 @@ In New York, I knew the night was going to be an emotional rollercoaster when Sp
 
 In Los Angeles, I had to apologize for my loud sniffling that only got worse through the screening at a friend's Airbnb. In Tokyo, I scavenged for toilet paper from bathroom stalls at the IMAX cinema to wipe my eyes. In Phuket, I stared at the ceiling of the van, in a futile attempt to hold back my tears, as other cruise-bound tourists were shuffling in. The breaking news was just in: Michelle Yeoh became the first Asian to win Best Actress at the Oscars.
 
-Also in a bathtub in Bangkok, in my bed in San Francisco, in Edinburgh, the list goes on — too many tears have I shed for _Everything Everywhere All At Once_.
+Also in a bathtub in Bangkok, in my bed in San Francisco, in the British Airways lounge in Edinburgh, the list goes on — too many tears have I shed for _Everything Everywhere All At Once_.
 
 The film was an instant classic to me. Yes, the buttplug and sausage fingers were a bit excessive, but everything else was perfect. The visual and sonic maximalism was riveting. The screenplay sustained a coherence that _Doctor Strange in the Multiverse of Madness_ wishes it had. The story was simultaneously as vast as the entire universe and as intimate as one family. All the performances were exceptional.
 
