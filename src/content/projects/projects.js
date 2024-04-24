@@ -8,6 +8,14 @@ const projects = [
     link: 'https://wall.rence.la/',
   },
   {
+    title: 'Radio',
+    year: '2023',
+    description:
+      'Personal directory of audio files from voice memos to singing. Site inspired by designs of independent radios. [Under Development].',
+    category: 'Creative',
+    link: 'https://radio.rence.la/',
+  },
+  {
     title: 'Spotlist Analysis',
     year: '2022',
     description:
