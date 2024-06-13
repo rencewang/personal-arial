@@ -5,7 +5,7 @@ year: 2023
 published: true
 category: Essay
 tag: [Reflection]
-permalink: '/blog/things-I-didnt-know'
+permalink: '/blog/the-things-I-didnt-know'
 type: post
 defaultExpanded: false
 description: 'The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart. '
@@ -30,7 +30,7 @@ I didn’t grow up the way my elementary school-self imagined, otherwise I’d g
 
 On my college apps, I mentioned that I don’t want to come out of college knowing what exactly to do with my life. Indeed, those are the shoes I’m in now. The amount of unknown that looms ahead is anxiety-inducing: apartment-hunting, making friends in the workplace, cooking and living on my own. But what comforts me is that I know, someday, looking back, I will appreciate this moment, and the hope that fills it.
 
-That’s why, for as much as I find it amusing that a psychic once told my mom that I’d marry and divorce four times, I don't believe in fortunes. An uncertain future is the most interesting of futures. One in which anything is possible, with infinite paths ahead of us.
+Hence, for as much as I find it amusing that a psychic once told my mom that I’d marry and divorce four times, I don't believe in fortunes. An uncertain future is the most interesting of futures. One in which anything is possible, with infinite paths ahead of us.
 
 So are there now. Infinite paths, waiting for our next move. For the past weeks, I’ve been wondering what I’ll pen down, about the end of it all. On move-out day, my gaze caught a patch of scratches on the granite tiles in the Timothy Dwight College foyer, accentuated by the shadows casted on it by a setting sun. I never noticed those marks before. I don’t know why but it made me think, for the first time (because I’ve been shitting on New Haven for so long), am I really ready to leave this place?
 
