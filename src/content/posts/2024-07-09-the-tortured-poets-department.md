@@ -9,7 +9,7 @@ permalink: '/blog/the-tortured-poets-department'
 type: post
 defaultExpanded: true
 description: 'Creating is an outlet. Not a performance. Art is personal. It can be a private view. Such is what I’ve believed, and so I think is the case for The Tortured Poets Department. Even if the album is of no value to anyone else, writing was a lifeline for Taylor. Meet someone, kiss someone. Love someone, lose someone. How do we record history for our future self? How do we project from now into eternity? How do we preserve the vibrations of emotions through time? What can we do but pen it all down.'
-seoDescription: 'Album Review: Taylor Swift subverts the iconography that's become her in The Tortured Poets Department. She's resentful and furious, of all the things she's sacrificed to stay on top. She admits to a lot of flaws and mocks her fans. But what makes this album compelling is how honest she is about it all in this genuine sprawl.'
+seoDescription: "Album Review: Taylor Swift subverts the iconography that's become her in The Tortured Poets Department. She's resentful and furious, of all the things she's sacrificed to stay on top. She admits to a lot of flaws and mocks her fans. But what makes this album compelling is how honest she is about it all in this genuine sprawl."
 ---
 
 Taylor Swift has long been complicit in creating the monstrosity that is obsessed with her, and on _The Tortured Poets Department_, she’s trying to break free. Fame comes with a price, and for Taylor Swift, that price is the demands of fans who feel a parasocial connection to her tales. She’s reaping what she sowed: after all, she’s the one who coalesced her personal narratives into a shared experience for millions. 
