@@ -14,11 +14,11 @@ seoDescription: 'Movie Review: The Daniels accomplishes a cinematic masterpiece 
 
 When Specks of Time started playing, I knew the night was going to be an emotional rollercoaster. Just 90 minutes ago we were forced to chug two cups of boba in front of the security guard at the Midtown AMC. He looked as if he would rather have let us in than having to bear the awkwardness of that scene. And now I was crying.
 
-In Los Angeles, I had to apologize for my loud sniffling that only got worse through the screening at a friend's Airbnb. In Tokyo, I scavenged for toilet paper from the IMAX theater's bathroom stalls. In Phuket, I futilely attempted to hold back my tears as other cruise-bound tourists were jumping in the van. The breaking news just came in: Michelle Yeoh became the first Asian to win Best Actress at the Oscars.
+In Los Angeles, I had to apologize for my loud sniffling that only got worse through the screening at a friend's Airbnb. In Tokyo, I scavenged for toilet paper from the IMAX theater's bathroom stalls. In Phuket, I futilely attempted to hold back my tears as other cruise-bound tourists were jumping in the van. The breaking news just came in: Michelle Yeoh was the first Asian to win Best Actress at the Oscars.
 
 Also in a bathtub in Bangkok, in my bed in San Francisco, in the British Airways lounge in Edinburgh, the list goes on — too many tears have I shed for _Everything Everywhere All At Once_.
 
-The film was an instant classic to me. Yes, the buttplug and sausage fingers became a bit excessive, but everything else was perfect. The visual and sonic maximalism was riveting. The screenplay sustained a coherence that _Doctor Strange in the Multiverse of Madness_ wishes it had. The story was simultaneously as vast as the entire universe and as intimate as one family. All the performances were exceptional.
+The film was an instant classic to me. Yes, the buttplug and sausage fingers felt a tad bit excessive, but everything else was perfect. The visual and sonic maximalism was riveting. The screenplay sustained a coherence that _Doctor Strange in the Multiverse of Madness_ wishes it had. The story was simultaneously as vast as the entire universe and as intimate as one family. All the performances were exceptional.
 
 The Chinese internet bashed the film for its cliched solution to despair. Sure, answering nihilism with love and kindness is cliche, but that doesn’t mean the story isn’t worth telling. Basic is good. And in this case, the message of “be kind, especially when we don’t know what’s going on” is eternal. That timeless theme, the first-generation immigrant experience, and the fear of not being enough, those are the reasons why I keep crying.
 
