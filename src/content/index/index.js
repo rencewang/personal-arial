@@ -106,6 +106,11 @@ export const interestArray = [
     image: null,
   },
   {
+    name: 'Karaoke',
+    link: null,
+    image: null,
+  },
+  {
     name: 'Origin stories',
     link: null,
     image: null,
@@ -149,27 +154,37 @@ export const interestArray = [
 
 export const aspirationArray = [
   {
-    name: 'A world traveller',
+    name: 'Believe',
     link: null,
     image: null,
   },
   {
-    name: 'Better at singing',
+    name: 'Dance',
     link: null,
     image: null,
   },
   {
-    name: 'Faster in the head',
+    name: 'Go to the Sun',
     link: null,
     image: null,
   },
   {
-    name: 'More prolific',
+    name: 'Hustle',
     link: null,
     image: null,
   },
   {
-    name: 'Never bald',
+    name: 'Write more',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Fight hair loss',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Speak Japanese',
     link: null,
     image: null,
   },

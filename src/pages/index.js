@@ -38,11 +38,6 @@ const Index = () => {
           <span className="title">Lawrence Wang</span>
         </summary>
         <div>
-          writes and codes and sings and draws and floats in space and stares
-          into walls and listens to Taylor Swift and turns on all the lights and
-          lives in a monastery and drinks milk and schemes and believes and
-          practices acceptance
-          <br /> <br />
           Software Development Engineer, ART19 <br />
           B.S. Computer Science and Economics, Yale University <br />
           B.A. Political Science, Yale University <br />
@@ -88,7 +83,7 @@ const Index = () => {
 
       <details>
         <summary>
-          <span className="title">Wishes He Could Be</span>
+          <span className="title">Wishes He Could</span>
         </summary>
         <div className="pill-container">
           {aspirationArray.map((interest) => (
