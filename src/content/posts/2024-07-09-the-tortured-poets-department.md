@@ -43,4 +43,6 @@ In the song 愚月 wrote for his 23rd birthday, he sings:
 
 I’m 23 too. I hope that'll be the case for me too. For all the smoke and mirrors I deploy, I still publish myself as an open book online, so that those pages might fly somewhere I can’t physically be, and touch someone far, far away.
 
-Creating is an outlet. Not a performance. Art is personal. It can be a private view. Understanding is few and far between. Thereby not a dependable source of meaning. Life is long. We need something by which to remember the pain. Such is what I've come to believe, and so is the case for _The Tortured Poets Department_. Meet someone, kiss someone. Love someone, lose someone. How do we record history for our future self? How do we project from now into eternity? How do we preserve the vibrations of emotions through time? What can we do but pen it all down.
+Creating is an outlet. Not a performance. Art is personal. It can be a private view. Understanding is few and far between. Thereby not a dependable source of meaning. Life is long. We need something by which to remember the pain. 
+
+Such is what I've come to believe, and so is the case for _The Tortured Poets Department_. Meet someone, kiss someone. Love someone, lose someone. How do we record history for our future self? How do we project from now into eternity? How do we preserve the vibrations of emotions through time? What can we do but pen it all down.
