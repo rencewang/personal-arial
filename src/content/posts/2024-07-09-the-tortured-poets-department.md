@@ -26,9 +26,9 @@ As much as people feel overexposed to her chart-topping success and ubiquitous g
 
 So there’s her answer to the price of going public: stop giving a fuck. Return art to the artist. Let the process of creation justify the product. Just like life: the journey alone should justify the end.
 
-And I agree. After going public on Instagram and what not, I’ve learned that, with all peace and love, no one cares — so I should care less too. I learned that everybody moves on, and that one person’s cringe doesn’t really mean anything. That the world is bigger than me, and I’m shielded by others’ apathy.  
+And I agree. After going public on Instagram and what not, I’ve learned that, with all peace and love, no one cares — so I should care less too. I learned that everybody moves on, and that one person’s cringe doesn’t really mean anything. That the world is bigger than me, and I’m shielded by others’ apathy.
 
-Maybe it’s a mental illness to engage in self-revisionism, but I kind of enjoy living double lives and smearing the boundary between fiction and nonfiction, between my inner and outer voices. That’s what creating allows you to do: you can capture today for tomorrow, define things on your terms, and weave those snapshots into alternative histories. Publicizing, then, is part of the metaphysical quest to prove one’s existence beyond oneself by impacting an oblivious world. One that only knows what you let it see. With certain contexts removed, whatever I display **is** the truth, and that’s the power trip. 
+Maybe it’s a mental illness to engage in self-revisionism, but I kind of enjoy living double lives and smearing the boundary between fiction and nonfiction, between my inner and outer voices. That’s what creating allows you to do: you can capture today for tomorrow, define things on your terms, and weave those snapshots into alternative histories. Publicizing, then, is part of the metaphysical quest to prove one’s existence beyond oneself by impacting an oblivious world. One that only knows what you let it see. With certain contexts removed, whatever I display **is** the truth, and that’s the power trip.
 
 There’s a Chinese saying that to be perceived is to be misunderstood. To be misunderstood is the price I'll pay. Long as I can control my narrative by creating and releasing, I'll let go of the interpretation to the world and the spectators in it. “This is the part where I spit it all out, and you decide what you think of me,” I’d sing. I want to craft who I am, but not be the arbiter of what I can be.
 
@@ -43,6 +43,6 @@ In the song 愚月 wrote for his 23rd birthday, he sings:
 
 I’m 23 too. I hope that'll be the case for me too. For all the smoke and mirrors I deploy, I still publish myself as an open book online, so that those pages might fly somewhere I can’t physically be, and touch someone far, far away.
 
-Creating is an outlet. Not a performance. Art is personal. It can be a private view. Understanding is few and far between. Thereby not a dependable source of meaning. Life is long. We need something by which to remember the pain. 
+Creating is an outlet. Not a performance. Art is personal. It can be a private view. Understanding is few and far between. Thus pointless to hope for. Life is long. We need something by which to remember the pain.
 
 Such is what I've come to believe, and so is the case for _The Tortured Poets Department_. Meet someone, kiss someone. Love someone, lose someone. How do we record history for our future self? How do we project from now into eternity? How do we preserve the vibrations of emotions through time? What can we do but pen it all down.

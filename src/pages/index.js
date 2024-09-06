@@ -81,7 +81,7 @@ const Index = () => {
         </div>
       </details>
 
-      <details>
+      <details open>
         <summary>
           <span className="title">Wishes He Could</span>
         </summary>
