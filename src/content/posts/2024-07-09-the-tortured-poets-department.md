@@ -30,7 +30,7 @@ And I agree. After going public on Instagram and what not, I’ve learned that, 
 
 Maybe it’s a mental illness to engage in self-revisionism, but I kind of enjoy living double lives and smearing the boundary between fiction and nonfiction, between my inner and outer voices. That’s what creating allows you to do: you can capture today for tomorrow, define things on your terms, and weave those snapshots into alternative histories. Publicizing, then, is part of the metaphysical quest to prove one’s existence beyond oneself by impacting an oblivious world. One that only knows what you let it see. With certain contexts removed, whatever I display **is** the truth, and that’s the power trip. 
 
-There’s a Chinese saying that to be perceived is to be misunderstood. To be misunderstood is the price I'll pay. Long as I can control my narrative, I'll let go of the interpretation. Control my narrative by creating and releasing. Free up the interpretation to the world and the spectators in it. “This is the part where I spit it all out, and you decide what you think of me,” I’d sing. I want to craft who I am, but not be the arbiter of what I can be.
+There’s a Chinese saying that to be perceived is to be misunderstood. To be misunderstood is the price I'll pay. Long as I can control my narrative by creating and releasing, I'll let go of the interpretation to the world and the spectators in it. “This is the part where I spit it all out, and you decide what you think of me,” I’d sing. I want to craft who I am, but not be the arbiter of what I can be.
 
 So I need not be relatable. It’s fine if only few understand. But somehow I’m sure, no matter what, some will. Dear reader, aren’t you still reading?
 
