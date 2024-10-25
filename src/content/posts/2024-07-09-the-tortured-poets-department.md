@@ -9,7 +9,7 @@ permalink: '/blog/the-tortured-poets-department'
 type: post
 defaultExpanded: true
 description: 'Meet someone, kiss someone. Love someone, lose someone. How do we record history for our future self? How do we project from now into eternity? How do we preserve the vibrations of emotions through time? What can we do but pen it all down.'
-seoDescription: "Album Review: Taylor Swift subverts the iconography that's become her in The Tortured Poets Department. She's resentful and furious, of all the things she's sacrificed to stay on top. She admits to a lot of flaws and mocks her fans. But what makes this album compelling is how honest she is about it all in this genuine sprawl."
+seoDescription: "Music Review: Taylor Swift subverts the iconography that's become her in The Tortured Poets Department. She's resentful and furious, of all the things she's sacrificed to stay on top. She admits to a lot of flaws and mocks her fans. But what makes this album compelling is how honest she is about it all in this genuine sprawl."
 ---
 
 I don’t think I have it in me to be an influencer. For one, I’m too slow (mentally and physically alike). For another, turning sharing into a career deprives one of the simple joy of sharing. Even more so, going public costs: with the limelight comes scrutiny; what you say online stays online; the weaknesses you reveal can and will be used against you; and as _The Tortured Poets Department_ reveals, there is danger in catering to an audience, no matter how innocuous-seeming.
