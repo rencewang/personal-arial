@@ -24,7 +24,7 @@ Instagram can do that too, you might say. But Instagram stories serve a more fla
 
 Scrolling through my snaps, I’m reminded of when the brisk clouds eclipsed the sun above Old Campus on the day I heard an acquaintance ended their own life. When the steaming pho lightly burned my skin at the dinner with people I didn’t know would become my best friends. When the air vibrated in rhythmic whooshes as I jump-roped in my common room during Covid. When the pedals caressed my hair on the walk around the blooming Branford courtyard after quarantine was finally lifted.
 
-I’m reminded of when I walked back from Marx Library after it closed at 11pm. The cold wasn’t so uncomfortable. I started skipping and thought of how romantic it is to bury myself deep underneath Science Hill for a day under the guise of studying.
+I’m reminded of when I walked back from Marx Library after it closed at 11 p.m. The cold wasn’t so uncomfortable. I started skipping and thought of how romantic it is to bury myself deep underneath Science Hill for a day under the guise of studying.
 
 My identity should be an uncompromising eternity, I once believed. A self-protective mechanism to not surrender my existence to ephemera. To prevent my ideals from being dictated by fleeting moments or persons, whose presence in my life will be, in comparison to my own presence, necessarily temporary. But I’m coming to the realization that, at the end of the day, what am I but a collection of moments stored in neural pathways of organic materials?
 
@@ -39,3 +39,5 @@ I temporarily leave my theses behind: the suffering from procrastination is gone
 We will all be busy after college, but I implore you to take a moment to remember: the footsteps, the flickering lamp, the dawn awash in blue. This incoherent web of moments is the best thing that’s ever been mine. I hope it’s yours too. Cherish it. Remember it. Don’t let it dissolve, like tears in rain.
 
 And maybe, if you’re like me, Snapchat can help with that.
+
+_Published as part of the Yale Daily News 2023 Commencement Issue. [Read more here](https://yaledailynews.com/commencement2023/2023/05/22/wang-why-i-still-use-snapchat/)._

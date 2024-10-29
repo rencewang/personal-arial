@@ -28,7 +28,7 @@ It really should be a happy affair, for an old lady of eighty-six with dutiful s
 
 I think the tears were more for myself than for Grandma. Grandma lived a long, fulfilled, and independent life. She insisted on living alone in the countryside, farming her own produce and feeding her own chickens, even as her kids begged for her to live in town. She ate what she liked (mostly vegetables) and smoked whenever she wanted. She accommodated the pains of aging and was never enslaved by medication. I am happy for her, but I cry at the thought that I failed to come back sooner. That I will now forever be without that icon of strength. Without grandparents. Without the person who will find any innovative method to feed me including putting me in the washing machine, who will fan mosquitoes away as I fell asleep, who will tolerate me. Who won’t give up on me even as everyone else might.
 
-The rain got to its worse around 11 pm. I hope she went without any pain.
+The rain got to its worse around 11 p.m. I hope she went without any pain.
 
 Grandma used to do this thing. When I was in elementary school, the darkness gave me all kinds of fright. If I couldn’t fall asleep, I would go to Grandma’s bed, and she would put a spell on me. She takes my right palm, writes a series of characters with her fingertips, then firmly folds my hand into a fist. She tells me to hold tight. Then she writes another set of characters on my forehead — it always ended with a dot — then blows lightly to seal the spell. It blessed me with a sound night’s sleep.
 

@@ -12,7 +12,7 @@ description: 'What we have to understand, is that although Rachel is modeled as 
 seoDescription: "Film Review: While Crazy Rich Asians succeeds in propelling Asian elements into an international blockbuster, I wish the film's Cinderella story had a more modern core. Although Rachel is modeled as a 21st century Cinderella, the plot should not be confined to the imagination of Cinderella. "
 ---
 
-_Crazy Rich Asians_ got many things right. The drama is great (albeit unrealistic at times), the performances by Constance Wu, Awkwafina, and Michelle Yeoh (soon debuting her own _Star Trek_ series!) are outstanding, the soundtrack — with heavy Asian-influenced curation (particularly the mandarin version of Yellow) — is touching. But it is also a movie that got a couple of key things wrong, and those significant flaws result in an identity crisis that diminishes the overall message.
+_Crazy Rich Asians_ gets many things right. The drama is gripping (albeit unrealistic at times), the performances by Constance Wu, Awkwafina, and Michelle Yeoh (soon debuting her own _Star Trek_ series!) are outstanding, the soundtrack — with heavy Asian-influenced curation (particularly the mandarin version of Yellow) — is touching. But it is also a movie that gets a couple of key things wrong, and those significant flaws result in an identity crisis that diminishes the overall message.
 
 ## Socioeconomic Mismatch
 

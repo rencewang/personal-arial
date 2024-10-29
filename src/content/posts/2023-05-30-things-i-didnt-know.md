@@ -8,7 +8,7 @@ tag: [Reflection]
 permalink: '/blog/the-things-I-didnt-know'
 type: post
 defaultExpanded: false
-description: 'The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart. '
+description: 'The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can still feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart. '
 seoDescription: "Diary from Yale: Knowing is fun, but sometimes, as is not knowing. As I reflect on graduating from Yale as part of the class of 2023, some memories suddenly rush back to my head. But still, I believe there is no need for goodbye. There'll only be more opportunities ahead."
 ---
 
@@ -24,13 +24,13 @@ People will forever live in your head, just as how you last met, if you never he
 
 That’s why there is never a full goodbye, not according to me. There are no definitive endings as long as I don’t know. Call me immature but I don't think my friendships fade because a part of them is already in me. There is no goodbye because I’ll always be spiritually with them. Or perhaps, them with me.
 
-The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to Long Live in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart.
+The gift of not knowing is hope. Thinking back to the moment when I got shivers while listening to "Long Live" in my bunk bed in suburban Los Angeles just after coming to America — I didn’t know what was ahead of me then — but I can still feel the hope that filled my iPod, my bedroom, the little bits of that immigrant heart.
 
 I didn’t grow up the way my elementary school-self imagined, otherwise I’d graduate from Wuhan University and be designing tunnels. Nor the way my middle school-self planned, as I didn’t end up on a campus of the University of California. And while I’m happy with where I am, I’m glad I didn’t know. Because then, you can convince yourself that you’re capable of anything and able to meet anyone, linger in moments that you never thought you’d have, and indulge in the surprise when the unexpected come to life.
 
-On my college apps, I mentioned that I don’t want to come out of college knowing what exactly to do with my life. Indeed, those are the shoes I’m in now. The amount of unknown that looms ahead is anxiety-inducing: apartment-hunting, making friends in the workplace, cooking and living on my own. But what comforts me is that I know, someday, looking back, I will appreciate this moment, and the hope that fills it.
+On my college apps, I mentioned that I don’t want to come out of college knowing what exactly to do with my life. Indeed, those are the shoes I’m in. The amount of unknown that looms ahead is anxiety-inducing: apartment-hunting, making friends in the workplace, cooking and living on my own. But what comforts me is that I know, someday, looking back, I will appreciate this moment, and the hope that fills it.
 
-Hence, for as much as I find it amusing that a psychic once told my mom that I’d marry and divorce four times, I don't believe in fortunes. An uncertain future is the most interesting of futures. One in which anything is possible, with infinite paths ahead of us.
+Hence, for as much as I find it amusing that a psychic once told my mom that I’d marry and get divorced four times, I don't believe in fortunes. An uncertain future is the most interesting of futures. One in which anything is possible, with infinite paths ahead of us.
 
 So are there now. Infinite paths, waiting for our next move. For the past weeks, I’ve been wondering what I’ll pen down, about the end of it all. On move-out day, my gaze caught a patch of scratches on the granite tiles in the Timothy Dwight College foyer, accentuated by the shadows casted on it by a setting sun. I never noticed those marks before. I don’t know why but it made me think, for the first time (because I’ve been shitting on New Haven for so long), am I really ready to leave this place?
 

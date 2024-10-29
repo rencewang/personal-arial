@@ -16,13 +16,13 @@ When people think of Christopher Nolan, the first movies that pop into mind are 
 
 What The Prestige really comes down to is just Nolan flexing his control of nonlinear narrative structure. The disordered sequence of the narration becomes increasingly mesmerizing as we dive deeper into the film. For example, we won’t know until the very end of the film, that the opening cut is actually the last event in the story.
 
-Intricate details like this offer bits of brain-burning fun, as we struggle to piece the seemingly disorganized story together, yet it does not come across as overwhelming. That is precisely the beauty behind many of Nolan’s works, and it’s infinitesimally augmented here.
+Intricate details like this offer bits of brain-burning fun, as we struggle to piece the seemingly disorganized story together, yet it does not come across as overwhelming. That is precisely the beauty behind many of Nolan’s works, and it’s infinitely augmented here.
 
 ## The Tragedy
 
 Aside from the interweaving narratives, the film closely follows the central idea of passion and its toxic byproduct, obsession. The protagonists, Angier and Borden, are obsessed with magic, an obsession that transcends their worldly status and human limitations. They are plagued by a blinding desire that created a cognitive dissonance and littered them mental stability, driving them into the abyss of sacrifice.
 
-Angier’s passion for magic prompts him to conceal his identity of a noble and become a magician’s protegee. He sacrifices his dignity, comforts, and eventually his wife. The sacrifice breeds more obsession which prompts even more sacrifice. _So what is all the sacrifice for?_ Ultimately, he lost more than status and love. As Angier adopted Tesla’s machine, it began the chapter of his final sacrifice— the sacrifice of self: behind every incredible show of magic, there is one rightful murder. The murderer Angier, the victim also Angier.
+Angier’s passion for magic prompts him to conceal his identity of a noble and become a magician’s protegee. He sacrifices his dignity, comforts, and eventually his wife. The sacrifice breeds more obsession which prompts even more sacrifice. _So what is all the sacrifice for?_ Ultimately, he lost more than status and love. As Angier adopted Tesla’s machine, it began the chapter of his final sacrifice — the sacrifice of self: behind every incredible show of magic, there is one rightful murder. The murderer Angier, the victim also Angier.
 
 The tragedy is that if you examine Angier close enough, you would find he loves magic no more than the audience’s reaction. He’s obsessed with the surprised faces on people, not the art of magic. His obsession is fundamentally a false one, a mere projection of the prestige— completely extrinsic. But what is the value in external gratification? He thought he was obsessed with the magic that he loves, yet in the end, he’s lost in the congratulatory praises. Maybe starting from the moment he desperately tries to surpass Borden’s incredible trick, Angier has already lost himself.
 

@@ -28,7 +28,7 @@ Like Jobu Tupaki, I think about death all the time. My favorite exclamation is �
 
 Jobu thinks nothing matters, because then “all the pain and guilt you feel from making nothing of your life disappears.” But I prefer an existential lens to her nihilistic one. If nothing holds inherent significance, then it's okay if you don't carve out some grand narrative. Any destination you reach marks a fresh adventure.
 
-Jobu thinks that it’s a “statistical inevitability,” that it’s “only a matter of time” before everything falls apart. However, I believe in regression to the mean. Life is a stochastic process, much like fluctuations in weather patterns and the stock market. Stochasticism introduces randomness and extremes, yet there is a statistical inclination for extreme values to gravitate toward the mean. Adversities are unlikely to persist indefinitely. At some point life’ll tick up!
+Jobu thinks that it’s a “statistical inevitability,” that it’s “only a matter of time” before everything falls apart. However, I subscribe to regression to the mean. Life is a stochastic process, much like fluctuations in weather patterns and the stock market. Stochasticism introduces randomness and extremes, yet there is a statistical inclination for extreme values to gravitate toward the mean. Adversities are unlikely to persist indefinitely. At some point life’ll tick up!
 
 Hence, while I’m happy to die now, I wouldn’t actively seek death. Should I end my life here, I would forfeit the opportunity to witness the ensuing spectacles, where people regress to the mean or experience extreme probabilistic disruptions. Of karma catching up to some, and luck striking others. Who knows which way it might go. That’s what keeps me going — I am at the edge of my seat from anticipation.
 
@@ -40,6 +40,6 @@ Last summer, I went back to China. Four years since my previous visit and my lon
 
 One of my classmates remarked how sixteen years passed in the blink of an eye (十六年一瞬间). I’ve been chewing on those words ever since. I think when I cried at the Edinburgh airport, it wasn’t for the movie. It was because I don’t know when I’ll see them again, after this one last ride. That despite traveling the whole wide world, despite realizing the infinite possibilities of our lives, I would still choose to be here, with you. Hold on to the memories when I was there, with you.
 
-In the song 勿念, Yoyo Sham sings about how “at times, when I close my eyes, I’m afraid of my memory thinning.” I, too, am afraid of my memories departing me. You never know that a time is going to be some of your best, until what was in front of you is now behind you.
+In the song “勿念,” Yoyo Sham sings about how “at times, when I close my eyes, I’m afraid of my memory thinning.” I, too, am afraid of my memories departing me. You never know that a time is going to be some of your best, until what was in front of you is now behind you.
 
 I turn 23 today. It’s my first birthday alone. I claimed my free Starbucks. The wine I blind bought turned out to be good. Yesterday’s weather was beautiful. I plan on celebrating by finishing a Whole Foods cake in one sitting. Life is going swimmingly. I think I will cherish these specks of time.
