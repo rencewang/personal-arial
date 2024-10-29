@@ -32,4 +32,4 @@ No journey is precisely straight. In fact, it’s good to cruise along a circuit
 
 30,000 days run fast. You only get to be here once, and people will always disagree. So eat the food you want to eat, meet the people you want to meet. See the scenery you enjoy, and do the things you love. Grand narratives can’t fight the abyss, but contentment amassed through minute choices can. Every pleasant memory is a lamp against the darkness should misfortune bring nightfall. Reminder of the faith you’d convinced yourself of that one scorching afternoon six years ago soaked in a fortuitousness that’s almost too good to be true. The bottomless mimosa lingers at the tip of your tongue.
 
-You hold out your hand as if waving to moments destined to expire, and think, wow, it’s really been six years. And you still believe, as some force draws you out of the core of the Earth. You’re right on time.
+You hold out your hand as if waving to moments destined to expire, and think, wow, it’s really been six years. All the shine of half a decade fading. And you still believe, as some force draws you out of the core of the Earth. You’re right on time.
