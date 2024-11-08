@@ -1,5 +1,5 @@
 ---
-title: 'The Tortured Poets Department: The Price of Going Public'
+title: 'The Tortured Poets Department: Price of Going Public'
 updated: 2024-07-09 22:34
 year: 2024
 published: true
