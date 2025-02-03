@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
-import ThreeCanvas from './canvas';
 import '../styles/general.scss';
 
 const Layout = ({ children }) => {
@@ -53,10 +52,6 @@ const Layout = ({ children }) => {
       </section>
 
       <Footer />
-
-      <section id="canvas">
-        <ThreeCanvas />
-      </section>
     </main>
   );
 };
