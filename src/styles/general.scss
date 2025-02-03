@@ -10,8 +10,8 @@
   --highlight-color: transparent;
   // --background-color: #000000;
   --background-color: #f2f2f2;
-  --select-color: #000000;
-  --select-background-color: #eaa206;
+  --select-color: #f2f2f2;
+  --select-background-color: #f25b1d;
 }
 
 $bodyColor: var(--text-color);
@@ -95,7 +95,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
-  overflow: hidden;
 
   @media (max-width: $mediaRule) {
     font-size: 0.8rem;
@@ -159,8 +158,18 @@ footer {
   }
 }
 
+section {
+  overflow: scroll;
+}
+
 table {
   width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid $bodyColor;
+    text-align: left;
+  }
 }
 
 // DETAILS SUMMARY STYLES ****************************************************

@@ -20,9 +20,8 @@ const BlogPage = () => {
               frontmatter {
                 title
                 permalink
-                updated(formatString: "YYYY")
+                updated(formatString: "YYYY-MM-DD")
                 description
-                defaultExpanded
                 category
               }
               id
@@ -49,59 +48,25 @@ const BlogPage = () => {
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [selectedYear, setSelectedYear] = useState(defaultYear);
-  const [displayedPosts, setDisplayedPosts] = useState();
-
-  const onePost = (post, postIndex) => (
-    <details
-      className="separate"
-      key={postIndex}
-      open={post.node.frontmatter.defaultExpanded}
-    >
-      <summary>
-        <span className="title">{post.node.frontmatter.title}</span>
-        &nbsp;
-        <span className="bold italic">{post.node.frontmatter.updated}</span>
-      </summary>
-      <div>{post.node.frontmatter.description}</div>
-
-      <div className="pill">
-        <Link to={post.node.frontmatter.permalink}>Read More</Link>
-      </div>
-    </details>
-  );
+  const [filteredPosts, setFilteredPosts] = useState([]);
 
   useEffect(() => {
-    // change displayedPosts to posts in a given category, and given year
-    // or return all posts if category and year is 'All'
-    setDisplayedPosts(() => {
-      // first, filter by year
-      let filteredYear = data.allMarkdownRemark.year;
-      if (selectedYear !== defaultYear) {
-        filteredYear = filteredYear.filter(
-          (year) => year.year === selectedYear
-        );
-      }
+    let posts = data.allMarkdownRemark.year;
 
-      // then, filter by category and return posts
-      return filteredYear
-        .slice(0)
-        .reverse()
-        .map((year, index) => (
-          <div key={index}>
-            {year.edges.map((post, postIndex) => {
-              if (selectedCategory === defaultCategory) {
-                return onePost(post, postIndex);
-              } else if (
-                post.node.frontmatter.category.includes(selectedCategory)
-              ) {
-                return onePost(post, postIndex);
-              } else {
-                return null;
-              }
-            })}
-          </div>
-        ));
-    });
+    if (selectedYear !== defaultYear) {
+      posts = posts.filter((year) => year.year === selectedYear);
+    }
+
+    const filteredPosts = posts
+      .flatMap((year) => year.edges.reverse())
+      .filter((post) =>
+        selectedCategory === defaultCategory
+          ? true
+          : post.node.frontmatter.category.includes(selectedCategory)
+      )
+      .reverse();
+
+    setFilteredPosts(filteredPosts);
   }, [selectedCategory, selectedYear]);
 
   return (
@@ -117,7 +82,40 @@ const BlogPage = () => {
         setSelected={setSelectedYear}
       />
 
-      <div className="displayed-posts">{displayedPosts}</div>
+      {/* Table Layout for Blog Posts */}
+      <table className="blog-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredPosts.map((post, index) => (
+            <tr key={index}>
+              <td className="post-title">
+                <details>
+                  <summary>{post.node.frontmatter.title}</summary>
+                  <div className="post-description">
+                    <p>{post.node.frontmatter.description}</p>
+                  </div>
+                </details>
+              </td>
+              <td className="post-year">{post.node.frontmatter.updated}</td>
+              <td className="post-year">{post.node.frontmatter.updated}</td>
+              <td className="post-category">
+                {post.node.frontmatter.category}
+              </td>
+              <td className="post-category">
+                <Link to={post.node.frontmatter.permalink}>Read More</Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 };
