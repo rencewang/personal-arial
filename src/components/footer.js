@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
 import { greetingArray } from '../content/index/index';
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    var timerID = setInterval(() => setTime(new Date()), 1000);
-    return () => {
-      clearInterval(timerID);
-    };
+    timerRef.current = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timerRef.current);
   }, []);
 
   return <span>{time.toLocaleTimeString()}</span>;
@@ -17,19 +19,14 @@ const Clock = () => {
 
 const Footer = () => {
   const footerRef = useRef();
-  const [greetingText, setGreetingText] = useState('');
-
-  // use effect to get random greeting
-  useEffect(() => {
-    console.log('good morning good evening good afternoon');
-    setGreetingText(
-      greetingArray[Math.floor(Math.random() * greetingArray.length)]
-    );
-  }, []);
+  const greetingText = useMemo(
+    () => greetingArray[Math.floor(Math.random() * greetingArray.length)],
+    []
+  );
 
   return (
     <footer ref={footerRef}>
-      <div id="clock">Arial 6.3.3 © 2024</div>
+      <Clock />
       <div id="greeting">{greetingText}</div>
     </footer>
   );
