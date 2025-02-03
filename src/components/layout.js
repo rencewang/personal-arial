@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
 
   // Set grid height to window height
   const [gridHeight, setGridHeight] = useState('100vh');
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       const updateGridHeight = () => {
         setGridHeight(window.innerHeight);
@@ -34,22 +34,14 @@ const Layout = ({ children }) => {
       <header>
         <Link to="/">rence.la</Link>
 
-        <div className="navigation">
-          <nav>
-            <Link to="/blog">Writing</Link>
-          </nav>
-          <nav>
-            <Link to="/project">Project</Link>
-          </nav>
-          <nav>
-            <Link to="/art">Art</Link>
-          </nav>
-        </div>
+        <nav className="navigation">
+          <Link to="/blog">Writing</Link>
+          <Link to="/project">Project</Link>
+          <Link to="/art">Art</Link>
+        </nav>
       </header>
 
-      <section className="content-container" ref={contentRef}>
-        <div id="content">{children}</div>
-      </section>
+      <section ref={contentRef}>{children}</section>
 
       <Footer />
     </main>

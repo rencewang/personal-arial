@@ -1,15 +1,17 @@
 // Color Bank
 // Blue #1E1CD8 Red #E91C23 Yellow #EAA206 Crimson #ac0611
-// Light Blue #cdedee Mint Blue #ade4ee Off White #e5d5cc
+// Light Blue #cdedee Mint Blue #ade4ee Sand #e5d5cc
 // Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
 // BV Green #009D48 BV Orange #F25B1D
 
 :root {
-  --text-color: #f3f3f3;
+  // --text-color: #f3f3f3;
+  --text-color: #1e1cd8;
   --highlight-color: transparent;
-  --background-color: #000000;
-  --select-color: #f3f3f3;
-  --select-background-color: #1e1cd8;
+  // --background-color: #000000;
+  --background-color: #f2f2f2;
+  --select-color: #000000;
+  --select-background-color: #eaa206;
 }
 
 $bodyColor: var(--text-color);
@@ -133,7 +135,8 @@ header {
     display: flex;
     justify-content: flex-end;
 
-    nav {
+    a {
+      display: block;
       padding-left: 20px;
       @media (max-width: $mediaRule) {
         padding-left: 10px;
@@ -156,15 +159,8 @@ footer {
   }
 }
 
-.content-container {
-  z-index: 500;
-  margin-left: 10px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
-  #content {
-    max-width: min(500px, calc(100% - 20px));
-  }
+table {
+  width: 100%;
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
