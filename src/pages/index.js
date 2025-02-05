@@ -12,7 +12,7 @@ const Index = () => {
     <div className="index">
       <About />
       <WritingList />
-      <ProjectList />
+      {/* <ProjectList /> */}
       <ArtList />
     </div>
   );
