@@ -5,11 +5,11 @@
 // BV Green #009D48 BV Orange #F25B1D
 
 :root {
-  // --text-color: #f3f3f3;
-  --text-color: #1e1cd8;
+  --text-color: #f3f3f3;
+  // --text-color: #0448e2;
   --highlight-color: transparent;
-  // --background-color: #000000;
-  --background-color: #f2f2f2;
+  --background-color: #000000;
+  // --background-color: #f2f2f2;
   --select-color: #f2f2f2;
   --select-background-color: #f25b1d;
 }
@@ -43,13 +43,13 @@ $mediaRule: 500px;
 }
 
 ::-moz-selection {
-  color: $selectColor;
-  background: $selectBackgroundColor;
+  color: $backgroundColor;
+  background: $bodyColor;
 }
 
 ::selection {
-  color: $selectColor;
-  background: $selectBackgroundColor;
+  color: $backgroundColor;
+  background: $bodyColor;
 }
 
 a,
@@ -117,7 +117,7 @@ main {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   // height: 100svh; this is set in layout component
   width: 100%;
   overflow: hidden;
@@ -159,7 +159,7 @@ footer {
 }
 
 section {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 table {
@@ -170,6 +170,26 @@ table {
     border: 1px solid $bodyColor;
     text-align: left;
   }
+}
+
+// INDEX PAGE STYLES ****************************************************
+
+.index {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  height: 100%;
+}
+
+#project,
+#about {
+  padding: 10px;
+  border-right: 1px solid $bodyColor;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#project {
 }
 
 // DETAILS SUMMARY STYLES ****************************************************

@@ -22,16 +22,18 @@ const Layout = ({ children }) => {
 
       updateGridHeight();
       window.addEventListener('scroll', updateGridHeight);
+      window.addEventListener('resize', updateGridHeight);
 
       return () => {
         window.removeEventListener('scroll', updateGridHeight);
+        window.removeEventListener('resize', updateGridHeight);
       };
     }
   }, []);
 
   return (
     <main style={{ height: gridHeight }}>
-      <header>
+      {/* <header>
         <Link to="/">rence.la</Link>
 
         <nav className="navigation">
@@ -39,7 +41,7 @@ const Layout = ({ children }) => {
           <Link to="/project">Project</Link>
           <Link to="/art">Art</Link>
         </nav>
-      </header>
+      </header> */}
 
       <section ref={contentRef}>{children}</section>
 
