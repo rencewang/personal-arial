@@ -181,15 +181,18 @@ table {
   height: 100%;
 }
 
+#art,
+#about,
 #project,
-#about {
+#writing {
   padding: 10px;
   border-right: 1px solid $bodyColor;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
-#project {
+#art {
+  border: none;
 }
 
 // DETAILS SUMMARY STYLES ****************************************************

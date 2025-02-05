@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import Seo from '../components/seo';
 import Dropdown from '../components/dropdown';
 
-const BlogPage = () => {
+const WritingList = () => {
   const data = useStaticQuery(graphql`
     query BlogNavigationQuery {
       allMarkdownRemark(
@@ -117,6 +116,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
-
-export const Head = () => <Seo title="Writing" />;
+export default WritingList;

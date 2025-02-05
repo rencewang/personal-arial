@@ -28,9 +28,7 @@ const About = () => {
   );
 
   return (
-    <div id="about">
-      <div className="page-filter"></div>
-
+    <disection id="about">
       <details open>
         <summary>
           <span className="title">Lawrence Wang</span>
@@ -108,7 +106,7 @@ const About = () => {
           ))}
         </div>
       </details>
-    </div>
+    </disection>
   );
 };
 
