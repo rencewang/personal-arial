@@ -140,21 +140,47 @@ main {
   height: 100%;
 }
 
-// #index-art,
-// #index-about,
-// #index-project,
-// #index-writing {
-//   padding: 10px;
-//   border-right: 1px solid $bodyColor;
-//   overflow-x: hidden;
-//   overflow-y: scroll;
-// }
-
 .page-content {
   height: 100%;
   padding: 10px;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.index {
+  display: grid;
+  grid-template-columns: 25% 1fr 25%;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Sections */
+.page-content {
+  height: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Responsive Grid */
+@media (max-width: 1000px) {
+  .index {
+    grid-template-columns: 35% 65%;
+  }
+
+  .middle-section {
+    display: none; /* Hide WritingList (now selectable) */
+  }
+}
+
+@media (max-width: 500px) {
+  .index {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .left-section {
+    display: none; /* Hide About (now selectable) */
+  }
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
