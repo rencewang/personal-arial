@@ -25,7 +25,7 @@ const ProjectList = () => {
   }, [category]);
 
   return (
-    <section id="project">
+    <>
       <Dropdown
         options={projectCategories}
         selected={category}
@@ -49,7 +49,7 @@ const ProjectList = () => {
           </div>
         </details>
       ))}
-    </section>
+    </>
   );
 };
 

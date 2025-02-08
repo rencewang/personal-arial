@@ -1,5 +1,4 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
@@ -33,17 +32,9 @@ const Layout = ({ children }) => {
 
   return (
     <main style={{ height: gridHeight }}>
-      {/* <header>
-        <Link to="/">rence.la</Link>
-
-        <nav className="navigation">
-          <Link to="/blog">Writing</Link>
-          <Link to="/project">Project</Link>
-          <Link to="/art">Art</Link>
-        </nav>
-      </header> */}
-
-      <section ref={contentRef}>{children}</section>
+      <div className="content" ref={contentRef}>
+        {children}
+      </div>
 
       <Footer />
     </main>

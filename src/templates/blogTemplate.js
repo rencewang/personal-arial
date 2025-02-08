@@ -4,10 +4,20 @@ import { graphql, Link } from 'gatsby';
 import Seo from '../components/seo';
 import Dropdown from '../components/dropdown';
 
+const PostNav = (post, label) => {
+  return (
+    <div className="postnav">
+      <div>{label}:</div>
+      <div>
+        <Link to={post.frontmatter.permalink}>{post.frontmatter.title}</Link>
+      </div>
+    </div>
+  );
+};
+
 const BlogTemplate = ({ data, pageContext }) => {
   const {
     frontmatter: { title, updated, category },
-    excerpt: autoExcerpt,
     html,
   } = data.markdownRemark;
   const { next, previous } = pageContext;
@@ -20,43 +30,34 @@ const BlogTemplate = ({ data, pageContext }) => {
     setContentFontSize(option);
   };
 
-  const PostNav = (post, label) => {
-    return (
-      <div className="postnav">
-        <div>{label}:</div>
-        <div>
-          <Link to={post.frontmatter.permalink}>{post.frontmatter.title}</Link>
-        </div>
-      </div>
-    );
-  };
-
   return (
-    <article className="post">
-      <Dropdown
-        options={Object.keys(fontSizeOptions)}
-        selected={contentFontSize}
-        setSelected={handleContentFontSizeChange}
-      />
+    <section className="page-content">
+      <article className="post">
+        <Dropdown
+          options={Object.keys(fontSizeOptions)}
+          selected={contentFontSize}
+          setSelected={handleContentFontSizeChange}
+        />
 
-      <h1 className="title">{title}</h1>
-      <div style={{ marginTop: '10px' }}>
-        {updated} in {category}
-      </div>
-      {next && PostNav(next, 'Previous')}
-      {previous && PostNav(previous, 'Next')}
+        <h1 className="title">{title}</h1>
+        <div style={{ marginTop: '10px' }}>
+          {updated} in {category}
+        </div>
+        {next && PostNav(next, 'Previous')}
+        {previous && PostNav(previous, 'Next')}
 
-      <div
-        className="postcontent"
-        style={{ fontSize: fontSizeOptions[contentFontSize] }}
-      >
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+        <div
+          className="postcontent"
+          style={{ fontSize: fontSizeOptions[contentFontSize] }}
+        >
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
 
-      <div>
-        <Link to="/blog">Back to All Posts</Link>
-      </div>
-    </article>
+        <div>
+          <Link to="/">Back to All Posts</Link>
+        </div>
+      </article>
+    </section>
   );
 };
 

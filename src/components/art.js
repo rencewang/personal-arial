@@ -72,7 +72,7 @@ const ArtList = () => {
   };
 
   return (
-    <section id="art">
+    <>
       <Dropdown
         options={artCategories}
         selected={category}
@@ -99,7 +99,7 @@ const ArtList = () => {
           </div>
         )
       )}
-    </section>
+    </>
   );
 };
 

@@ -67,6 +67,7 @@ const WritingList = () => {
       </div>
     </details>
   );
+
   useEffect(() => {
     const filterPosts = () => {
       // Filter posts by year first
@@ -99,7 +100,7 @@ const WritingList = () => {
   }, [selectedCategory, selectedYear]);
 
   return (
-    <section id="writing">
+    <>
       <Dropdown
         options={categories}
         selected={selectedCategory}
@@ -112,7 +113,7 @@ const WritingList = () => {
       />
 
       <div className="displayed-posts">{displayedPosts}</div>
-    </section>
+    </>
   );
 };
 

@@ -10,10 +10,16 @@ import '../styles/general.scss';
 const Index = () => {
   return (
     <div className="index">
-      <About />
-      <WritingList />
+      <section className="page-content border-right">
+        <About />
+      </section>
+      <section className="page-content border-right">
+        <WritingList />
+      </section>
       {/* <ProjectList /> */}
-      <ArtList />
+      <section className="page-content">
+        <ArtList />
+      </section>
     </div>
   );
 };
