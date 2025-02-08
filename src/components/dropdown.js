@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 
 // options should be an array of strings, with default being the first element
-const Dropdown = ({ options, selected, setSelected }) => {
+const Dropdown = ({ options, selected, setSelected, style }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -21,7 +21,11 @@ const Dropdown = ({ options, selected, setSelected }) => {
   }, [isOpen, handleClickOutside]);
 
   return (
-    <div className={`dropdown ${isOpen ? 'is-open' : ''}`} ref={dropdownRef}>
+    <div
+      className={`dropdown ${isOpen ? 'is-open' : ''}`}
+      ref={dropdownRef}
+      style={style}
+    >
       <div className="dropdown-header pill" onClick={() => setIsOpen(!isOpen)}>
         <span>{selected}</span> <span>&#9662;</span>
       </div>

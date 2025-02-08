@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -21,55 +21,38 @@ const ArtList = () => {
     }
   `);
 
-  const capitalize = (string) =>
-    string.charAt(0).toUpperCase() + string.slice(1);
-
-  // Add the queried GatsbyImage to each piece of art
-  const piecesWithGatsbyImage = art.map((piece) => {
-    const imageData = data.art.edges.find(
-      (node) => node.node.name === piece.name
-    );
-
-    return {
-      ...piece,
-      category: capitalize(piece.category),
-      image: getImage(imageData.node),
-    };
-  });
+  // Pre-process art data once, add queried GatsbyImage, capitalize title
+  const piecesWithGatsbyImage = useMemo(() => {
+    return art.map((piece) => {
+      const imageData = data.art.edges.find(
+        (node) => node.node.name === piece.name
+      );
+      return {
+        ...piece,
+        category:
+          piece.category.charAt(0).toUpperCase() + piece.category.slice(1), // capitalize
+        image: getImage(imageData?.node),
+      };
+    });
+  }, [data]);
 
   const defaultCategory = 'All Art';
-  const artCategories = [
-    'All Art',
-    ...new Set(piecesWithGatsbyImage.map((piece) => piece.category)),
-  ];
-
   const [category, setCategory] = useState(defaultCategory);
-  const [displayedArt, setDisplayedArt] = useState(piecesWithGatsbyImage);
 
-  // When category is set, filter the art pieces by category
-  const filterArt = () => {
-    if (category === defaultCategory) {
-      return piecesWithGatsbyImage;
-    }
-    return piecesWithGatsbyImage.filter((piece) => piece.category === category);
-  };
+  const artCategories = useMemo(
+    () => [
+      defaultCategory,
+      ...new Set(piecesWithGatsbyImage.map((piece) => piece.category)),
+    ],
+    [piecesWithGatsbyImage]
+  );
 
-  useEffect(() => {
-    setDisplayedArt(filterArt());
-  }, [category]);
-
-  // return individual mediums from medium string (delimited by comma), and wrapped in a span
-  const renderMedium = (mediums) => {
-    return (
-      <div className="gallery-medium">
-        {mediums.split(',').map((medium, index) => (
-          <span className="pill" key={index}>
-            {medium.trim()}
-          </span>
-        ))}
-      </div>
-    );
-  };
+  // Filter art when category changes
+  const displayedArt = useMemo(() => {
+    return category === defaultCategory
+      ? piecesWithGatsbyImage
+      : piecesWithGatsbyImage.filter((piece) => piece.category === category);
+  }, [category, piecesWithGatsbyImage]);
 
   return (
     <>
@@ -81,21 +64,37 @@ const ArtList = () => {
 
       {displayedArt.map((piece, index) =>
         piece.title ? (
-          <details className="separate gallery-piece" key={index} open>
+          <details className="separate-row" key={index} open>
             <summary>
               <span className="title">{piece.title}</span>
             </summary>
             <div className="gallery-image">
               <GatsbyImage image={piece.image} alt={piece.title || ''} />
             </div>
-            {piece.medium ? renderMedium(piece.medium) : null}
+            {piece.medium && (
+              <div className="pill-container">
+                {piece.medium.split(',').map((medium, i) => (
+                  <div className="pill" key={i}>
+                    {medium.trim()}
+                  </div>
+                ))}
+              </div>
+            )}
           </details>
         ) : (
-          <div className="separate gallery-piece" key={index} open>
+          <div className="separate-row" key={index} open>
             <div className="gallery-image">
               <GatsbyImage image={piece.image} alt={piece.title || ''} />
             </div>
-            {piece.medium ? renderMedium(piece.medium) : null}
+            {piece.medium && (
+              <div className="pill-container">
+                {piece.medium.split(',').map((medium, i) => (
+                  <div className="pill" key={i}>
+                    {medium.trim()}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )
       )}

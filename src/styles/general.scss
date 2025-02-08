@@ -21,7 +21,7 @@ $selectColor: var(--select-color);
 $selectBackgroundColor: var(--select-background-color);
 
 $bodyFont: 'Arial', sans-serif;
-$mediaRule: 500px;
+$mediaRule: 700px;
 
 // GENERAL STYLES ****************************************************
 
@@ -147,27 +147,11 @@ main {
   overflow-y: scroll;
 }
 
-.index {
-  display: grid;
-  grid-template-columns: 25% 1fr 25%;
-  overflow: hidden;
-  height: 100%;
-}
-
-/* Sections */
-.page-content {
-  height: 100%;
-  padding: 10px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 /* Responsive Grid */
 @media (max-width: 1000px) {
   .index {
     grid-template-columns: 35% 65%;
   }
-
   .middle-section {
     display: none; /* Hide WritingList (now selectable) */
   }
@@ -177,7 +161,6 @@ main {
   .index {
     grid-template-columns: 1fr; /* Single-column layout */
   }
-
   .left-section {
     display: none; /* Hide About (now selectable) */
   }
@@ -203,13 +186,6 @@ details {
   > span {
     line-height: 1.25;
   }
-  .pill a {
-    text-decoration: none !important;
-  }
-  .pill {
-    margin-top: 5px;
-    width: fit-content;
-  }
 }
 
 // DROPDOWN STYLES ****************************************************
@@ -218,7 +194,7 @@ details {
   position: relative;
   display: inline-block;
   min-width: 130px;
-  margin: 10px 10px 5px 0;
+  margin-right: 5px;
 
   .dropdown-header {
     cursor: pointer;
@@ -343,18 +319,9 @@ sup {
 
 // ART STYLES ****************************************************
 
-.gallery-piece {
-  margin-top: 20px;
-
-  .gallery-image {
-    margin: 10px 0;
-  }
-  .gallery-medium {
-    margin: 10px 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+.gallery-image {
+  margin: 10px 0;
+  max-width: 500px;
 }
 
 // PLAYER STYLES ****************************************************
@@ -415,6 +382,7 @@ sup {
   padding: 5px 10px;
   border: 1px solid $bodyColor;
   border-radius: 10px;
+  width: fit-content;
 
   a {
     text-decoration: none !important;
@@ -451,7 +419,7 @@ sup {
   border-right: 1px solid $bodyColor;
 }
 
-.separate:not(:empty) {
+.separate-row:not(:empty) {
   padding-bottom: 10px;
   border-bottom: 1px solid $bodyColor;
 }

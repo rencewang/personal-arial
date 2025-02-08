@@ -5,9 +5,7 @@ import Seo from '../components/seo';
 
 const ArtPage = () => (
   <section className="page-content">
-    <div style={{ maxWidth: '500px' }}>
-      <ArtList />
-    </div>
+    <ArtList />
   </section>
 );
 

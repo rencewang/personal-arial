@@ -33,7 +33,7 @@ const ProjectList = () => {
       />
 
       {displayedProjects.map((project, index) => (
-        <details className="separate" key={index} open={index < 3}>
+        <details className="separate-row" key={index} open={index < 3}>
           <summary>
             <span className="title">{project.title}</span>
             &nbsp;

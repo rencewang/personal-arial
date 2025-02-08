@@ -10,8 +10,14 @@ import Seo from '../components/seo';
 import '../styles/general.scss';
 
 const Index = () => {
+  const getInitialSelected = () => {
+    if (window.innerWidth < 500) return 'About';
+    if (window.innerWidth < 1000) return 'Writing';
+    return 'Art';
+  };
+
   const [screenSize, setScreenSize] = useState(window.innerWidth);
-  const [selected, setSelected] = useState('ArtList');
+  const [selected, setSelected] = useState(getInitialSelected);
   const [prevScreenSize, setPrevScreenSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -20,9 +26,13 @@ const Index = () => {
 
       // Detect transitions between key breakpoints
       if (prevScreenSize < 500 && newSize >= 500) {
-        setSelected('WritingList'); // Switch to WritingList when crossing 500px
+        setSelected('Writing'); // Switch to WritingList when crossing 500px
+      } else if (prevScreenSize > 500 && newSize <= 500) {
+        setSelected('Writing'); // Switch to ArtList when crossing 1000px
+      } else if (prevScreenSize > 1000 && newSize <= 1000) {
+        setSelected('Writing'); // Switch to ArtList when crossing 1000px
       } else if (prevScreenSize < 1000 && newSize >= 1000) {
-        setSelected('ArtList'); // Switch to ArtList when crossing 1000px
+        setSelected('Art'); // Switch to ArtList when crossing 1000px
       }
 
       setPrevScreenSize(newSize);
@@ -78,7 +88,7 @@ const Index = () => {
           selected={selected}
           setSelected={setSelected}
         />
-        <div className="content-container">{renderContent()}</div>
+        <div style={{ marginTop: '5px' }}>{renderContent()}</div>
       </section>
     </div>
   );

@@ -51,14 +51,14 @@ const WritingList = () => {
 
   const onePost = (post, postIndex) => (
     <details
-      className="separate"
+      className="separate-row"
       key={postIndex}
       open={post.node.frontmatter.defaultExpanded}
     >
       <summary>
         <span className="title">{post.node.frontmatter.title}</span>
-        &nbsp;
-        <span className="bold italic">{post.node.frontmatter.updated}</span>
+        {/* &nbsp;
+        <span className="bold italic">{post.node.frontmatter.updated}</span> */}
       </summary>
       <div>{post.node.frontmatter.description}</div>
 
