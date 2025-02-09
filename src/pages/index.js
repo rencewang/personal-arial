@@ -68,6 +68,16 @@ const Index = () => {
     }
   };
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Runs only on client-side
+  }, []);
+
+  if (!isClient) {
+    return null; // Don't render until `window` is available
+  }
+
   return (
     <div className="index">
       {/* Always show About if width > 500px */}

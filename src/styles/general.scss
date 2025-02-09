@@ -196,13 +196,13 @@ details {
 .dropdown {
   position: relative;
   display: inline-block;
-  min-width: 130px;
   margin-right: 5px;
 
   .dropdown-header {
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    min-width: 130px;
     justify-content: space-between;
     gap: 10px;
   }
@@ -388,6 +388,7 @@ sup {
   padding: 5px 10px;
   border: 1px solid $bodyColor;
   border-radius: 10px;
+  width: fit-content;
 
   a {
     text-decoration: none !important;
@@ -402,7 +403,7 @@ sup {
   }
 }
 
-.link-image {
+.pill .link-image {
   span {
     display: none;
     z-index: 999;

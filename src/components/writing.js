@@ -20,6 +20,7 @@ const WritingList = () => {
                 title
                 permalink
                 updated(formatString: "YYYY-MM-DD")
+                formattedUpdated: updated(formatString: "MMMM DD[,] YYYY")
                 description
                 category
                 defaultExpanded
@@ -75,8 +76,13 @@ const WritingList = () => {
       <summary>
         <span className="title">{post.node.frontmatter.title}</span>
       </summary>
+
+      <div className="bold">
+        {post.node.frontmatter.formattedUpdated} in{' '}
+        {post.node.frontmatter.category}
+      </div>
       <div>{post.node.frontmatter.description}</div>
-      <div className="pill">
+      <div className="pill" style={{ marginTop: '5px' }}>
         <Link to={post.node.frontmatter.permalink}>Read More</Link>
       </div>
     </details>
