@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
 import Dropdown from '../components/dropdown';
 
-const PostNav = (post, label) => {
-  return (
+const PostNav = ({ post, label }) =>
+  post && (
     <div className="postnav">
       <div>{label}:</div>
       <div>
@@ -13,22 +13,18 @@ const PostNav = (post, label) => {
       </div>
     </div>
   );
-};
 
 const BlogTemplate = ({ data, pageContext }) => {
-  const {
-    frontmatter: { title, updated, category },
-    html,
-  } = data.markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
   const { next, previous } = pageContext;
 
   const fontSizeOptions = { Small: '1rem', Medium: '1.5rem', Large: '2rem' };
-  const defaultFontSize = 'Medium';
-  const [contentFontSize, setContentFontSize] = useState(defaultFontSize);
+  const [contentFontSize, setContentFontSize] = useState('Medium');
 
-  const handleContentFontSizeChange = (option) => {
-    setContentFontSize(option);
-  };
+  const contentStyle = useMemo(
+    () => ({ fontSize: fontSizeOptions[contentFontSize] }),
+    [contentFontSize]
+  );
 
   return (
     <section className="page-content">
@@ -36,20 +32,18 @@ const BlogTemplate = ({ data, pageContext }) => {
         <Dropdown
           options={Object.keys(fontSizeOptions)}
           selected={contentFontSize}
-          setSelected={handleContentFontSizeChange}
+          setSelected={setContentFontSize}
         />
 
-        <h1 className="title">{title}</h1>
+        <h1 className="title">{frontmatter.title}</h1>
         <div style={{ marginTop: '10px' }}>
-          {updated} in {category}
+          {frontmatter.updated} in {frontmatter.category}
         </div>
-        {next && PostNav(next, 'Previous')}
-        {previous && PostNav(previous, 'Next')}
 
-        <div
-          className="postcontent"
-          style={{ fontSize: fontSizeOptions[contentFontSize] }}
-        >
+        <PostNav post={previous} label="Previous" />
+        <PostNav post={next} label="Next" />
+
+        <div className="postcontent" style={contentStyle}>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
 
@@ -64,13 +58,10 @@ const BlogTemplate = ({ data, pageContext }) => {
 export default BlogTemplate;
 
 export const Head = ({ data }) => {
-  const {
-    frontmatter: { title, seoDescription },
-    excerpt: autoExcerpt,
-  } = data.markdownRemark;
-  const excerpt = autoExcerpt || seoDescription;
+  const { frontmatter, excerpt: autoExcerpt } = data.markdownRemark;
+  const excerpt = autoExcerpt || frontmatter.seoDescription;
 
-  return <Seo title={title} description={excerpt} />;
+  return <Seo title={frontmatter.title} description={excerpt} />;
 };
 
 export const postQuery = graphql`

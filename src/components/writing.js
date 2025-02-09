@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Dropdown from '../components/dropdown';
@@ -22,6 +22,7 @@ const WritingList = () => {
                 updated(formatString: "YYYY-MM-DD")
                 description
                 category
+                defaultExpanded
               }
               id
             }
@@ -35,69 +36,51 @@ const WritingList = () => {
   const defaultYear = 'All Year';
   const years = [
     defaultYear,
-    '2024',
-    '2023',
-    '2022',
-    '2021',
-    '2020',
-    '2019',
-    '2018',
+    ...data.allMarkdownRemark.year.map((y) => y.year),
   ];
   const categories = [defaultCategory, 'Essay', 'Review'];
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [selectedYear, setSelectedYear] = useState(defaultYear);
-  const [displayedPosts, setDisplayedPosts] = useState();
 
-  const onePost = (post, postIndex) => (
+  const filteredPosts = useMemo(() => {
+    return data.allMarkdownRemark.year
+      .sort((a, b) => b.year - a.year) // Ensure years are in descending order
+      .filter(
+        (year) => selectedYear === defaultYear || year.year === selectedYear
+      )
+      .map((year) => ({
+        year: year.year,
+        posts: year.edges
+          .filter(
+            (post) =>
+              selectedCategory === defaultCategory ||
+              post.node.frontmatter.category.includes(selectedCategory)
+          )
+          .sort(
+            (a, b) =>
+              new Date(b.node.frontmatter.updated) -
+              new Date(a.node.frontmatter.updated)
+          ), // Sort posts by date descending
+      }))
+      .filter((yearGroup) => yearGroup.posts.length > 0); // Remove empty groups
+  }, [selectedCategory, selectedYear, data]);
+
+  const renderPost = (post) => (
     <details
+      key={post.node.id}
       className="separate-row"
-      key={postIndex}
       open={post.node.frontmatter.defaultExpanded}
     >
       <summary>
         <span className="title">{post.node.frontmatter.title}</span>
-        {/* &nbsp;
-        <span className="bold italic">{post.node.frontmatter.updated}</span> */}
       </summary>
       <div>{post.node.frontmatter.description}</div>
-
       <div className="pill">
         <Link to={post.node.frontmatter.permalink}>Read More</Link>
       </div>
     </details>
   );
-
-  useEffect(() => {
-    const filterPosts = () => {
-      // Filter posts by year first
-      let filteredYear = data.allMarkdownRemark.year;
-
-      if (selectedYear !== defaultYear) {
-        filteredYear = filteredYear.filter(
-          (year) => year.year === selectedYear
-        );
-      }
-
-      // Now, filter by category
-      return filteredYear
-        .slice(0)
-        .reverse()
-        .map((year, index) => (
-          <div key={index}>
-            {year.edges
-              .filter(
-                (post) =>
-                  selectedCategory === defaultCategory ||
-                  post.node.frontmatter.category.includes(selectedCategory)
-              )
-              .map((post, postIndex) => onePost(post, postIndex))}
-          </div>
-        ));
-    };
-
-    setDisplayedPosts(filterPosts());
-  }, [selectedCategory, selectedYear]);
 
   return (
     <>
@@ -112,7 +95,11 @@ const WritingList = () => {
         setSelected={setSelectedYear}
       />
 
-      <div className="displayed-posts">{displayedPosts}</div>
+      <div className="displayed-posts">
+        {filteredPosts.map((yearGroup) => (
+          <div key={yearGroup.year}>{yearGroup.posts.map(renderPost)}</div>
+        ))}
+      </div>
     </>
   );
 };

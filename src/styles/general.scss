@@ -135,9 +135,31 @@ main {
 
 .index {
   display: grid;
-  grid-template-columns: 25% 1fr 25%;
+  grid-template-columns: 500px 1fr 1000px 500px;
   overflow: hidden;
   height: 100%;
+
+  .extra-section {
+    background-color: $bodyColor;
+  }
+  @media (max-width: 2000px) {
+    grid-template-columns: 25% 1fr 25%;
+    .extra-section {
+      display: none;
+    }
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 35% 65%;
+    .middle-section {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+    .left-section {
+      display: none;
+    }
+  }
 }
 
 .page-content {
@@ -145,25 +167,6 @@ main {
   padding: 10px;
   overflow-x: hidden;
   overflow-y: scroll;
-}
-
-/* Responsive Grid */
-@media (max-width: 1000px) {
-  .index {
-    grid-template-columns: 35% 65%;
-  }
-  .middle-section {
-    display: none; /* Hide WritingList (now selectable) */
-  }
-}
-
-@media (max-width: 500px) {
-  .index {
-    grid-template-columns: 1fr; /* Single-column layout */
-  }
-  .left-section {
-    display: none; /* Hide About (now selectable) */
-  }
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
@@ -376,13 +379,15 @@ sup {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  .pill {
+    width: fit-content;
+  }
 }
 
 .pill {
   padding: 5px 10px;
   border: 1px solid $bodyColor;
   border-radius: 10px;
-  width: fit-content;
 
   a {
     text-decoration: none !important;

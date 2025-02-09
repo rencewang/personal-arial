@@ -74,7 +74,10 @@ const Index = () => {
         </section>
       )}
 
-      {/* Always show WritingList if width > 1000px */}
+      {/* Extra column (empty with background color) if width > 2000px */}
+      {screenSize >= 2000 && <section className="extra-section"></section>}
+
+      {/* Always show Writing if width > 1000px */}
       {screenSize >= 1000 && (
         <section className="page-content border-right middle-section">
           <WritingList />

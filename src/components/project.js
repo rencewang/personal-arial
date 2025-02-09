@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 
 import Dropdown from '../components/dropdown';
 import Projects from '../content/projects/projects';
@@ -11,19 +11,15 @@ const ProjectList = () => {
   ];
 
   const [category, setCategory] = useState(defaultCategory);
-  const [displayedProjects, setDisplayedProjects] = useState(Projects);
 
-  const filterProjects = () => {
-    if (category === defaultCategory) {
-      return Projects;
-    }
-    return Projects.filter((project) => project.category === category);
-  };
-
-  useEffect(() => {
-    setDisplayedProjects(filterProjects());
-  }, [category]);
-
+  // Memoized filtering logic
+  const displayedProjects = useMemo(
+    () =>
+      category === defaultCategory
+        ? Projects
+        : Projects.filter((project) => project.category === category),
+    [category]
+  );
   return (
     <>
       <Dropdown
