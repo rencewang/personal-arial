@@ -10,19 +10,22 @@ import Seo from '../components/seo';
 import '../styles/general.scss';
 
 const Index = () => {
+  const getScreenWidth = () =>
+    typeof window !== 'undefined' ? window.innerWidth : 1200;
+
   const getInitialSelected = () => {
-    if (window.innerWidth < 500) return 'About';
-    if (window.innerWidth < 1000) return 'Writing';
+    if (getScreenWidth() < 500) return 'About';
+    if (getScreenWidth() < 1000) return 'Writing';
     return 'Art';
   };
 
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
+  const [screenSize, setScreenSize] = useState(getScreenWidth());
   const [selected, setSelected] = useState(getInitialSelected);
-  const [prevScreenSize, setPrevScreenSize] = useState(window.innerWidth);
+  const [prevScreenSize, setPrevScreenSize] = useState(getScreenWidth());
 
   useEffect(() => {
     const handleResize = () => {
-      const newSize = window.innerWidth;
+      const newSize = getScreenWidth();
 
       // Detect transitions between key breakpoints
       if (prevScreenSize < 500 && newSize >= 500) {
