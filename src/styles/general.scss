@@ -20,7 +20,7 @@ $backgroundColor: var(--background-color);
 $selectColor: var(--select-color);
 $selectBackgroundColor: var(--select-background-color);
 
-$bodyFont: 'Arial', sans-serif;
+$bodyFont: "Arial", sans-serif;
 $mediaRule: 700px;
 
 // GENERAL STYLES ****************************************************
@@ -99,6 +99,9 @@ body {
   @media (max-width: $mediaRule) {
     font-size: 0.8rem;
   }
+  @media (max-width: 400px) {
+    font-size: 0.7rem;
+  }
 }
 
 // LAYOUT STYLES ****************************************************
@@ -117,7 +120,7 @@ main {
   }
 
   footer {
-    min-height: 40px;
+    min-height: 30px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -154,11 +157,14 @@ main {
       display: none;
     }
   }
-  @media (max-width: 500px) {
-    grid-template-columns: 1fr;
-    .left-section {
-      display: none;
-    }
+  // @media (max-width: 500px) {
+  //   grid-template-columns: 1fr;
+  //   .left-section {
+  //     display: none;
+  //   }
+  // }
+  @media (max-width: 400px) {
+    grid-template-columns: 45% 55%;
   }
 }
 
@@ -372,6 +378,10 @@ sup {
   @media (max-width: $mediaRule) {
     font-size: 3rem;
     letter-spacing: -0.2rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 2.5rem;
+    letter-spacing: -0.15rem;
   }
 }
 
