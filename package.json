@@ -1,11 +1,9 @@
 {
-  "name": "Personal Arial",
-  "version": "6.3.3",
+  "name": "Lawrence Wang, Personal Site 2025",
+  "version": "7.0.1",
   "description": "Personal site for Lawrence Wang, Patch Arial",
   "author": "Lawrence Wang",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": [],
   "scripts": {
     "develop": "gatsby clean && gatsby develop",
     "start": "gatsby develop",
