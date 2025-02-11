@@ -6,22 +6,18 @@
 
 :root {
   --text-color: #1e1cd8;
-  // --text-color: #0448e2;
-  --highlight-color: transparent;
   --background-color: #f3f3f3;
-  // --background-color: #f2f2f2;
-  --select-color: #f2f2f2;
-  --select-background-color: #f25b1d;
 }
 
 $bodyColor: var(--text-color);
-$highlightColor: var(--highlight-color);
 $backgroundColor: var(--background-color);
-$selectColor: var(--select-color);
-$selectBackgroundColor: var(--select-background-color);
 
-$bodyFont: "Arial", sans-serif;
+$bodyFont: 'Arial', sans-serif;
 $mediaRule: 700px;
+
+$laptopRule: 1000px;
+$tabletRule: 700px;
+$mobileRule: 500px;
 
 // GENERAL STYLES ****************************************************
 
@@ -198,6 +194,12 @@ details {
 }
 
 // DROPDOWN STYLES ****************************************************
+
+.dropdown-container {
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .dropdown {
   position: relative;

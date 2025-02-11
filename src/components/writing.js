@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import React, { useState, useMemo } from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import Dropdown from "../components/dropdown";
+import Dropdown from '../components/dropdown';
 
 const WritingList = () => {
   const data = useStaticQuery(graphql`
@@ -33,13 +33,13 @@ const WritingList = () => {
     }
   `);
 
-  const defaultCategory = "All Category";
-  const defaultYear = "All Year";
+  const defaultCategory = 'All Category';
+  const defaultYear = 'All Year';
   const years = [
     defaultYear,
     ...data.allMarkdownRemark.year.map((y) => y.year),
   ];
-  const categories = [defaultCategory, "Essay", "Review"];
+  const categories = [defaultCategory, 'Essay', 'Review'];
 
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
   const [selectedYear, setSelectedYear] = useState(defaultYear);
@@ -74,32 +74,44 @@ const WritingList = () => {
       open={post.node.frontmatter.defaultExpanded}
     >
       <summary>
-        <span className="title">{post.node.frontmatter.title} ↗</span>
+        <span className="title">{post.node.frontmatter.title}</span>
       </summary>
 
       <div className="bold">
-        {post.node.frontmatter.formattedUpdated} in{" "}
+        {post.node.frontmatter.formattedUpdated} in{' '}
         {post.node.frontmatter.category}
       </div>
-      <div>{post.node.frontmatter.description}</div>
-      <div className="pill" style={{ marginTop: "5px" }}>
-        <Link to={post.node.frontmatter.permalink}>Read More</Link>
+
+      <div style={{ margin: '0.2rem 0' }}>
+        {post.node.frontmatter.description}
+      </div>
+
+      <div className="bold">
+        <a
+          href={post.node.frontmatter.permalink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read on Substack
+        </a>
       </div>
     </details>
   );
 
   return (
     <>
-      <Dropdown
-        options={categories}
-        selected={selectedCategory}
-        setSelected={setSelectedCategory}
-      />
-      <Dropdown
-        options={years}
-        selected={selectedYear}
-        setSelected={setSelectedYear}
-      />
+      <div className="dropdown-container">
+        <Dropdown
+          options={categories}
+          selected={selectedCategory}
+          setSelected={setSelectedCategory}
+        />
+        <Dropdown
+          options={years}
+          selected={selectedYear}
+          setSelected={setSelectedYear}
+        />
+      </div>
 
       <div className="displayed-posts">
         {filteredPosts.map((yearGroup) => (

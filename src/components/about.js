@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import Player from "../components/player";
-import Subscribe from "../components/subscribe";
+import Player from '../components/player';
+import Subscribe from '../components/subscribe';
 import {
   interestArray,
   aspirationArray,
   recommendationArray,
-} from "../content/index/index";
-import "../styles/general.scss";
+} from '../content/index/index';
+import '../styles/general.scss';
 
 const PillBlock = ({ name, link, image }) => (
   <div className="link-image pill" key={name}>
@@ -40,7 +40,8 @@ const About = () => (
           href="https://www.instagram.com/rencewang/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ marginRight: "10px" }}
+          style={{ marginRight: '10px' }}
+          className="bold"
         >
           Instagram
         </a>
@@ -48,6 +49,7 @@ const About = () => (
           href="https://www.linkedin.com/in/rencewang/"
           target="_blank"
           rel="noopener noreferrer"
+          className="bold"
         >
           LinkedIn
         </a>
@@ -63,9 +65,9 @@ const About = () => (
     </details>
 
     {[
-      { title: "Has Interests In", data: interestArray },
-      { title: "Wishes He Could", data: aspirationArray },
-      { title: "Recommends", data: recommendationArray },
+      { title: 'Has Interests In', data: interestArray },
+      { title: 'Wishes He Could', data: aspirationArray },
+      { title: 'Suggests', data: recommendationArray },
     ].map(({ title, data }) => (
       <details key={title} open>
         <summary>

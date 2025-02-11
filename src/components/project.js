@@ -36,11 +36,11 @@ const ProjectList = () => {
             <span className="bold italic">{project.year}</span>
           </summary>
 
-          <div>{project.description}</div>
+          <div style={{ margin: '0 0 0.2rem 0' }}>{project.description}</div>
 
-          <div className="pill">
-            <a href={project.link} target="_blank" rel="noreferrer">
-              View
+          <div className="bold">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              View Demo
             </a>
           </div>
         </details>
