@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Player from '../components/player';
-import Subscribe from '../components/subscribe';
 import {
   interestArray,
   aspirationArray,
@@ -53,7 +52,6 @@ const About = () => (
         >
           LinkedIn
         </a>
-        <Subscribe />
       </div>
     </details>
 

@@ -358,34 +358,7 @@ sup {
   }
 }
 
-// FUNCTIONAL STYLES ****************************************************
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.title {
-  font-size: 4rem;
-  letter-spacing: -0.25rem;
-  line-height: 0.9;
-
-  @media (max-width: $tabletRule) {
-    font-size: 3rem;
-    letter-spacing: -0.2rem;
-  }
-  @media (max-width: $mobileRule) {
-    font-size: 2.5rem;
-    letter-spacing: -0.15rem;
-  }
-}
+// PILL STYLES ****************************************************
 
 .pill-container {
   display: flex;
@@ -427,6 +400,56 @@ sup {
     img {
       width: 100%;
     }
+  }
+}
+
+// SUBSCRIBE STYLES ****************************************************
+
+#custom-substack-embed {
+  margin: 5px 0;
+
+  .custom-substack-widget {
+    border: 1px solid $bodyColor;
+    border-radius: 10px;
+
+    input {
+      background-color: $backgroundColor;
+      color: $bodyColor;
+      font-size: 1rem;
+    }
+    button {
+      color: $backgroundColor;
+      background-color: $bodyColor;
+    }
+  }
+}
+
+// FUNCTIONAL STYLES ****************************************************
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.title {
+  font-size: 4rem;
+  letter-spacing: -0.25rem;
+  line-height: 0.9;
+
+  @media (max-width: $tabletRule) {
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+  }
+  @media (max-width: $mobileRule) {
+    font-size: 2.5rem;
+    letter-spacing: -0.15rem;
   }
 }
 
