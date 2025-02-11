@@ -67,7 +67,7 @@ const About = () => (
     {[
       { title: 'Has Interests In', data: interestArray },
       { title: 'Wishes He Could', data: aspirationArray },
-      { title: 'Suggests', data: recommendationArray },
+      { title: 'Endorses', data: recommendationArray },
     ].map(({ title, data }) => (
       <details key={title} open>
         <summary>

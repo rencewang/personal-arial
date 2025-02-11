@@ -13,8 +13,8 @@ $bodyColor: var(--text-color);
 $backgroundColor: var(--background-color);
 
 $bodyFont: 'Arial', sans-serif;
-$mediaRule: 700px;
 
+$desktopRule: 2000px;
 $laptopRule: 1000px;
 $tabletRule: 700px;
 $mobileRule: 500px;
@@ -25,11 +25,11 @@ $mobileRule: 500px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
   &::before,
   &::after {
     box-sizing: border-box;
   }
+
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
@@ -92,10 +92,10 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: $backgroundColor;
 
-  @media (max-width: $mediaRule) {
+  @media (max-width: $tabletRule) {
     font-size: 0.8rem;
   }
-  @media (max-width: 400px) {
+  @media (max-width: $mobileRule) {
     font-size: 0.7rem;
   }
 }
@@ -141,25 +141,20 @@ main {
   .extra-section {
     background-color: $bodyColor;
   }
-  @media (max-width: 2000px) {
+
+  @media (max-width: $desktopRule) {
     grid-template-columns: 25% 1fr 25%;
     .extra-section {
       display: none;
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $laptopRule) {
     grid-template-columns: 35% 65%;
     .middle-section {
       display: none;
     }
   }
-  // @media (max-width: 500px) {
-  //   grid-template-columns: 1fr;
-  //   .left-section {
-  //     display: none;
-  //   }
-  // }
-  @media (max-width: 400px) {
+  @media (max-width: $mobileRule) {
     grid-template-columns: 45% 55%;
   }
 }
@@ -178,16 +173,19 @@ details {
   &:not(:first-of-type) {
     margin-top: 20px;
   }
+
   summary {
     cursor: pointer;
     outline: none;
     margin: 10px 0 10px 0;
+
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
   }
+
   > span {
     line-height: 1.25;
   }
@@ -233,9 +231,11 @@ details {
       padding: 5px 10px;
       cursor: pointer;
       border-bottom: 1px solid $bodyColor;
+
       &:last-child {
         border-bottom: none;
       }
+
       &:hover {
         background-color: $bodyColor;
         color: $backgroundColor;
@@ -377,11 +377,11 @@ sup {
   letter-spacing: -0.25rem;
   line-height: 0.9;
 
-  @media (max-width: $mediaRule) {
+  @media (max-width: $tabletRule) {
     font-size: 3rem;
     letter-spacing: -0.2rem;
   }
-  @media (max-width: 400px) {
+  @media (max-width: $mobileRule) {
     font-size: 2.5rem;
     letter-spacing: -0.15rem;
   }
@@ -402,9 +402,6 @@ sup {
   border-radius: 10px;
   width: fit-content;
 
-  a {
-    text-decoration: none !important;
-  }
   &:hover,
   &:hover * {
     color: $backgroundColor;
