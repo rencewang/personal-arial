@@ -17,11 +17,11 @@ const PillBlock = ({ name, link, image }) => (
     ) : (
       name
     )}
-    {image && (
+    {/* {image && (
       <span>
         <img src={image} alt={name} />
       </span>
-    )}
+    )} */}
   </div>
 );
 
