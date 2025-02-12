@@ -32,11 +32,11 @@ const Layout = ({ children }) => {
 
   return (
     <main style={{ height: gridHeight }}>
+      <Footer />
+
       <div className="content" ref={contentRef}>
         {children}
       </div>
-
-      <Footer />
     </main>
   );
 };

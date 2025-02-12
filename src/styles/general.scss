@@ -20,27 +20,19 @@ $tabletRule: 700px;
 $mobileRule: 500px;
 
 // GENERAL STYLES ****************************************************
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
-
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
 
   color: $bodyColor;
   font-family: $bodyFont;
-}
-
-::-moz-selection {
-  color: $backgroundColor;
-  background: $bodyColor;
 }
 
 ::selection {
@@ -51,20 +43,18 @@ $mobileRule: 500px;
 a,
 .link-button {
   display: inline-block;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration: underline 1px;
   text-underline-offset: 2px;
   cursor: pointer;
 
   &:active {
     background-color: transparent;
   }
-}
 
-@media (hover: hover) {
-  a:hover,
-  .link-button:hover {
-    text-decoration: none;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -103,10 +93,8 @@ body {
 // LAYOUT STYLES ****************************************************
 
 main {
-  margin: 0;
-  padding: 0;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr;
   // height: 100svh; this is set in layout component
   width: 100%;
   overflow: hidden;
@@ -116,16 +104,18 @@ main {
   }
 
   footer {
-    min-height: 30px;
-    padding: 10px;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    border-top: 1px solid $bodyColor;
+    border-bottom: 1px solid $bodyColor;
+    background-color: $bodyColor;
+
+    > * {
+      color: $backgroundColor;
+    }
 
     #greeting {
-      margin-left: 15px;
-      text-align: right;
+      margin-right: 15px;
     }
   }
 }
@@ -179,10 +169,12 @@ details {
     outline: none;
     margin: 10px 0 10px 0;
 
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
     }
   }
 
@@ -236,9 +228,11 @@ details {
         border-bottom: none;
       }
 
-      &:hover {
-        background-color: $bodyColor;
-        color: $backgroundColor;
+      @media (hover: hover) {
+        &:hover {
+          background-color: $bodyColor;
+          color: $backgroundColor;
+        }
       }
     }
   }
@@ -251,8 +245,9 @@ details {
 // MARKDOWN STYLES ****************************************************
 
 blockquote {
-  border-left: 2px solid $bodyColor;
+  border-left: 4px solid $bodyColor;
   padding: 0 10px;
+  margin: 20px;
 }
 
 sup {
@@ -375,51 +370,14 @@ sup {
   border-radius: 10px;
   width: fit-content;
 
-  &:hover,
-  &:hover * {
-    color: $backgroundColor;
-    background-color: $bodyColor;
-    path {
-      fill: $backgroundColor !important;
-    }
-  }
-}
-
-.pill .link-image {
-  span {
-    display: none;
-    z-index: 999;
-    position: fixed;
-    right: 20px;
-    top: 20%;
-    max-width: 500px;
-  }
-
-  &:hover span {
-    display: block;
-    img {
-      width: 100%;
-    }
-  }
-}
-
-// SUBSCRIBE STYLES ****************************************************
-
-#custom-substack-embed {
-  margin: 5px 0;
-
-  .custom-substack-widget {
-    border: 1px solid $bodyColor;
-    border-radius: 10px;
-
-    input {
-      background-color: $backgroundColor;
-      color: $bodyColor;
-      font-size: 1rem;
-    }
-    button {
+  @media (hover: hover) {
+    &:hover,
+    &:hover * {
       color: $backgroundColor;
       background-color: $bodyColor;
+      path {
+        fill: $backgroundColor !important;
+      }
     }
   }
 }
@@ -460,4 +418,24 @@ sup {
 .separate-row:not(:empty) {
   padding-bottom: 10px;
   border-bottom: 1px solid $bodyColor;
+}
+
+.link-image {
+  span {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    right: 10px;
+    top: 20%;
+    max-width: min(500px, calc(100% - 20px));
+  }
+
+  @media (hover: hover) {
+    &:hover span {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

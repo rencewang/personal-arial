@@ -9,7 +9,7 @@ import {
 import '../styles/general.scss';
 
 const PillBlock = ({ name, link, image }) => (
-  <div className="link-image pill" key={name}>
+  <div className="pill link-image" key={name}>
     {link ? (
       <a href={link} target="_blank" rel="noopener noreferrer">
         {name}

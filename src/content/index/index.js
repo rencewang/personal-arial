@@ -51,12 +51,12 @@ export const greetingArray = [
   "I'm falling out of love with you, LA.",
   "When the lights go down it's the ending of the show",
   'Hate me if it helps.',
-  "I know I typically fight it but I'm letting my grip go.",
+  "I typically fight it but I'm letting my grip go.",
   'What I tell you is in confidence.',
   "Ten months older, I won't give in.",
   'Remember Harbor Boulevard?',
   "Now we're looking forward in silence.",
-  "I promise there'd be a fire.",
+  "Promise me there'd be a fire.",
   "So I'm counting to Fifteen.",
   "It'll be on, and then it won't be on.",
   "I know that it's hard to love.",
@@ -111,7 +111,8 @@ export const interestArray = [
   {
     name: 'Grand strategy games',
     link: 'https://eu4.paradoxwikis.com/Burgundy',
-    image: null,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cross_of_Burgundy_%28Template%29.svg/588px-Cross_of_Burgundy_%28Template%29.svg.png',
   },
   {
     name: 'Historical fiction',

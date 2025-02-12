@@ -86,15 +86,19 @@ const WritingList = () => {
         {post.node.frontmatter.description}
       </div>
 
-      <div className="bold">
-        <a
-          href={post.node.frontmatter.permalink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read on Substack
-        </a>
-      </div>
+      <a
+        className="bold"
+        href={post.node.frontmatter.permalink}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ marginRight: '15px' }}
+      >
+        Read on Substack
+      </a>
+
+      <Link className="bold" to={post.node.frontmatter.permalink}>
+        Read Here
+      </Link>
     </details>
   );
 
