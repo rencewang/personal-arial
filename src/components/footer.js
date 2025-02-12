@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <footer ref={footerRef}>
       <div id="greeting">{greetingText}</div>
-      <Clock />
+      {/* <Clock /> */}
     </footer>
   );
 };
