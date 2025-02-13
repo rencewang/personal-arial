@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 
-import Footer from './footer';
-import '../styles/general.scss';
+import Footer from "./footer";
+import "../styles/general.scss";
 
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
@@ -32,7 +32,8 @@ const Layout = ({ children }) => {
   // }, []);
 
   return (
-    <main style={{ height: gridHeight }}>
+    // <main style={{ height: gridHeight }}>
+    <main>
       <Footer />
 
       <div className="content" ref={contentRef}>
