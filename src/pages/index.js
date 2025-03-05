@@ -15,50 +15,42 @@ const Index = () => {
   const determineDefaultTab = (width) => (width < 1000 ? 'Writing' : 'Art');
 
   const [screenSize, setScreenSize] = useState(getScreenWidth());
-  const [selected, setSelected] = useState(
+  const [selected, setSelected] = useState(() =>
     determineDefaultTab(getScreenWidth())
   );
   const options =
     screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
 
+  const components = {
+    Writing: WritingList,
+    Art: ArtList,
+    Projects: ProjectList,
+  };
+  const SelectedComponent = components[selected] || ProjectList;
+
   useEffect(() => {
     const handleResize = () => {
-      const newSize = getScreenWidth();
-      setScreenSize(newSize);
-
-      if (screenSize >= 1000 && newSize < 1000) setSelected('Writing');
-      if (screenSize < 1000 && newSize >= 1000) setSelected('Art');
+      setScreenSize((prevSize) => {
+        const newSize = getScreenWidth();
+        if (prevSize >= 1000 && newSize < 1000) setSelected('Writing');
+        if (prevSize < 1000 && newSize >= 1000) setSelected('Art');
+        return newSize;
+      });
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [screenSize]);
-
-  // Determine available options based on screen size
-  const getOptions = () => {
-    if (screenSize < 1000) return ['Writing', 'Art', 'Projects'];
-    return ['Art', 'Projects'];
-  };
-
-  const renderContent = () => {
-    const components = {
-      Writing: WritingList,
-      Art: ArtList,
-      Projects: ProjectList,
-    };
-    const SelectedComponent = components[selected] || ProjectList;
-    return <SelectedComponent />;
-  };
-
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Runs only on client-side
   }, []);
 
-  if (!isClient) {
-    return null; // Don't render until `window` is available
-  }
+  // const [isClient, setIsClient] = useState(false);
+
+  // useEffect(() => {
+  //   setIsClient(true); // Runs only on client-side
+  // }, []);
+
+  // if (!isClient) {
+  //   return null; // Don't render until `window` is available
+  // }
 
   return (
     <div className="index">
@@ -83,7 +75,9 @@ const Index = () => {
           selected={selected}
           setSelected={setSelected}
         />
-        <div style={{ marginTop: '5px' }}>{renderContent()}</div>
+        <div style={{ marginTop: '5px' }}>
+          <SelectedComponent />
+        </div>
       </section>
     </div>
   );
