@@ -7,6 +7,7 @@ import '../styles/general.scss';
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
+  const loaderRef = useRef();
 
   useEffect(() => {
     if (contentRef.current) {
@@ -14,27 +15,24 @@ const Layout = ({ children }) => {
     }
   }, [children]);
 
-  const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState(() =>
     typeof window !== 'undefined' ? window.innerWidth : 1200
   );
 
   useEffect(() => {
-    setIsClient(true);
     const handleResize = () => setScreenSize(window.innerWidth);
+    const timeout = setTimeout(() => {
+      loaderRef.current.style.opacity = '0';
+    }, 500);
 
     setScreenSize(window.innerWidth);
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
-  if (!isClient) {
-    return (
-      <div
-        style={{ width: '100vw', height: '100vh', backgroundColor: '#1e1cd8' }}
-      />
-    );
-  }
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <main>
@@ -43,6 +41,8 @@ const Layout = ({ children }) => {
       <div className="content" ref={contentRef}>
         {React.cloneElement(children, { screenSize })}
       </div>
+
+      <div className="loader" ref={loaderRef} />
     </main>
   );
 };
