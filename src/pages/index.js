@@ -16,7 +16,7 @@ const Index = ({ screenSize }) => {
 
   useEffect(() => {
     setSelected(screenSize < 1000 ? 'Writing' : 'Art');
-  }, [screenSize]); // Update tab when screen size changes
+  }, [screenSize]);
 
   const options =
     screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
@@ -26,32 +26,6 @@ const Index = ({ screenSize }) => {
     Projects: ProjectList,
   };
   const SelectedComponent = components[selected] || ProjectList;
-
-  // const determineDefaultTab = (width) => (width < 1000 ? 'Writing' : 'Art');
-  // const [selected, setSelected] = useState(() =>
-  //   determineDefaultTab(screenSize)
-  // );
-
-  // const options =
-  //   screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
-
-  // const components = {
-  //   Writing: WritingList,
-  //   Art: ArtList,
-  //   Projects: ProjectList,
-  // };
-  // const SelectedComponent = components[selected] || ArtList;
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     const newSize = window.innerWidth;
-  //     setScreenSize(newSize);
-  //     setSelected(determineDefaultTab(newSize));
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
 
   return (
     <div className="index">

@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
@@ -9,41 +9,34 @@ const Layout = ({ children }) => {
   const contentRef = useRef();
 
   useEffect(() => {
-    contentRef.current.scrollTop = 0;
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
   }, [children]);
 
+  const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState(() =>
     typeof window !== 'undefined' ? window.innerWidth : 1200
   );
 
   useEffect(() => {
+    setIsClient(true);
     const handleResize = () => setScreenSize(window.innerWidth);
 
+    setScreenSize(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Set grid height to window height
-  // const [gridHeight, setGridHeight] = useState('100vh');
-  // useLayoutEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const updateGridHeight = () => {
-  //       setGridHeight(window.innerHeight);
-  //     };
-
-  //     updateGridHeight();
-  //     window.addEventListener('scroll', updateGridHeight);
-  //     window.addEventListener('resize', updateGridHeight);
-
-  //     return () => {
-  //       window.removeEventListener('scroll', updateGridHeight);
-  //       window.removeEventListener('resize', updateGridHeight);
-  //     };
-  //   }
-  // }, []);
+  if (!isClient) {
+    return (
+      <div
+        style={{ width: '100vw', height: '100vh', backgroundColor: '#1e1cd8' }}
+      />
+    );
+  }
 
   return (
-    // <main style={{ height: gridHeight }}>
     <main>
       <Footer />
 
