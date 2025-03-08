@@ -95,7 +95,7 @@ body {
 main {
   display: grid;
   grid-template-rows: auto 1fr;
-  // height: 100svh; this is set in layout component
+  height: 100svh;
   width: 100%;
   overflow: hidden;
 

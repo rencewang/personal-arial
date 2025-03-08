@@ -9,18 +9,17 @@ import Seo from '../components/seo';
 
 import '../styles/general.scss';
 
-const Index = () => {
-  const getScreenWidth = () =>
-    typeof window !== 'undefined' ? window.innerWidth : 1200;
-  const determineDefaultTab = (width) => (width < 1000 ? 'Writing' : 'Art');
-
-  const [screenSize, setScreenSize] = useState(getScreenWidth());
-  const [selected, setSelected] = useState(() =>
-    determineDefaultTab(getScreenWidth())
+const Index = ({ screenSize }) => {
+  const [selected, setSelected] = useState(
+    screenSize < 1000 ? 'Writing' : 'Art'
   );
+
+  useEffect(() => {
+    setSelected(screenSize < 1000 ? 'Writing' : 'Art');
+  }, [screenSize]); // Update tab when screen size changes
+
   const options =
     screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
-
   const components = {
     Writing: WritingList,
     Art: ArtList,
@@ -28,29 +27,31 @@ const Index = () => {
   };
   const SelectedComponent = components[selected] || ProjectList;
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenSize((prevSize) => {
-        const newSize = getScreenWidth();
-        if (prevSize >= 1000 && newSize < 1000) setSelected('Writing');
-        if (prevSize < 1000 && newSize >= 1000) setSelected('Art');
-        return newSize;
-      });
-    };
+  // const determineDefaultTab = (width) => (width < 1000 ? 'Writing' : 'Art');
+  // const [selected, setSelected] = useState(() =>
+  //   determineDefaultTab(screenSize)
+  // );
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  // const options =
+  //   screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
 
-  // const [isClient, setIsClient] = useState(false);
+  // const components = {
+  //   Writing: WritingList,
+  //   Art: ArtList,
+  //   Projects: ProjectList,
+  // };
+  // const SelectedComponent = components[selected] || ArtList;
 
   // useEffect(() => {
-  //   setIsClient(true); // Runs only on client-side
-  // }, []);
+  //   const handleResize = () => {
+  //     const newSize = window.innerWidth;
+  //     setScreenSize(newSize);
+  //     setSelected(determineDefaultTab(newSize));
+  //   };
 
-  // if (!isClient) {
-  //   return null; // Don't render until `window` is available
-  // }
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
 
   return (
     <div className="index">
@@ -58,17 +59,12 @@ const Index = () => {
         <About />
       </section>
 
-      {/* Extra column (empty with background color) if width > 2000px */}
-      {screenSize >= 2000 && <section className="extra-section"></section>}
+      <section className="extra-section"></section>
 
-      {/* Always show Writing if width > 1000px */}
-      {screenSize >= 1000 && (
-        <section className="page-content border-right middle-section">
-          <WritingList />
-        </section>
-      )}
+      <section className="page-content border-right middle-section">
+        <WritingList />
+      </section>
 
-      {/* Selectable Section */}
       <section className="page-content right-section">
         <Dropdown
           options={options}

@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 
-import Footer from "./footer";
-import "../styles/general.scss";
+import Footer from './footer';
+import '../styles/general.scss';
 
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
@@ -11,6 +11,17 @@ const Layout = ({ children }) => {
   useEffect(() => {
     contentRef.current.scrollTop = 0;
   }, [children]);
+
+  const [screenSize, setScreenSize] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Set grid height to window height
   // const [gridHeight, setGridHeight] = useState('100vh');
@@ -37,7 +48,7 @@ const Layout = ({ children }) => {
       <Footer />
 
       <div className="content" ref={contentRef}>
-        {children}
+        {React.cloneElement(children, { screenSize })}
       </div>
     </main>
   );
