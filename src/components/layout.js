@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
   const loaderRef = useRef();
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -21,16 +22,33 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
-    const timeout = setTimeout(() => {
-      loaderRef.current.style.opacity = '0';
+
+    const timeoutOpacity = setTimeout(() => {
+      if (loaderRef.current) {
+        loaderRef.current.style.opacity = '0';
+      }
+      setShowLoader(false);
     }, 500);
+
+    const timeoutVisibility = setTimeout(() => {
+      if (loaderRef.current) {
+        loaderRef.current.style.display = 'none';
+      }
+    }, 1000);
+
+    // Ensure loader starts fully visible
+    if (loaderRef.current) {
+      loaderRef.current.style.opacity = '1';
+      loaderRef.current.style.display = 'block';
+    }
 
     setScreenSize(window.innerWidth);
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      clearTimeout(timeout);
+      clearTimeout(timeoutOpacity);
+      clearTimeout(timeoutVisibility);
     };
   }, []);
 
