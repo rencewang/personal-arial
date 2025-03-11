@@ -80,7 +80,7 @@ body {
   font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: $backgroundColor;
+  background-color: $bodyColor;
 
   @media (max-width: $tabletRule) {
     font-size: 0.8rem;
@@ -101,6 +101,9 @@ main {
 
   .content {
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-color: $backgroundColor;
   }
 
   footer {
@@ -109,6 +112,8 @@ main {
     justify-content: space-between;
     border-bottom: 1px solid $bodyColor;
     background-color: $bodyColor;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 
     > * {
       color: $backgroundColor;
@@ -380,18 +385,6 @@ sup {
       }
     }
   }
-}
-
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $bodyColor;
-  transition: opacity 0.8s ease-in-out;
-  z-index: 9999;
-  pointer-events: none;
 }
 
 // FUNCTIONAL STYLES ****************************************************

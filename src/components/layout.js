@@ -7,8 +7,7 @@ import '../styles/general.scss';
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
-  const loaderRef = useRef();
-  const [showLoader, setShowLoader] = useState(true);
+  const footerRef = useRef();
 
   useEffect(() => {
     if (contentRef.current) {
@@ -23,45 +22,30 @@ const Layout = ({ children }) => {
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
-    const timeoutOpacity = setTimeout(() => {
-      if (loaderRef.current) {
-        loaderRef.current.style.opacity = '0';
-      }
-      setShowLoader(false);
+    footerRef.current.style.opacity = '0';
+    contentRef.current.style.opacity = '0';
+
+    const timeout = setTimeout(() => {
+      footerRef.current.style.opacity = '1';
+      contentRef.current.style.opacity = '1';
     }, 500);
-
-    const timeoutVisibility = setTimeout(() => {
-      if (loaderRef.current) {
-        loaderRef.current.style.display = 'none';
-      }
-    }, 1000);
-
-    // Ensure loader starts fully visible
-    if (loaderRef.current) {
-      loaderRef.current.style.opacity = '1';
-      loaderRef.current.style.display = 'block';
-    }
 
     setScreenSize(window.innerWidth);
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      loaderRef.current.style.opacity = '1';
-      clearTimeout(timeoutOpacity);
-      clearTimeout(timeoutVisibility);
+      clearTimeout(timeout);
     };
   }, []);
 
   return (
     <main>
-      <Footer />
+      <Footer ref={footerRef} />
 
       <div className="content" ref={contentRef}>
         {React.cloneElement(children, { screenSize })}
       </div>
-
-      {showLoader && <div className="loader" ref={loaderRef} />}
     </main>
   );
 };

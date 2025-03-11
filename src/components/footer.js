@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, forwardRef } from 'react';
 
 import { greetingArray } from '../content/index/index';
 
@@ -17,19 +17,18 @@ const Clock = () => {
   return <span>{time.toLocaleTimeString()}</span>;
 };
 
-const Footer = () => {
-  const footerRef = useRef();
+const Footer = forwardRef((props, ref) => {
   const greetingText = useMemo(
     () => greetingArray[Math.floor(Math.random() * greetingArray.length)],
     []
   );
 
   return (
-    <footer ref={footerRef}>
+    <footer ref={ref}>
       <div id="greeting">{greetingText}</div>
       <Clock />
     </footer>
   );
-};
+});
 
 export default Footer;
