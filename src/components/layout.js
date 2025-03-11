@@ -47,6 +47,7 @@ const Layout = ({ children }) => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      loaderRef.current.style.opacity = '1';
       clearTimeout(timeoutOpacity);
       clearTimeout(timeoutVisibility);
     };
@@ -60,7 +61,7 @@ const Layout = ({ children }) => {
         {React.cloneElement(children, { screenSize })}
       </div>
 
-      <div className="loader" ref={loaderRef} />
+      {showLoader && <div className="loader" ref={loaderRef} />}
     </main>
   );
 };
