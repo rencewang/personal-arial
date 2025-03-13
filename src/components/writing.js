@@ -19,6 +19,7 @@ const WritingList = () => {
               frontmatter {
                 title
                 permalink
+                substack
                 updated(formatString: "YYYY-MM-DD")
                 formattedUpdated: updated(formatString: "MMMM DD[,] YYYY")
                 description
@@ -86,15 +87,15 @@ const WritingList = () => {
         {post.node.frontmatter.description}
       </div>
 
-      <a
+      {/* <a
         className="bold"
-        href={post.node.frontmatter.permalink}
+        href={post.node.frontmatter.substack}
         target="_blank"
         rel="noopener noreferrer"
         style={{ marginRight: '15px' }}
       >
         Read on Substack
-      </a>
+      </a> */}
 
       <Link className="bold" to={post.node.frontmatter.permalink}>
         Read Here
