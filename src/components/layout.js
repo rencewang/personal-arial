@@ -1,62 +1,51 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
-import ThreeCanvas from './canvas';
 import '../styles/general.scss';
 
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
+  const footerRef = useRef();
+
   useEffect(() => {
-    contentRef.current.scrollTop = 0;
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
   }, [children]);
 
-  // Set grid height to window height
-  const [gridHeight, setGridHeight] = useState('100vh');
+  const [screenSize, setScreenSize] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const updateGridHeight = () => {
-        setGridHeight(window.innerHeight);
-      };
+    const handleResize = () => setScreenSize(window.innerWidth);
 
-      updateGridHeight();
-      window.addEventListener('scroll', updateGridHeight);
+    footerRef.current.style.opacity = '0';
+    contentRef.current.style.opacity = '0';
 
-      return () => {
-        window.removeEventListener('scroll', updateGridHeight);
-      };
-    }
+    const timeout = setTimeout(() => {
+      footerRef.current.style.opacity = '1';
+      contentRef.current.style.opacity = '1';
+    }, 500);
+
+    setScreenSize(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (
-    <main style={{ height: gridHeight }}>
-      <header>
-        <Link to="/">rence.la</Link>
+    <main>
+      <Footer ref={footerRef} />
 
-        <div className="navigation">
-          <nav>
-            <Link to="/blog">Writing</Link>
-          </nav>
-          <nav>
-            <Link to="/project">Project</Link>
-          </nav>
-          <nav>
-            <Link to="/art">Art</Link>
-          </nav>
-        </div>
-      </header>
-
-      <section className="content-container" ref={contentRef}>
-        <div id="content">{children}</div>
-      </section>
-
-      <Footer />
-
-      <section id="canvas">
-        <ThreeCanvas />
-      </section>
+      <div className="content" ref={contentRef}>
+        {React.cloneElement(children, { screenSize })}
+      </div>
     </main>
   );
 };

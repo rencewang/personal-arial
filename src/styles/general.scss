@@ -1,37 +1,32 @@
 // Color Bank
 // Blue #1E1CD8 Red #E91C23 Yellow #EAA206 Crimson #ac0611
-// Light Blue #cdedee Mint Blue #ade4ee Off White #e5d5cc
+// Light Blue #cdedee Mint Blue #ade4ee Sand #e5d5cc
 // Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
 // BV Green #009D48 BV Orange #F25B1D
 
 :root {
-  --text-color: #f3f3f3;
-  --highlight-color: transparent;
-  --background-color: #000000;
-  --select-color: #f3f3f3;
-  --select-background-color: #1e1cd8;
+  --text-color: #1e1cd8;
+  --background-color: #f3f3f3;
 }
 
 $bodyColor: var(--text-color);
-$highlightColor: var(--highlight-color);
 $backgroundColor: var(--background-color);
-$selectColor: var(--select-color);
-$selectBackgroundColor: var(--select-background-color);
 
 $bodyFont: 'Arial', sans-serif;
-$mediaRule: 500px;
+
+$desktopRule: 2000px;
+$laptopRule: 1000px;
+$tabletRule: 700px;
+$mobileRule: 500px;
 
 // GENERAL STYLES ****************************************************
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
@@ -40,33 +35,26 @@ $mediaRule: 500px;
   font-family: $bodyFont;
 }
 
-::-moz-selection {
-  color: $selectColor;
-  background: $selectBackgroundColor;
-}
-
 ::selection {
-  color: $selectColor;
-  background: $selectBackgroundColor;
+  color: $backgroundColor;
+  background: $bodyColor;
 }
 
 a,
 .link-button {
   display: inline-block;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration: underline 1px;
   text-underline-offset: 2px;
   cursor: pointer;
 
   &:active {
     background-color: transparent;
   }
-}
 
-@media (hover: hover) {
-  a:hover,
-  .link-button:hover {
-    text-decoration: none;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -92,79 +80,85 @@ body {
   font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: $backgroundColor;
-  overflow: hidden;
+  background-color: $bodyColor;
 
-  @media (max-width: $mediaRule) {
+  @media (max-width: $tabletRule) {
     font-size: 0.8rem;
+  }
+  @media (max-width: $mobileRule) {
+    font-size: 0.7rem;
   }
 }
 
 // LAYOUT STYLES ****************************************************
 
-#canvas {
-  z-index: -500;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100svh;
-  background-color: $backgroundColor;
-}
-
 main {
-  margin: 0;
-  padding: 0;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  // height: 100svh; this is set in layout component
+  grid-template-rows: auto 1fr;
+  height: 100svh;
   width: 100%;
   overflow: hidden;
-}
 
-header {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid $bodyColor;
+  .content {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-color: $backgroundColor;
+  }
 
-  .navigation {
+  footer {
+    padding: 5px 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid $bodyColor;
+    background-color: $bodyColor;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 
-    nav {
-      padding-left: 20px;
-      @media (max-width: $mediaRule) {
-        padding-left: 10px;
-      }
+    > * {
+      color: $backgroundColor;
+    }
+
+    #greeting {
+      margin-right: 15px;
     }
   }
 }
 
-footer {
-  min-height: 40px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-top: 1px solid $bodyColor;
+// INDEX PAGE STYLES ****************************************************
 
-  #greeting {
-    margin-left: 15px;
-    text-align: right;
+.index {
+  display: grid;
+  grid-template-columns: 500px 1fr 1000px 500px;
+  overflow: hidden;
+  height: 100%;
+
+  .extra-section {
+    background-color: $bodyColor;
+  }
+
+  @media (max-width: $desktopRule) {
+    grid-template-columns: 25% 1fr 25%;
+    .extra-section {
+      display: none;
+    }
+  }
+  @media (max-width: $laptopRule) {
+    grid-template-columns: 35% 65%;
+    .middle-section {
+      display: none;
+    }
+  }
+  @media (max-width: $mobileRule) {
+    grid-template-columns: 45% 55%;
   }
 }
 
-.content-container {
-  z-index: 500;
-  margin-left: 10px;
+.page-content {
+  height: 100%;
+  padding: 10px;
   overflow-x: hidden;
   overflow-y: scroll;
-
-  #content {
-    max-width: min(500px, calc(100% - 20px));
-  }
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
@@ -174,40 +168,44 @@ details {
   &:not(:first-of-type) {
     margin-top: 20px;
   }
+
   summary {
     cursor: pointer;
     outline: none;
     margin: 10px 0 10px 0;
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
     }
   }
+
   > span {
     line-height: 1.25;
-  }
-  .pill a {
-    text-decoration: none !important;
-  }
-  .pill {
-    margin-top: 5px;
-    width: fit-content;
   }
 }
 
 // DROPDOWN STYLES ****************************************************
 
+.dropdown-container {
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
-  min-width: 130px;
-  margin: 10px 10px 5px 0;
+  margin-right: 5px;
 
   .dropdown-header {
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    min-width: 130px;
     justify-content: space-between;
     gap: 10px;
   }
@@ -222,7 +220,7 @@ details {
     position: absolute;
     border: 1px solid $bodyColor;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $backgroundColor;
     backdrop-filter: blur(10px);
     overflow: hidden;
 
@@ -230,15 +228,20 @@ details {
       padding: 5px 10px;
       cursor: pointer;
       border-bottom: 1px solid $bodyColor;
+
       &:last-child {
         border-bottom: none;
       }
-      &:hover {
-        background-color: $bodyColor;
-        color: $backgroundColor;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $bodyColor;
+          color: $backgroundColor;
+        }
       }
     }
   }
+
   &.is-open .dropdown-options {
     display: block;
   }
@@ -247,8 +250,9 @@ details {
 // MARKDOWN STYLES ****************************************************
 
 blockquote {
-  border-left: 2px solid $bodyColor;
+  border-left: 4px solid $bodyColor;
   padding: 0 10px;
+  margin: 20px;
 }
 
 sup {
@@ -282,62 +286,53 @@ sup {
 
 .post {
   margin-bottom: 20px;
+  max-width: 800px;
   h1 {
     margin: 10px 0;
     line-height: 0.8;
     font-weight: 500;
   }
-}
+  .postnav {
+    width: 100%;
+    display: flex;
 
-.postnav {
-  width: 100%;
-  display: flex;
-
-  div:first-child {
-    flex-basis: 100px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    div:first-child {
+      flex-basis: 100px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    div:last-child {
+      width: auto;
+    }
+    &:first-of-type {
+      margin-top: 20px;
+    }
   }
-  div:last-child {
-    width: auto;
+
+  .category {
+    margin-bottom: 20px;
+    line-height: 1.3;
+
+    > * {
+      width: fit-content;
+    }
   }
-  &:first-of-type {
-    margin-top: 20px;
-  }
-}
 
-.category {
-  margin-bottom: 20px;
-  line-height: 1.3;
+  .postcontent {
+    margin: 0 0 20px 0;
+    line-height: 1.3;
 
-  > * {
-    width: fit-content;
-  }
-}
-
-.postcontent {
-  margin: 0 0 20px 0;
-  line-height: 1.3;
-
-  a {
-    display: inline;
+    a {
+      display: inline;
+    }
   }
 }
 
 // ART STYLES ****************************************************
 
-.gallery-piece {
-  margin-top: 20px;
-
-  .gallery-image {
-    margin: 10px 0;
-  }
-  .gallery-medium {
-    margin: 10px 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+.gallery-image {
+  margin: 10px 0;
+  max-width: 500px;
 }
 
 // PLAYER STYLES ****************************************************
@@ -363,10 +358,33 @@ sup {
   }
 }
 
+// PILL STYLES ****************************************************
+
 .pill-container {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  .pill {
+    width: fit-content;
+  }
+}
+
+.pill {
+  padding: 5px 10px;
+  border: 1px solid $bodyColor;
+  border-radius: 10px;
+  width: fit-content;
+
+  @media (hover: hover) {
+    &:hover,
+    &:hover * {
+      color: $backgroundColor;
+      background-color: $bodyColor;
+      path {
+        fill: $backgroundColor !important;
+      }
+    }
+  }
 }
 
 // FUNCTIONAL STYLES ****************************************************
@@ -386,30 +404,25 @@ sup {
 .title {
   font-size: 4rem;
   letter-spacing: -0.25rem;
-  line-height: 0.85;
+  line-height: 0.9;
 
-  @media (max-width: $mediaRule) {
+  @media (max-width: $tabletRule) {
     font-size: 3rem;
     letter-spacing: -0.2rem;
   }
+  @media (max-width: $mobileRule) {
+    font-size: 2.5rem;
+    letter-spacing: -0.15rem;
+  }
 }
 
-.pill {
-  padding: 5px 10px;
-  border: 1px solid $bodyColor;
-  border-radius: 10px;
+.border-right {
+  border-right: 1px solid $bodyColor;
+}
 
-  a {
-    text-decoration: none !important;
-  }
-  &:hover,
-  &:hover * {
-    color: $backgroundColor;
-    background-color: $bodyColor;
-    path {
-      fill: $backgroundColor !important;
-    }
-  }
+.separate-row:not(:empty) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $bodyColor;
 }
 
 .link-image {
@@ -417,20 +430,17 @@ sup {
     display: none;
     z-index: 999;
     position: fixed;
-    right: 20px;
+    right: 10px;
     top: 20%;
-    max-width: 500px;
+    max-width: min(500px, calc(100% - 20px));
   }
 
-  &:hover span {
-    display: block;
-    img {
-      width: 100%;
+  @media (hover: hover) {
+    &:hover span {
+      display: block;
+      img {
+        width: 100%;
+      }
     }
   }
-}
-
-.separate:not(:empty) {
-  padding-bottom: 10px;
-  border-bottom: 1px solid $bodyColor;
 }

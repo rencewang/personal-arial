@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Player = () => {
-  const [song, setSong] = useState([]);
+  const [song, setSong] = useState({});
 
   const refreshAccessToken = () => {
     return fetch(`https://accounts.spotify.com/api/token`, {
@@ -49,7 +49,9 @@ const Player = () => {
   return (
     <div id="player" className="pill">
       <div className="player-content">
-        {song.track ? `${song.track.name}, ${song.track.artists[0].name}` : ''}
+        {song.track
+          ? `${song.track.name}, ${song.track.artists[0].name}`
+          : 'No track playing'}
       </div>
       <div className="spotify-logo">
         <a

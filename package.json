@@ -1,11 +1,9 @@
 {
-  "name": "Personal Arial",
-  "version": "6.3.3",
+  "name": "Lawrence Wang, Personal Site 2025",
+  "version": "7.0.1",
   "description": "Personal site for Lawrence Wang, Patch Arial",
   "author": "Lawrence Wang",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": [],
   "scripts": {
     "develop": "gatsby clean && gatsby develop",
     "start": "gatsby develop",
@@ -17,9 +15,7 @@
     "@babel/core": "^7.24.0",
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
-    "@react-three/fiber": "^8.15.19",
-    "@react-three/postprocessing": "^2.16.2",
-    "@types/three": "^0.162.0",
+    "ajv": "^8.17.1",
     "gatsby": "^5.6.0",
     "gatsby-plugin-google-gtag": "^5.6.0",
     "gatsby-plugin-image": "^3.6.0",
@@ -35,11 +31,9 @@
     "gatsby-transformer-remark": "^6.6.0",
     "gatsby-transformer-sharp": "^5.6.0",
     "npm": "^9.3.1",
-    "postprocessing": "^6.35.0",
     "react": "^18.2.0",
     "react-dom": "^18.0.0",
     "sass": "^1.49.9",
-    "sharp": "^0.33.2",
-    "three": "^0.162.0"
+    "sharp": "^0.33.2"
   }
 }

@@ -51,7 +51,20 @@ export const greetingArray = [
   "I'm falling out of love with you, LA.",
   "When the lights go down it's the ending of the show",
   'Hate me if it helps.',
-  "I know I typically fight it but I'm letting my grip go.",
+  "I typically fight it but I'm letting my grip go.",
+  'What I tell you is in confidence.',
+  "Ten months older, I won't give in.",
+  'Remember Harbor Boulevard?',
+  "Now we're looking forward in silence.",
+  "Promise me there'd be a fire.",
+  "So I'm counting to Fifteen.",
+  "It'll be on, and then it won't be on.",
+  "I know that it's hard to love.",
+  "Still haven't made it up the PCH.",
+  "I know I'm not that pretty, but it's only freshman year.",
+  'Am I allowed to cry?',
+  'I practice speeches in private.',
+  'Sit down if you need someone to lean on.',
 ];
 
 export const interestArray = [
@@ -66,12 +79,17 @@ export const interestArray = [
     image: null,
   },
   {
-    name: 'Chinese poems and novels',
+    name: 'Chinese Poems',
     link: null,
     image: null,
   },
   {
     name: 'Cities Skylines',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Interior design',
     link: null,
     image: null,
   },
@@ -93,15 +111,16 @@ export const interestArray = [
   {
     name: 'Grand strategy games',
     link: 'https://eu4.paradoxwikis.com/Burgundy',
-    image: null,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cross_of_Burgundy_%28Template%29.svg/588px-Cross_of_Burgundy_%28Template%29.svg.png',
   },
   {
-    name: 'Hotels',
+    name: 'Historical fiction',
     link: null,
     image: null,
   },
   {
-    name: 'Interior design',
+    name: 'Hotels',
     link: null,
     image: null,
   },
@@ -183,11 +202,6 @@ export const aspirationArray = [
     link: null,
     image: null,
   },
-  {
-    name: 'Speak Japanese',
-    link: null,
-    image: null,
-  },
 ];
 
 export const recommendationArray = [
@@ -202,7 +216,7 @@ export const recommendationArray = [
     image: null,
   },
   {
-    name: 'Genshin Impact',
+    name: "McDonald's",
     link: null,
     image: null,
   },
