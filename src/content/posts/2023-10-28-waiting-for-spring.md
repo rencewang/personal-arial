@@ -6,15 +6,16 @@ published: true
 category: Essay
 tag: [Reflection, Music]
 permalink: '/blog/waiting-for-spring'
+substack: 'https://rawrence.substack.com/p/waiting-for-spring'
 type: post
 defaultExpand: false
 description: 'I’m sure, in fact, I know magic is happening. Politics is happening. Sex in the City is happening, in real life, in one of those squares of light in the sea of squares of light. But I am not witnessing, uncovering, or holding. None of those belong to me.'
 seoDescription: 'Diary from New York: I want to say that every day in New York is an affirmation of my choice to eventually return to California. Not because of the chaos, which I thought would turn me away, but perhaps, the rain.'
 ---
 
-Fall in New York really is bleak. Never would I have imagined that no amount of rain in New Haven could have prepared me for even more rain that punctually shrouded the weekends. I thought days would stretch with boredom; my unemployment proved otherwise. I would like to absolve my 1pm wake up; how could I live if not for the constant self-indulgence. But a part of the blame has to be placed on the shortening days and, yes, the rain.
+Fall in New York really is bleak. Never would I have imagined that no amount of rain in New Haven could have prepared me for even more rain that punctually shrouded the weekends. I thought days would stretch with boredom; my unemployment proved otherwise. I would like to absolve my 1 p.m. wake up; how could I live if not for the constant self-indulgence. But a part of the blame has to be placed on the shortening days and, yes, the rain.
 
-My story with _1989_ took place in Fall. For that thirteen year-old, the songs painted a dream life. Move to a big city, leave country music behind, experience a breakup or two. But no matter, you still end up clean — a fairytale. I probably did believe in love back then, because love, as penned by Swift, was so exciting and raw and perfect and calamitous and treacherous and satirical and free. I cannot say that the prospect of being a Swiftian protagonist never crossed my mind.
+My story with _1989_ took place in Fall. For that thirteen year-old, the songs painted a dream life. Move to a big city, leave country music behind, experience a breakup or two. But no matter, you still end up clean — a fairytale. I probably did believe in love back then, because love, as penned by Swift, was so perfect and calamitous, treacherous and free. I cannot say that the prospect of being a Swiftian protagonist never crossed my mind.
 
 But as I sit streaming the reissue (_Taylor’s Version_), it hits me that _1989_ was not even Taylor Swift’s own life, let alone for it to be mine. Her real life is a lot less polished, a lot less bulletproof, much more unhinged. My real life, as it turns out, would be a lot more alone, a lot more loveless, and never as exciting as I imagined.
 

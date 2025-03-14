@@ -6,6 +6,7 @@ published: true
 category: Essay
 tag: [Reflection]
 permalink: '/blog/to-ask-why-we-fight'
+substack: 'https://rawrence.substack.com/p/to-ask-why-we-fight'
 type: post
 defaultExpanded: true
 description: "I always wondered if anyone actually reads these rambles of mine. After all, my writing isn't particularly literary. Does it matter if it's perceived? Does it matter who reads these?"
@@ -32,7 +33,7 @@ Through writing, I learn. I create. I pour my heart out. I am lost and found. I 
 
 One of the lessons from internship over the summer is that, after graduation, the definition of a person becomes blurrier. It may be cynical or utilitarian of me, but while in school, there are things that easily and nearly conclusively define me: major, college, clubs, classes — all of which exist in a self-contained sphere. Those labels are either hidden or scattered upon entering the society. Your coworkers know about your work, your acquaintance at the climbing gym might know your athletic hobbies, your high school friend knows you sell feet pics online. It might not be a bad thing to have decentralized images, but it’s necessary to have a centralized, cohesive self-concept.
 
-So perhaps behind my attempts at self-reinvention is the desperation to grab onto something upon which to hinge my identity, through which to provide the backbone for my actions, and with which to clarify who I am to the outside world. After all, “they only know what you let them see,” according to Saturday Nights.
+So perhaps behind my attempts at self-reinvention is the desperation to grab onto something upon which to hinge my identity, through which to provide the backbone for my actions, and with which to clarify who I am to the outside world. After all, “they only know what you let them see.”
 
 The result of writing, thus, is reclamation of my own narrative. Claiming to define what I am on my own terms. Making my self-concept less dependent on others’ perception of me. Awarding more agency to myself.
 

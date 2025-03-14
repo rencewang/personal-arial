@@ -6,6 +6,7 @@ published: true
 category: Review
 tag: [Music]
 permalink: '/blog/norman-fucking-rockwell'
+substack: 'https://rawrence.substack.com/p/norman-fucking-rockwell'
 type: post
 defaultExpanded: true
 description: 'After all, it''s not just you and me who are not going anywhere: "no one''s going anywhere," and as Lana famously said: "the culture is lit."'

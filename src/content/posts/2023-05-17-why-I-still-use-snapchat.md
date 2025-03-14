@@ -6,6 +6,7 @@ published: true
 category: Essay
 tag: [Reflection]
 permalink: '/blog/why-I-still-use-snapchat'
+substack: 'https://rawrence.substack.com/p/why-i-still-use-snapchat'
 type: post
 defaultExpanded: true
 description: 'One day, I got drenched in the Spring rain on the way back, with osmanthus oil still lingering in my hair from when I put it on after swimming. It teleported me to Fall in Shanghai. Wrong season, I know; not that I’ve ever been to Shanghai in the Fall, I know. But this, somehow, felt exactly how it’s supposed to be.'

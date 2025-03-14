@@ -6,6 +6,7 @@ published: true
 category: Review
 tag: [Movie and TV]
 permalink: '/blog/blue-jasmine'
+substack: 'https://rawrence.substack.com/p/blue-jasmine'
 type: post
 defaultExpanded: false
 description: 'Finally, don’t forget that “the harder working the luckier.” Having put in the hard work means being better prepared for chance occurrences, for slips in the wheel of fortune, which, when aggregated, roughly equals to being luckier.'
@@ -18,7 +19,7 @@ Jasmine wasn't always elegant, but she crafts the life she wants step by step wi
 
 One of Jasmine’s problems is she overplays her own contribution in her rags-to-riches story. Anyone can reinvent themselves to be a Jasmine, but not all of them can score a partner with status or wealth — that’s her luck. As she mistakes her luck for her abilities, she forgets how fragile she actually is. When designing her persona, she only builds the walls of pride and roof of ambition, but forgets a foundation of skills and self-sufficiency. To support Jasmine’s dreams, being a beautiful fool is not enough. You need substance to be "someone substantial." In its absence, nothing can support her elegant but hollow frame.
 
-As the story unfolds, pride is all that Jasmine has left. After losing her money, her status, her son, if she forgoes pride she will be nothing. And she can't bear being nothing. When she almost succeeds at reinvention, her pride stops her. She refuses advances by her sister’s friends as well as the dentist, who are obviously beneath her. Had her pride not driven her to lie to the diplomat about her past, maybe that could have worked out.
+As the story unfolds, pride is all that Jasmine has left. After losing her money, her status, her son, if she forgoes pride she will be nothing. And she can't bear being nothing. When she almost succeeds at reinvention, her pride stops her. She refuses advances by her sister’s friends as well as the dentist, who she considers to be beneath her. Has her pride not driven her to lie to the diplomat about her past, maybe that could have worked out.
 
 There are plenty of valid criticisms of Jasmine: didn’t she ask for this? Didn’t she report her husband, and thus debased her pride in a moment’s rage? Didn't she treat her sister poorly? Yes, she did. But I still don’t want to criticize her too harshly because I see a bit of myself in her. A combination of stupidity and pride led to her downfall, and who's to say that mine won’t? Maybe until then.
 
