@@ -8,7 +8,7 @@ const NotFoundPage = () => (
       <span className="title">This Page Does Not Exist.</span>
       <br />
       <br />
-      <span className="title">
+      <span className="subtitle">
         The universe (which others call the Library) is composed of an
         indefinite, perhaps infinite number of hexagonal galleries. From any
         hexagon, one can see, interminably, the upper and lower floors. The

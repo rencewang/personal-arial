@@ -29,7 +29,7 @@ const About = () => (
   <>
     <details open>
       <summary>
-        <span className="title">Lawrence Wang</span>
+        <span className="subtitle">Lawrence Wang</span>
       </summary>
       <div>
         Software Development Engineer, ART19 <br />
@@ -57,7 +57,7 @@ const About = () => (
 
     <details>
       <summary>
-        <span className="title">Is Listening To</span>
+        <span className="subtitle">Is Listening To</span>
       </summary>
       <Player />
     </details>
@@ -69,7 +69,7 @@ const About = () => (
     ].map(({ title, data }) => (
       <details key={title} open>
         <summary>
-          <span className="title">{title}</span>
+          <span className="subtitle">{title}</span>
         </summary>
         <div className="pill-container">
           {data.map((item) => (

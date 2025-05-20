@@ -66,7 +66,7 @@ const ArtList = () => {
         piece.title ? (
           <details className="separate-row" key={index} open>
             <summary>
-              <span className="title">{piece.title}</span>
+              <span className="subtitle">{piece.title}</span>
             </summary>
             <div className="gallery-image">
               <GatsbyImage image={piece.image} alt={piece.title || ''} />

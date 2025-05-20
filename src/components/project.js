@@ -31,7 +31,7 @@ const ProjectList = () => {
       {displayedProjects.map((project, index) => (
         <details className="separate-row" key={index} open={index < 3}>
           <summary>
-            <span className="title">{project.title}</span>
+            <span className="subtitle">{project.title}</span>
             &nbsp;
             <span className="bold italic">{project.year}</span>
           </summary>
