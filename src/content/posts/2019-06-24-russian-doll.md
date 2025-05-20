@@ -6,6 +6,7 @@ published: true
 category: Review
 tag: [Movie and TV]
 permalink: '/blog/russian-doll'
+
 type: post
 defaultExpanded: true
 description: 'Sometimes, the meniality of daily chores and the pressure from others can make life feel like pure hell. Sometimes, the anxiety of simply being alive carry unbearable burdens. But as Russian Doll reminds us, we are not alone in this world. We still have each other, can find each other, and save each other. '

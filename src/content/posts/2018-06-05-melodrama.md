@@ -6,6 +6,7 @@ published: true
 category: Review
 tag: [Music]
 permalink: '/blog/melodrama'
+
 type: post
 defaultExpanded: true
 description: 'So many melodrama will end up being supercuts. So many hard feelings will lead to exclamation of what the fuck are perfect places. Perhaps this youth is imperfect, but its stubborn, tenacious, yet sinister vitality is precious and impossible to compound.'

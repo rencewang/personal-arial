@@ -6,6 +6,7 @@ published: true
 category: Essay
 tag: [Reflection]
 permalink: '/blog/covid-college-and-us'
+
 type: post
 defaultExpanded: false
 description: 'It was cold. I was alone. My bags were drenched. But I enjoyed having the streets to myself — it felt regal, and I liked how the lights were blurred by downpour, then reflected by puddles, which are then shattered by droplets. Light On reminds me of the rain that night.'

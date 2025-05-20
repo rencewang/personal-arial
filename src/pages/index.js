@@ -45,7 +45,7 @@ const Index = ({ screenSize }) => {
           selected={selected}
           setSelected={setSelected}
         />
-        <div style={{ marginTop: '5px' }}>
+        <div style={{ marginTop: '0.3rem' }}>
           <SelectedComponent />
         </div>
       </section>

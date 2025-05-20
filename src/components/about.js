@@ -39,7 +39,7 @@ const About = () => (
           href="https://www.instagram.com/rencewang/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ marginRight: '10px' }}
+          style={{ marginRight: '0.6rem' }}
           className="bold"
         >
           Instagram

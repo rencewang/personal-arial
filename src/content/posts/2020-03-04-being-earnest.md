@@ -6,6 +6,7 @@ published: true
 category: Essay
 tag: [Reflection]
 permalink: '/blog/being-earnest'
+
 type: post
 defaultExpanded: true
 description: 'You cannot decide what other people think of you, or what they see in you, but you can change how you act. It is our own responsibility to lead a genuine life, to be earnest.'

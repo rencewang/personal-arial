@@ -36,7 +36,7 @@ const BlogTemplate = ({ data, pageContext }) => {
         />
 
         <h1 className="title">{frontmatter.title}</h1>
-        <div style={{ marginTop: '10px' }}>
+        <div style={{ marginTop: '0.6rem' }}>
           {frontmatter.updated} in {frontmatter.category}
         </div>
 

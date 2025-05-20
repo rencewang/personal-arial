@@ -92,7 +92,7 @@ const WritingList = () => {
         href={post.node.frontmatter.substack}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ marginRight: '15px' }}
+        style={{ marginRight: '0.9rem' }}
       >
         Read on Substack
       </a> */}
