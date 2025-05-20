@@ -1,13 +1,21 @@
 import React from 'react';
 
+import About from '../components/about';
 import Seo from '../components/seo';
 import WritingList from '../components/writing';
 
 const BlogPage = () => {
   return (
-    <section className="page-content">
-      <WritingList />
-    </section>
+    <div className="blog-grid">
+      <section className="page-content border-right left-section">
+        <About />
+      </section>
+
+      <section className="extra-section" />
+      <section className="page-content">
+        <WritingList />
+      </section>
+    </div>
   );
 };
 

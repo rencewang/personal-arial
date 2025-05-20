@@ -112,10 +112,6 @@ main {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 
-    > * {
-      // color: $backgroundColor;
-    }
-
     #greeting {
       margin-right: 1rem;
     }
@@ -129,10 +125,6 @@ main {
   grid-template-columns: 500px 1fr 1000px 500px;
   overflow: hidden;
   height: 100%;
-
-  .extra-section {
-    background-color: $bodyColor;
-  }
 
   @media (max-width: $desktopRule) {
     grid-template-columns: 25% 1fr 25%;
@@ -149,6 +141,10 @@ main {
   @media (max-width: $mobileRule) {
     grid-template-columns: 45% 55%;
   }
+}
+
+.extra-section {
+  background-color: $bodyColor;
 }
 
 .page-content {
@@ -281,9 +277,31 @@ sup {
 
 // BLOG STYLES ****************************************************
 
+.blog-grid {
+  display: grid;
+  grid-template-columns: 500px 1fr 1000px;
+  overflow: hidden;
+  height: 100%;
+
+  @media (max-width: $desktopRule) {
+    grid-template-columns: 25% 1fr 650px;
+  }
+  @media (max-width: $laptopRule) {
+    grid-template-columns: 35% 65%;
+    .extra-section {
+      display: none;
+    }
+  }
+  @media (max-width: $mobileRule) {
+    grid-template-columns: auto;
+    .left-section {
+      display: none;
+    }
+  }
+}
+
 .post {
-  margin-bottom: 1.2rem;
-  max-width: 800px;
+  margin: 0 0 1.2rem 0;
   h1 {
     margin: 0.6rem 0;
     line-height: 0.8;
@@ -321,6 +339,14 @@ sup {
 
     a {
       display: inline;
+    }
+  }
+
+  .postheader {
+    display: flex;
+    gap: 0.6rem;
+    a {
+      text-decoration: none;
     }
   }
 }

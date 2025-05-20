@@ -79,7 +79,7 @@ export const interestArray = [
     image: null,
   },
   {
-    name: 'Chinese Poems',
+    name: 'Chinese poems',
     link: null,
     image: null,
   },
@@ -125,6 +125,11 @@ export const interestArray = [
     image: null,
   },
   {
+    name: 'Maps',
+    link: null,
+    image: null,
+  },
+  {
     name: 'Karaoke',
     link: null,
     image: null,
@@ -151,6 +156,11 @@ export const interestArray = [
   },
   {
     name: 'Song lyrics',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Swiftian magic',
     link: null,
     image: null,
   },
@@ -193,12 +203,37 @@ export const aspirationArray = [
     image: null,
   },
   {
-    name: 'Write more',
+    name: "Know it's for the better",
+    link: 'https://open.spotify.com/track/04mAOoQNsXmDJlyupJwmkO?si=0428688ca3b94a9b',
+    image: null,
+  },
+  {
+    name: 'Resist vice',
     link: null,
     image: null,
   },
   {
-    name: 'Fight hair loss',
+    name: 'Scream',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Shine',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Outrun bad luck',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Quit gracefully',
+    link: null,
+    image: null,
+  },
+  {
+    name: 'Wake up',
     link: null,
     image: null,
   },

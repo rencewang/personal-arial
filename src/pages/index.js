@@ -33,7 +33,7 @@ const Index = ({ screenSize }) => {
         <About />
       </section>
 
-      <section className="extra-section"></section>
+      <section className="extra-section" />
 
       <section className="page-content border-right middle-section">
         <WritingList />

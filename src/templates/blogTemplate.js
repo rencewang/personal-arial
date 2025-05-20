@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Seo from '../components/seo';
+import About from '../components/about';
 import Dropdown from '../components/dropdown';
 
 const PostNav = ({ post, label }) =>
@@ -27,19 +28,29 @@ const BlogTemplate = ({ data, pageContext }) => {
   );
 
   return (
-    <section className="page-content">
-      <article className="post">
-        <Dropdown
-          options={Object.keys(fontSizeOptions)}
-          selected={contentFontSize}
-          setSelected={setContentFontSize}
-        />
+    <div className="blog-grid">
+      <section className="page-content border-right left-section">
+        <About />
+      </section>
+
+      <section className="extra-section" />
+
+      <article className="page-content post">
+        <div className="postheader">
+          <div className="pill">
+            <Link to="/">Back</Link>
+          </div>
+          <Dropdown
+            options={Object.keys(fontSizeOptions)}
+            selected={contentFontSize}
+            setSelected={setContentFontSize}
+          />
+        </div>
 
         <h1 className="title">{frontmatter.title}</h1>
         <div style={{ marginTop: '0.6rem' }}>
           {frontmatter.updated} in {frontmatter.category}
         </div>
-
         <PostNav post={previous} label="Previous" />
         <PostNav post={next} label="Next" />
 
@@ -51,7 +62,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           <Link to="/">Back to All Posts</Link>
         </div>
       </article>
-    </section>
+    </div>
   );
 };
 
