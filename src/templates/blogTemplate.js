@@ -4,6 +4,8 @@ import { graphql, Link } from 'gatsby';
 import Seo from '../components/seo';
 import About from '../components/about';
 import Dropdown from '../components/dropdown';
+import NetworkCanvas from '../components/NetworkCanvas';
+import ShimmerCanvas from '../components/ShimmerCanvas';
 
 const PostNav = ({ post, label }) =>
   post && (
@@ -29,11 +31,13 @@ const BlogTemplate = ({ data, pageContext }) => {
 
   return (
     <div className="blog-grid">
-      <section className="page-content border-right left-section">
+      {/* <section className="page-content border-right left-section">
         <About />
       </section>
 
-      <section className="extra-section" />
+      <section className="extra-section">
+        <ShimmerCanvas />
+      </section> */}
 
       <article className="page-content post">
         <div className="postheader">

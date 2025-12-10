@@ -4,6 +4,8 @@
 // Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
 // BV Green #009D48 BV Orange #F25B1D
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
 :root {
   --text-color: #1e1cd8;
   --background-color: #f3f3f3;
@@ -12,7 +14,7 @@
 $bodyColor: var(--text-color);
 $backgroundColor: var(--background-color);
 
-$bodyFont: 'Arial', sans-serif;
+$bodyFont: 'Arial Narrow', 'Roboto Condensed', sans-serif;
 
 $desktopRule: 2000px;
 $laptopRule: 1000px;
@@ -31,6 +33,7 @@ html {
 }
 
 * {
+  appearance: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
@@ -99,7 +102,7 @@ main {
   .content {
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    // transition: opacity 0.8s ease-in-out;
     background-color: $backgroundColor;
   }
 
@@ -278,26 +281,26 @@ sup {
 // BLOG STYLES ****************************************************
 
 .blog-grid {
-  display: grid;
-  grid-template-columns: 500px 1fr 1000px;
-  overflow: hidden;
-  height: 100%;
+  // display: grid;
+  // grid-template-columns: 500px 1fr 1000px;
+  // overflow: hidden;
+  // height: 100%;
 
-  @media (max-width: $desktopRule) {
-    grid-template-columns: 25% 1fr 650px;
-  }
-  @media (max-width: $laptopRule) {
-    grid-template-columns: 35% 65%;
-    .extra-section {
-      display: none;
-    }
-  }
-  @media (max-width: $mobileRule) {
-    grid-template-columns: auto;
-    .left-section {
-      display: none;
-    }
-  }
+  // @media (max-width: $desktopRule) {
+  //   grid-template-columns: 25% 1fr 650px;
+  // }
+  // @media (max-width: $laptopRule) {
+  //   grid-template-columns: 35% 65%;
+  //   .extra-section {
+  //     display: none;
+  //   }
+  // }
+  // @media (max-width: $mobileRule) {
+  //   grid-template-columns: auto;
+  //   .left-section {
+  //     display: none;
+  //   }
+  // }
 }
 
 .post {
@@ -395,7 +398,7 @@ sup {
 .pill {
   padding: 0.3rem 0.6rem;
   border: 0.08rem solid $bodyColor;
-  border-radius: 0.6rem;
+  border-radius: 0;
   width: fit-content;
 
   @media (hover: hover) {

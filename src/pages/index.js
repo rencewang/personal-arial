@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Dropdown from '../components/dropdown';
-import WritingList from '../components/writing';
+import WritingAccordion from '../components/WritingAccordion';
 import ArtList from '../components/art';
 import About from '../components/about';
 import ProjectList from '../components/project';
@@ -21,34 +21,19 @@ const Index = ({ screenSize }) => {
   const options =
     screenSize < 1000 ? ['Writing', 'Art', 'Projects'] : ['Art', 'Projects'];
   const components = {
-    Writing: WritingList,
+    Writing: WritingAccordion,
     Art: ArtList,
     Projects: ProjectList,
   };
   const SelectedComponent = components[selected] || ProjectList;
 
   return (
-    <div className="index">
-      <section className="page-content border-right left-section">
+    <div className="index-single-column">
+      <WritingAccordion />
+
+      <div style={{ marginTop: '2rem' }}>
         <About />
-      </section>
-
-      <section className="extra-section" />
-
-      <section className="page-content border-right middle-section">
-        <WritingList />
-      </section>
-
-      <section className="page-content right-section">
-        <Dropdown
-          options={options}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <div style={{ marginTop: '0.3rem' }}>
-          <SelectedComponent />
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import {
 import '../styles/general.scss';
 
 const PillBlock = ({ name, link, image }) => (
-  <div className="pill link-image" key={name}>
+  <span  key={name}>
     {link ? (
       <a href={link} target="_blank" rel="noopener noreferrer">
         {name}
@@ -22,17 +22,45 @@ const PillBlock = ({ name, link, image }) => (
         <img src={image} alt={name} />
       </span>
     )} */}
-  </div>
+  </span>
 );
 
 const About = () => (
   <>
-    <details open>
+    {/* <details open>
+      <summary> */}
+        {/* <span className="subtitle">Lawrence Wang</span> */}
+      {/* </summary> */}
+
+    {/* </details> */}
+
+    {/* <details>
       <summary>
-        <span className="subtitle">Lawrence Wang</span>
+        <span className="subtitle">Is Listening To</span>
       </summary>
-      <div>
-        Software Development Engineer, ART19 <br />
+      <Player />
+    </details> */}
+
+    {[
+      { title: 'I am interested in', data: interestArray },
+      { title: 'I wish I could', data: aspirationArray },
+      // { title: 'Endorses', data: recommendationArray },
+    ].map(({ title, data }) => (
+      // <details key={title} open>
+      //   <summary>
+      <>
+          {/* <div className="subtitle">{title}</div> */}
+        <div className="pill-container">
+          {title}
+          {data.map((item) => (
+            <PillBlock key={item.name} {...item} />
+          ))}
+        </div>
+        </>
+    ))}
+    <br />
+          <div>
+        Software Engineer, ART19 <br />
         B.S. Computer Science and Economics, Yale University <br />
         B.A. Political Science, Yale University <br />
         <a
@@ -53,31 +81,6 @@ const About = () => (
           LinkedIn
         </a>
       </div>
-    </details>
-
-    <details>
-      <summary>
-        <span className="subtitle">Is Listening To</span>
-      </summary>
-      <Player />
-    </details>
-
-    {[
-      { title: 'Has Interests In', data: interestArray },
-      { title: 'Wishes He Could', data: aspirationArray },
-      // { title: 'Endorses', data: recommendationArray },
-    ].map(({ title, data }) => (
-      <details key={title} open>
-        <summary>
-          <span className="subtitle">{title}</span>
-        </summary>
-        <div className="pill-container">
-          {data.map((item) => (
-            <PillBlock key={item.name} {...item} />
-          ))}
-        </div>
-      </details>
-    ))}
   </>
 );
 export default About;
