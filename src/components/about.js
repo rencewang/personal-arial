@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Player from '../components/player';
+// import Player from '../components/player';
 import {
   interestArray,
   aspirationArray,
@@ -29,7 +29,7 @@ const About = () => (
   <>
     {/* <details open>
       <summary> */}
-        {/* <span className="subtitle">Lawrence Wang</span> */}
+        <span className="subtitle">Regarding</span>
       {/* </summary> */}
 
     {/* </details> */}

@@ -1,20 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Footer from './footer';
 import ShimmerCanvas from './ShimmerCanvas';
+import WindCanvas from './WindCanvas';
+import AsciiCanvas from './AsciiCanvas';
 import '../styles/general.scss';
 
 const Layout = ({ children }) => {
   // Ensure page is scrolled to top on page change
   const contentRef = useRef();
   const footerRef = useRef();
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [children]);
   
   const [screenSize, setScreenSize] = useState(() =>
     typeof window !== 'undefined' ? window.innerWidth : 1200
   );
 
   const [isAmbient, setIsAmbient] = useState(true);
+  
+  // Weather State: 'snow', 'rain', 'fog', 'wind'
+  const [weather, setWeather] = useState('snow');
+
   // Helper to get time string instantly
   const getAmbientString = () => {
     if (typeof window === 'undefined') return '';
@@ -45,19 +56,11 @@ const Layout = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.scrollTop = 0;
-    }
-  }, [children]);
-
-  useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
-    if (footerRef.current) footerRef.current.style.opacity = '0';
     if (contentRef.current) contentRef.current.style.opacity = '0';
 
     const timeout = setTimeout(() => {
-      if (footerRef.current) footerRef.current.style.opacity = '1';
       if (contentRef.current) contentRef.current.style.opacity = '1';
     }, 100);
 
@@ -70,11 +73,28 @@ const Layout = ({ children }) => {
     };
   }, [isAmbient]);
 
+  const cycleWeather = () => {
+    const weathers = ['snow', 'rain', 'fog', 'wind', 'ascii'];
+    const nextIndex = (weathers.indexOf(weather) + 1) % weathers.length;
+    setWeather(weathers[nextIndex]);
+  };
+
+  const getWeatherDescription = () => {
+    switch (weather) {
+      case 'wind': return 'Wind is brewing.'; // Kept user's edit
+      case 'ascii': return 'System is driving.';
+      case 'snow': 
+      default: return 'Snow is falling upward.';
+    }
+  };
+
   return (
     <main style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* 1. Full Screen Background */}
+      {/* 1. Full Screen Background - Switch based on Weather */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-        <ShimmerCanvas />
+        {weather === 'snow' && <ShimmerCanvas />}
+        {weather === 'wind' && <WindCanvas />}
+        {weather === 'ascii' && <AsciiCanvas />}
       </div>
 
       {/* 2. Top Nav / Retract Toggle */}
@@ -127,21 +147,20 @@ const Layout = ({ children }) => {
             transform: 'translate(-50%, -50%)', 
             textAlign: 'center',
             width: '100%',
-            zIndex: 10
+            zIndex: 10,
+            cursor: isAmbient ? 'pointer' : 'default',
+            pointerEvents: isAmbient ? 'auto' : 'none' // Only clickable when ambient
           }}
+          onClick={isAmbient ? cycleWeather : undefined}
         >
           <div className="title" style={{ fontSize: '2rem', marginBottom: '1rem' }}>
             {currentTime}
           </div>
           <div style={{ fontSize: '1.2rem', fontStyle: 'italic' }}>
-            Snow is falling upward.
+            {getWeatherDescription()}
           </div>
         </div>
       {/* )} */}
-
-      <div style={{ display: 'none' }}>
-        <Footer ref={footerRef} />
-      </div>
     </main>
   );
 };

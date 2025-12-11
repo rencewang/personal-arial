@@ -92,69 +92,28 @@ body {
 
 // LAYOUT STYLES ****************************************************
 
+// LAYOUT STYLES ****************************************************
+
 main {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100svh;
   width: 100%;
+  height: 100svh;
   overflow: hidden;
-
-  .content {
-    overflow: hidden;
-    opacity: 0;
-    // transition: opacity 0.8s ease-in-out;
-    background-color: $backgroundColor;
-  }
-
-  footer {
-    padding: 0.3rem 0.6rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.08rem solid $bodyColor;
-    background-color: $backgroundColor;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-
-    #greeting {
-      margin-right: 1rem;
-    }
-  }
+  position: relative;
 }
 
-// INDEX PAGE STYLES ****************************************************
+// INDEX & BLOG STYLES ****************************************************
 
-.index {
-  display: grid;
-  grid-template-columns: 500px 1fr 1000px 500px;
-  overflow: hidden;
-  height: 100%;
-
-  @media (max-width: $desktopRule) {
-    grid-template-columns: 25% 1fr 25%;
-    .extra-section {
-      display: none;
-    }
-  }
-  @media (max-width: $laptopRule) {
-    grid-template-columns: 35% 65%;
-    .middle-section {
-      display: none;
-    }
-  }
-  @media (max-width: $mobileRule) {
-    grid-template-columns: 45% 55%;
-  }
-}
-
-.extra-section {
-  background-color: $bodyColor;
+.index-single-column {
+  /* No specific styles needed if it's just a flex/block container handled by Layout */
+  background: #ffffff;
+  z-index: 50;
 }
 
 .page-content {
   height: 100%;
-  padding: 0.6rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  // overflow-x: hidden;
+  // overflow-y: scroll; 
+  /* Scroll handled by Layout container now */
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
@@ -172,9 +131,9 @@ details {
 
     @media (hover: hover) {
       &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 0.06rem;
-        text-underline-offset: 0.18rem;
+        // text-decoration: underline;
+        // text-decoration-thickness: 0.06rem;
+        // text-underline-offset: 0.18rem;
       }
     }
   }
@@ -278,36 +237,11 @@ sup {
   }
 }
 
-// BLOG STYLES ****************************************************
-
-.blog-grid {
-  // display: grid;
-  // grid-template-columns: 500px 1fr 1000px;
-  // overflow: hidden;
-  // height: 100%;
-
-  // @media (max-width: $desktopRule) {
-  //   grid-template-columns: 25% 1fr 650px;
-  // }
-  // @media (max-width: $laptopRule) {
-  //   grid-template-columns: 35% 65%;
-  //   .extra-section {
-  //     display: none;
-  //   }
-  // }
-  // @media (max-width: $mobileRule) {
-  //   grid-template-columns: auto;
-  //   .left-section {
-  //     display: none;
-  //   }
-  // }
-}
-
 .post {
   margin: 0 0 1.2rem 0;
   h1 {
     margin: 0.6rem 0;
-    line-height: 0.8;
+    line-height: 0.9; // Adjusted for large titles
     font-weight: 500;
   }
   .postnav {
@@ -343,6 +277,12 @@ sup {
     a {
       display: inline;
     }
+    
+    // Ensure images fit
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .postheader {
@@ -350,36 +290,6 @@ sup {
     gap: 0.6rem;
     a {
       text-decoration: none;
-    }
-  }
-}
-
-// ART STYLES ****************************************************
-
-.gallery-image {
-  margin: 0.6rem 0;
-  max-width: 500px;
-}
-
-// PLAYER STYLES ****************************************************
-
-#player {
-  width: fit-content;
-  margin: 0.9rem 0 0 0;
-  position: relative;
-
-  display: flex;
-  gap: 1.2rem;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    path {
-      fill: $bodyColor;
     }
   }
 }
@@ -440,7 +350,8 @@ sup {
 }
 
 .border-right {
-  border-right: 0.08rem solid $bodyColor;
+  // border-right: 0.08rem solid $bodyColor; 
+  /* Removed border-right usage */
 }
 
 .separate-row:not(:empty) {
