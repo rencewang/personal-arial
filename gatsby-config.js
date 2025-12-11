@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: "RENCELA",
@@ -103,4 +105,13 @@ module.exports = {
       },
     },
   ],
+  onCreateWebpackConfig: ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, 'src'),
+        },
+      },
+    });
+  },
 };
