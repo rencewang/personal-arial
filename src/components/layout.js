@@ -38,9 +38,9 @@ const Layout = ({ children }) => {
   const [currentTime, setCurrentTime] = useState(getAmbientString);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(getAmbientString());
-    }, 1000);
+    // const timer = setInterval(() => {
+    //   setCurrentTime(getAmbientString());
+    // }, 1000);
 
     return () => clearInterval(timer);
   }, []);
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
 
       {/* 4. Ambient Mode Display */}
       <div className="ambient-content">
-        <div className="highlight subtitle">{currentTime}</div>
+        <div className="subtitle">{currentTime}</div>
         <div className="italic">Snow is falling upward.</div>
       </div>
     </main>

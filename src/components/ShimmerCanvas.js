@@ -15,7 +15,7 @@ const ShimmerCanvas = () => {
       particles = [];
       // Optimization: drastically reduced density from /100 to /800
       // 1080p: ~2000 particles instead of ~20000.
-      const particleCount = Math.floor((width * height) / 800);
+      const particleCount = Math.floor((width * height) / 100);
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({

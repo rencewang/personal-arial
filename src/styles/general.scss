@@ -112,15 +112,12 @@ section:not(:first-of-type) {
 
 .details-group {
   margin: 0.5rem 0;
+  border-top: 1px solid $bodyColor;
 }
 
 details {
   padding: 0.2rem 0;
   border-bottom: 1px solid $bodyColor;
-
-  &:first-of-type {
-    border-top: 1px solid $bodyColor;
-  }
 
   .details-description {
     margin: 0.2rem 0;
@@ -382,9 +379,71 @@ article {
   text-align: center;
   width: 100%;
   z-index: 0;
+}
 
-  .ambient-message {
-    font-size: 1.2rem;
-    font-style: italic;
+// INTEREST MAP STYLES ****************************************************
+
+.interest-map {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+
+  &__axis-y {
+    position: absolute;
+    top: 3rem;
+    bottom: 3rem;
+    border-left: 1px solid $bodyColor;
+  }
+
+  &__axis-x {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    border-top: 1px solid $bodyColor;
+  }
+
+  &__label {
+    position: absolute;
+    font-weight: bold;
+    cursor: default;
+
+    &--top {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--bottom {
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      writing-mode: vertical-lr;
+    }
+
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-lr;
+    }
+  }
+
+  &__point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: min(1rem, 20px);
+    white-space: nowrap;
+    cursor: default;
+
+    &[href] {
+      cursor: pointer;
+    }
   }
 }
