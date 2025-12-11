@@ -13,6 +13,10 @@ const NotFoundPage = () => (
       Somewhere, it is said, there exists a book that explains them all. But no
       one has found it.
     </div>
+
+    <div className="pill">
+      <Link to="/">Back to Home</Link>
+    </div>
   </>
 );
 
