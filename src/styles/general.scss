@@ -382,13 +382,19 @@ article {
 .page-content {
   position: relative;
   max-width: 700px;
-  height: calc(100vh - 5rem);
-  margin: 3rem auto 2rem;
+  height: calc(100vh - 4rem);
+  height: calc(100dvh - 4rem);
+  margin: 2rem auto 2rem;
   padding: 0.5rem;
   background: $backgroundColor;
   border: 1px solid $bodyColor;
   overflow-y: auto;
   z-index: 50;
+
+  @media (max-width: $tabletRule) {
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .ambient-content {

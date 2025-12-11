@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import Seo from "../components/Seo";
 
@@ -13,7 +14,8 @@ const NotFoundPage = () => (
       Somewhere, it is said, there exists a book that explains them all. But no
       one has found it.
     </div>
-
+    <br />
+    <br />
     <div className="pill">
       <Link to="/">Back to Home</Link>
     </div>
