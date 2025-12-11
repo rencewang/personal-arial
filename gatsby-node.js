@@ -5,6 +5,9 @@ const blogTemplate = path.resolve(`./src/templates/blogTemplate.js`);
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
       fallback: {
         fs: false,
         tls: false,

@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { graphql, Link } from 'gatsby';
+import React, { useState, useMemo } from "react";
+import { graphql, Link } from "gatsby";
 
-import Seo from '../components/seo';
-import Dropdown from '../components/dropdown';
+import Seo from "../components/seo";
+import Dropdown from "../components/dropdown";
 
 const PostNav = ({ post, label }) =>
   post && (
@@ -18,8 +18,8 @@ const BlogTemplate = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { next, previous } = pageContext;
 
-  const fontSizeOptions = { Small: '1rem', Medium: '1.5rem', Large: '2rem' };
-  const [contentFontSize, setContentFontSize] = useState('Medium');
+  const fontSizeOptions = { Small: "1rem", Medium: "1.5rem", Large: "2rem" };
+  const [contentFontSize, setContentFontSize] = useState("Medium");
 
   const contentStyle = useMemo(
     () => ({ fontSize: fontSizeOptions[contentFontSize] }),
@@ -40,7 +40,7 @@ const BlogTemplate = ({ data, pageContext }) => {
       </div>
 
       <h1 className="title">{frontmatter.title}</h1>
-      <div style={{ marginTop: '0.6rem' }}>
+      <div className="post-meta">
         {frontmatter.updated} in {frontmatter.category}
       </div>
       <PostNav post={previous} label="Previous" />
