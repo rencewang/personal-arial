@@ -5,7 +5,7 @@ import ShimmerCanvas from "./ShimmerCanvas";
 
 import "../styles/general.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const contentRef = useRef();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
     }
   }, [children]);
 
-  const [isAmbient, setIsAmbient] = useState(true);
+  const [isAmbient, setIsAmbient] = useState(location?.pathname === "/");
 
   // Helper to get time string instantly
   const getAmbientString = () => {
@@ -79,6 +79,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object,
 };
 
 export default Layout;

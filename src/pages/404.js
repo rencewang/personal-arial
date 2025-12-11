@@ -4,7 +4,7 @@ import Seo from "../components/Seo";
 
 const NotFoundPage = () => (
   <>
-    <div className="title highlight">This Page Does Not Exist.</div>
+    <div className="title">This Page Does Not Exist.</div>
     <br />
     <br />
     <div className="subtitle">
