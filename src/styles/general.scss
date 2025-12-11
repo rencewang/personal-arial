@@ -4,7 +4,33 @@
 // Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
 // BV Green #009D48 BV Orange #F25B1D
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/fonts/arialnarrow_bolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
 
 :root {
   --text-color: #1e1cd8;
@@ -14,7 +40,7 @@
 $bodyColor: var(--text-color);
 $backgroundColor: var(--background-color);
 
-$bodyFont: "Arial Narrow", "Roboto Condensed", sans-serif;
+$bodyFont: "Arial Narrow", sans-serif;
 
 $desktopRule: 2000px;
 $laptopRule: 1000px;
