@@ -4,6 +4,8 @@
 // Blue #4592af Light Purple #f4e6f0 Grassy Green #afa75f
 // BV Green #009D48 BV Orange #F25B1D
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
 :root {
   --text-color: #1e1cd8;
   --background-color: #f3f3f3;
@@ -12,7 +14,7 @@
 $bodyColor: var(--text-color);
 $backgroundColor: var(--background-color);
 
-$bodyFont: 'Arial', sans-serif;
+$bodyFont: "Arial Narrow", "Roboto Condensed", sans-serif;
 
 $desktopRule: 2000px;
 $laptopRule: 1000px;
@@ -20,7 +22,7 @@ $tabletRule: 700px;
 $mobileRule: 500px;
 
 html {
-  font-size: clamp(12px, 1.1vw, 20px);
+  font-size: clamp(14px, 1.5vw, 24px);
 }
 
 // GENERAL STYLES ****************************************************
@@ -31,6 +33,7 @@ html {
 }
 
 * {
+  appearance: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
@@ -47,12 +50,15 @@ html {
 a,
 .link-button {
   display: inline-block;
-  text-decoration: underline 0.06rem;
-  text-underline-offset: 0.12rem;
+  text-decoration: underline 1px;
+  text-underline-offset: 0.15rem;
   cursor: pointer;
+  border: none;
+  padding: 0;
+  background: transparent;
 
-  &:active {
-    background-color: transparent;
+  &:not(:last-of-type) {
+    margin-right: 0.5rem;
   }
 
   @media (hover: hover) {
@@ -62,6 +68,10 @@ a,
   }
 }
 
+button {
+  font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -69,7 +79,7 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: 0;
+  margin: 1.5rem 0;
 }
 
 html,
@@ -87,156 +97,54 @@ body {
   background-color: $bodyColor;
 }
 
-// LAYOUT STYLES ****************************************************
-
 main {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100svh;
   width: 100%;
+  height: 100svh;
   overflow: hidden;
-
-  .content {
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    background-color: $backgroundColor;
-  }
-
-  footer {
-    padding: 0.3rem 0.6rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.08rem solid $bodyColor;
-    background-color: $backgroundColor;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-
-    #greeting {
-      margin-right: 1rem;
-    }
-  }
+  position: relative;
 }
 
-// INDEX PAGE STYLES ****************************************************
-
-.index {
-  display: grid;
-  grid-template-columns: 500px 1fr 1000px 500px;
-  overflow: hidden;
-  height: 100%;
-
-  @media (max-width: $desktopRule) {
-    grid-template-columns: 25% 1fr 25%;
-    .extra-section {
-      display: none;
-    }
-  }
-  @media (max-width: $laptopRule) {
-    grid-template-columns: 35% 65%;
-    .middle-section {
-      display: none;
-    }
-  }
-  @media (max-width: $mobileRule) {
-    grid-template-columns: 45% 55%;
-  }
-}
-
-.extra-section {
-  background-color: $bodyColor;
-}
-
-.page-content {
-  height: 100%;
-  padding: 0.6rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+section:not(:first-of-type) {
+  margin-top: 2rem;
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
 
+.details-group {
+  margin: 0.5rem 0;
+  border-top: 1px solid $bodyColor;
+}
+
 details {
-  margin-bottom: 0.6rem;
-  &:not(:first-of-type) {
-    margin-top: 1.2rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid $bodyColor;
+
+  .details-description {
+    margin: 0.2rem 0;
   }
 
   summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     cursor: pointer;
+    list-style: none;
     outline: none;
-    margin: 0.6rem 0 0.6rem 0;
+
+    > :last-child {
+      flex-shrink: 0;
+    }
 
     @media (hover: hover) {
       &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 0.06rem;
-        text-underline-offset: 0.18rem;
+        text-decoration: underline 1px;
+        text-underline-offset: 0.15rem;
       }
     }
-  }
 
-  > span {
-    line-height: 1.25;
-  }
-}
-
-// DROPDOWN STYLES ****************************************************
-
-.dropdown-container {
-  gap: 0.3rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 0.3rem;
-
-  .dropdown-header {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    min-width: 7.8rem;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .dropdown-options {
-    z-index: 1000;
-    display: none;
-    list-style: none;
-    width: 100%;
-    padding: 0;
-    margin: 0.3rem 0 0 0;
-    position: absolute;
-    border: 0.08rem solid $bodyColor;
-    border-radius: 0.6rem;
-    background-color: $backgroundColor;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-
-    li {
-      padding: 0.3rem 0.6rem;
-      cursor: pointer;
-      border-bottom: 0.08rem solid $bodyColor;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          background-color: $bodyColor;
-          color: $backgroundColor;
-        }
-      }
+    &::-webkit-details-marker {
+      display: none;
     }
-  }
-
-  &.is-open .dropdown-options {
-    display: block;
   }
 }
 
@@ -275,39 +183,12 @@ sup {
   }
 }
 
-// BLOG STYLES ****************************************************
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: 500px 1fr 1000px;
-  overflow: hidden;
-  height: 100%;
-
-  @media (max-width: $desktopRule) {
-    grid-template-columns: 25% 1fr 650px;
-  }
-  @media (max-width: $laptopRule) {
-    grid-template-columns: 35% 65%;
-    .extra-section {
-      display: none;
-    }
-  }
-  @media (max-width: $mobileRule) {
-    grid-template-columns: auto;
-    .left-section {
-      display: none;
-    }
-  }
-}
-
-.post {
-  margin: 0 0 1.2rem 0;
+article {
   h1 {
-    margin: 0.6rem 0;
-    line-height: 0.8;
-    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
   }
-  .postnav {
+
+  .navigation {
     width: 100%;
     display: flex;
 
@@ -316,103 +197,31 @@ sup {
       flex-grow: 0;
       flex-shrink: 0;
     }
-    div:last-child {
-      width: auto;
-    }
-    &:first-of-type {
-      margin-top: 1.2rem;
-    }
   }
 
-  .category {
-    margin-bottom: 1.2rem;
-    line-height: 1.3;
-
-    > * {
-      width: fit-content;
-    }
-  }
-
-  .postcontent {
-    margin: 0 0 1.2rem 0;
+  .content {
     line-height: 1.3;
 
     a {
       display: inline;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
-  .postheader {
+  .options {
     display: flex;
-    gap: 0.6rem;
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
-// ART STYLES ****************************************************
-
-.gallery-image {
-  margin: 0.6rem 0;
-  max-width: 500px;
-}
-
-// PLAYER STYLES ****************************************************
-
-#player {
-  width: fit-content;
-  margin: 0.9rem 0 0 0;
-  position: relative;
-
-  display: flex;
-  gap: 1.2rem;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    path {
-      fill: $bodyColor;
-    }
-  }
-}
-
-// PILL STYLES ****************************************************
-
-.pill-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  .pill {
-    width: fit-content;
-  }
-}
-
-.pill {
-  padding: 0.3rem 0.6rem;
-  border: 0.08rem solid $bodyColor;
-  border-radius: 0.6rem;
-  width: fit-content;
-
-  @media (hover: hover) {
-    &:hover,
-    &:hover * {
-      color: $backgroundColor;
-      background-color: $bodyColor;
-      path {
-        fill: $backgroundColor !important;
-      }
-    }
+    gap: 0.5rem;
   }
 }
 
 // FUNCTIONAL STYLES ****************************************************
 
 ::-webkit-scrollbar {
+  // TODO add custom styling instead of hide
   display: none;
 }
 
@@ -428,6 +237,7 @@ sup {
   font-size: 4rem;
   letter-spacing: -0.2rem;
   line-height: 0.9;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -436,31 +246,198 @@ sup {
   line-height: 0.9;
 }
 
-.border-right {
-  border-right: 0.08rem solid $bodyColor;
+.subsubtitle {
+  font-size: 1.3rem;
+  letter-spacing: -0.01rem;
 }
 
-.separate-row:not(:empty) {
-  padding-bottom: 0.6rem;
-  border-bottom: 0.08rem solid $bodyColor;
-}
+.pill {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid $bodyColor;
+  border-radius: 0;
+  width: fit-content;
+  font-size: 1rem;
+  text-decoration: none;
 
-.link-image {
-  span {
-    display: none;
-    z-index: 999;
-    position: fixed;
-    right: 0.6rem;
-    top: 20%;
-    max-width: min(500px, calc(100% - 20px));
+  > * {
+    text-decoration: none;
   }
 
   @media (hover: hover) {
-    &:hover span {
-      display: block;
-      img {
-        width: 100%;
+    &:hover,
+    &:hover * {
+      color: $backgroundColor;
+      background-color: $bodyColor;
+      path {
+        fill: $backgroundColor !important;
       }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-header {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    min-width: 6rem;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .dropdown-options {
+    z-index: 1000;
+    display: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0.3rem 0 0 0;
+    position: absolute;
+    border: 1px solid $bodyColor;
+    background-color: $backgroundColor;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+
+    li {
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border-bottom: 1px solid $bodyColor;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $bodyColor;
+          color: $backgroundColor;
+        }
+      }
+    }
+  }
+
+  &.is-open .dropdown-options {
+    display: block;
+  }
+}
+
+// LAYOUT STYLES ****************************************************
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  background: $backgroundColor;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.page-content {
+  position: relative;
+  max-width: 700px;
+  height: calc(100vh - 5rem);
+  margin: 3rem auto 2rem;
+  padding: 0.5rem;
+  background: $backgroundColor;
+  border: 1px solid $bodyColor;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.ambient-content {
+  position: absolute;
+  max-width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+}
+
+// INTEREST MAP STYLES ****************************************************
+
+.interest-map {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+
+  &__axis-y {
+    position: absolute;
+    top: 3rem;
+    bottom: 3rem;
+    border-left: 1px solid $bodyColor;
+  }
+
+  &__axis-x {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    border-top: 1px solid $bodyColor;
+  }
+
+  &__label {
+    position: absolute;
+    font-weight: bold;
+    cursor: default;
+
+    &--top {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--bottom {
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      writing-mode: vertical-lr;
+    }
+
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-lr;
+    }
+  }
+
+  &__point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: min(1rem, 20px);
+    white-space: nowrap;
+    cursor: default;
+
+    &[href] {
+      cursor: pointer;
     }
   }
 }

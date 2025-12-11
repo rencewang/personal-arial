@@ -1,5 +1,5 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 function Seo({ title, description, children }) {
   const { site } = useStaticQuery(
@@ -18,7 +18,7 @@ function Seo({ title, description, children }) {
 
   const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
-  const metaAuthor = site.siteMetadata.author || 'Lawrence Wang';
+  const metaAuthor = site.siteMetadata.author || "Lawrence Wang";
 
   return (
     <>

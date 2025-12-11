@@ -5,7 +5,7 @@ import About from "../components/About";
 import ProjectList from "../components/ProjectList";
 import Seo from "../components/Seo";
 
-const Index = () => {
+const AboutPage = () => {
   return (
     <>
       <WritingList />
@@ -15,6 +15,6 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default AboutPage;
 
 export const Head = () => <Seo title="From the Desk of Lawrence Wang" />;

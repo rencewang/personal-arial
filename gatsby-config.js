@@ -1,41 +1,41 @@
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
-    title: 'RENCELA',
+    title: "RENCELA",
     description:
-      'Personal blog and project directory of Lawrence Wang. Currently a software engineer at ART19, previously student at Yale University. Intereted in art, economics, and computer science. Aspiring to become a writer, designer, traveler, and developer for the world wide web.',
-    author: 'Lawrence Wang',
-    username: '@rencewang',
-    siteUrl: 'https://rence.la',
+      "Personal blog and project directory of Lawrence Wang. Currently a software engineer at ART19, previously student at Yale University. Intereted in art, economics, and computer science. Aspiring to become a writer, designer, traveler, and developer for the world wide web.",
+    author: "Lawrence Wang",
+    username: "@rencewang",
+    siteUrl: "https://rence.la",
   },
   plugins: [
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/layout.js`),
+        component: require.resolve(`./src/components/Layout.js`),
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'rence.la',
-        icon: 'src/images/favicon.ico',
+        name: "rence.la",
+        icon: "src/images/favicon.ico",
       },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ['G-XZ15GRH075'],
+        trackingIds: ["G-XZ15GRH075"],
         pluginConfig: {
           head: true,
         },
       },
     },
-    'gatsby-plugin-mdx',
+    // 'gatsby-plugin-mdx',
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -48,39 +48,39 @@ module.exports = {
         },
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-image',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        name: "pages",
+        path: "./src/pages/",
       },
-      __key: 'pages',
+      __key: "pages",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
-        path: './src/content/posts/',
+        name: "posts",
+        path: "./src/content/posts/",
       },
-      __key: 'posts',
+      __key: "posts",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'art',
+        name: "art",
         path: `${__dirname}/static/artimages/`,
       },
-      __key: 'art',
+      __key: "art",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'static',
-        path: './static/',
+        name: "static",
+        path: "./static/",
       },
-      __key: 'static',
+      __key: "static",
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -89,7 +89,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              staticFolderName: 'static',
+              staticFolderName: "static",
             },
           },
           {
@@ -98,7 +98,7 @@ module.exports = {
               maxWidth: 1600,
             },
           },
-          'gatsby-remark-static-images',
+          "gatsby-remark-static-images",
         ],
       },
     },

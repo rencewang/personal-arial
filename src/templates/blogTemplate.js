@@ -1,13 +1,12 @@
-import React, { useState, useMemo } from 'react';
-import { graphql, Link } from 'gatsby';
+import React, { useState, useMemo } from "react";
+import { graphql, Link } from "gatsby";
 
-import Seo from '../components/seo';
-import About from '../components/about';
-import Dropdown from '../components/dropdown';
+import Seo from "../components/Seo";
+import Dropdown from "../components/Dropdown";
 
 const PostNav = ({ post, label }) =>
   post && (
-    <div className="postnav">
+    <div className="navigation">
       <div>{label}:</div>
       <div>
         <Link to={post.frontmatter.permalink}>{post.frontmatter.title}</Link>
@@ -19,8 +18,8 @@ const BlogTemplate = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { next, previous } = pageContext;
 
-  const fontSizeOptions = { Small: '1rem', Medium: '1.5rem', Large: '2rem' };
-  const [contentFontSize, setContentFontSize] = useState('Medium');
+  const fontSizeOptions = { Small: "1rem", Medium: "1.5rem", Large: "2rem" };
+  const [contentFontSize, setContentFontSize] = useState("Medium");
 
   const contentStyle = useMemo(
     () => ({ fontSize: fontSizeOptions[contentFontSize] }),
@@ -28,41 +27,33 @@ const BlogTemplate = ({ data, pageContext }) => {
   );
 
   return (
-    <div className="blog-grid">
-      <section className="page-content border-right left-section">
-        <About />
-      </section>
-
-      <section className="extra-section" />
-
-      <article className="page-content post">
-        <div className="postheader">
-          <div className="pill">
-            <Link to="/">Back</Link>
-          </div>
-          <Dropdown
-            options={Object.keys(fontSizeOptions)}
-            selected={contentFontSize}
-            setSelected={setContentFontSize}
-          />
+    <article>
+      <div className="options">
+        <div className="pill">
+          <Link to="/">Back to Home</Link>
         </div>
+        <Dropdown
+          options={Object.keys(fontSizeOptions)}
+          selected={contentFontSize}
+          setSelected={setContentFontSize}
+        />
+      </div>
 
-        <h1 className="title">{frontmatter.title}</h1>
-        <div style={{ marginTop: '0.6rem' }}>
-          {frontmatter.updated} in {frontmatter.category}
-        </div>
-        <PostNav post={previous} label="Previous" />
-        <PostNav post={next} label="Next" />
+      <h1 className="title">{frontmatter.title}</h1>
+      <div>
+        {frontmatter.updated} in {frontmatter.category}
+      </div>
+      <PostNav post={previous} label="Next" />
+      <PostNav post={next} label="Previous" />
 
-        <div className="postcontent" style={contentStyle}>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+      <div className="content" style={contentStyle}>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
 
-        <div>
-          <Link to="/">Back to All Posts</Link>
-        </div>
-      </article>
-    </div>
+      <div className="pill">
+        <Link to="/">Back to Home</Link>
+      </div>
+    </article>
   );
 };
 

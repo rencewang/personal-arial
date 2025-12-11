@@ -2,18 +2,6 @@ const path = require('path');
 
 const blogTemplate = path.resolve(`./src/templates/blogTemplate.js`);
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      fallback: {
-        fs: false,
-        tls: false,
-        net: false,
-      },
-    },
-  });
-};
-
 exports.createPages = async ({ graphql, actions, getNodes }) => {
   const { createPage } = actions;
   const allNodes = getNodes();

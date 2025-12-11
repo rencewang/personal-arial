@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from "react";
 
 // options should be an array of strings, with default being the first element
 const Dropdown = ({ options, selected, setSelected, style }) => {
@@ -13,16 +13,16 @@ const Dropdown = ({ options, selected, setSelected, style }) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.addEventListener('click', handleClickOutside);
+      document.addEventListener("click", handleClickOutside);
     } else {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     }
-    return () => document.removeEventListener('click', handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isOpen, handleClickOutside]);
 
   return (
     <div
-      className={`dropdown ${isOpen ? 'is-open' : ''}`}
+      className={`dropdown ${isOpen ? "is-open" : ""}`}
       ref={dropdownRef}
       style={style}
     >
