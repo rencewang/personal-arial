@@ -22,7 +22,7 @@ $tabletRule: 700px;
 $mobileRule: 500px;
 
 html {
-  font-size: clamp(12px, 1.1vw, 20px);
+  font-size: clamp(14px, 1.5vw, 24px);
 }
 
 // GENERAL STYLES ****************************************************
@@ -50,12 +50,15 @@ html {
 a,
 .link-button {
   display: inline-block;
-  text-decoration: underline 0.06rem;
-  text-underline-offset: 0.12rem;
+  text-decoration: underline 1px;
+  text-underline-offset: 0.15rem;
   cursor: pointer;
+  border: none;
+  padding: 0;
+  background: transparent;
 
-  &:active {
-    background-color: transparent;
+  &:not(:last-of-type) {
+    margin-right: 0.5rem;
   }
 
   @media (hover: hover) {
@@ -65,6 +68,10 @@ a,
   }
 }
 
+button {
+  font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -72,7 +79,7 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: 0;
+  margin: 1.5rem 0;
 }
 
 html,
@@ -90,8 +97,6 @@ body {
   background-color: $bodyColor;
 }
 
-// LAYOUT STYLES ****************************************************
-
 main {
   width: 100%;
   height: 100svh;
@@ -99,164 +104,50 @@ main {
   position: relative;
 }
 
-.index-single-column {
-  background: #ffffff;
-  z-index: 50;
-}
-
-.page-content {
-  height: 100%;
+section:not(:first-of-type) {
+  margin-top: 2rem;
 }
 
 // DETAILS SUMMARY STYLES ****************************************************
 
+.details-group {
+  margin: 0.5rem 0;
+}
+
 details {
-  margin-bottom: 0.6rem;
-  &:not(:first-of-type) {
-    margin-top: 1.2rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid $bodyColor;
+
+  &:first-of-type {
+    border-top: 1px solid $bodyColor;
+  }
+
+  .details-description {
+    margin: 0.2rem 0;
   }
 
   summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     cursor: pointer;
+    list-style: none;
     outline: none;
-    margin: 0.6rem 0 0.6rem 0;
+
+    > :last-child {
+      flex-shrink: 0;
+    }
 
     @media (hover: hover) {
       &:hover {
-        // text-decoration: underline;
-        // text-decoration-thickness: 0.06rem;
-        // text-underline-offset: 0.18rem;
+        text-decoration: underline 1px;
+        text-underline-offset: 0.15rem;
       }
     }
 
-    // Hide default marker
     &::-webkit-details-marker {
       display: none;
     }
-  }
-
-  > span {
-    line-height: 1.25;
-  }
-}
-
-// ACCORDION STYLES ****************************************************
-
-.accordion-item {
-  border-bottom: 1px solid #1e1cd8;
-  margin: 0;
-  padding: 0;
-}
-
-.accordion-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  cursor: pointer;
-  list-style: none;
-  outline: none;
-  margin: 0.2rem 0;
-}
-
-.accordion-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.accordion-date {
-  font-size: 1rem;
-  white-space: nowrap;
-  margin-left: 1rem;
-}
-
-.accordion-content {
-  margin-top: 0.8rem;
-  padding-left: 0;
-
-  p {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-  }
-
-  a {
-    text-decoration: underline;
-    font-weight: bold;
-    color: #1e1cd8;
-  }
-}
-
-.show-more-btn {
-  margin-top: 1.5rem;
-  background: transparent;
-  border: none;
-  color: #1e1cd8;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
-}
-
-.section-spacing {
-  margin-top: 3rem;
-}
-
-// DROPDOWN STYLES ****************************************************
-
-.dropdown-container {
-  gap: 0.3rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 0.3rem;
-
-  .dropdown-header {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    min-width: 7.8rem;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .dropdown-options {
-    z-index: 1000;
-    display: none;
-    list-style: none;
-    width: 100%;
-    padding: 0;
-    margin: 0.3rem 0 0 0;
-    position: absolute;
-    border: 0.08rem solid $bodyColor;
-    border-radius: 0.6rem;
-    background-color: $backgroundColor;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-
-    li {
-      padding: 0.3rem 0.6rem;
-      cursor: pointer;
-      border-bottom: 0.08rem solid $bodyColor;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          background-color: $bodyColor;
-          color: $backgroundColor;
-        }
-      }
-    }
-  }
-
-  &.is-open .dropdown-options {
-    display: block;
   }
 }
 
@@ -295,14 +186,12 @@ sup {
   }
 }
 
-.post {
-  margin: 0 0 1.2rem 0;
+article {
   h1 {
-    margin: 0.6rem 0;
-    line-height: 0.9;
-    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
   }
-  .postnav {
+
+  .navigation {
     width: 100%;
     display: flex;
 
@@ -311,25 +200,9 @@ sup {
       flex-grow: 0;
       flex-shrink: 0;
     }
-    div:last-child {
-      width: auto;
-    }
-    &:first-of-type {
-      margin-top: 1.2rem;
-    }
   }
 
-  .category {
-    margin-bottom: 1.2rem;
-    line-height: 1.3;
-
-    > * {
-      width: fit-content;
-    }
-  }
-
-  .postcontent {
-    margin: 0 0 1.2rem 0;
+  .content {
     line-height: 1.3;
 
     a {
@@ -342,51 +215,16 @@ sup {
     }
   }
 
-  .postheader {
+  .options {
     display: flex;
-    gap: 0.6rem;
-    a {
-      text-decoration: none;
-    }
-  }
-
-  .post-meta {
-    margin-top: 0.6rem;
-  }
-}
-
-// PILL STYLES ****************************************************
-
-.pill-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  .pill {
-    width: fit-content;
-  }
-}
-
-.pill {
-  padding: 0.3rem 0.6rem;
-  border: 0.08rem solid $bodyColor;
-  border-radius: 0;
-  width: fit-content;
-
-  @media (hover: hover) {
-    &:hover,
-    &:hover * {
-      color: $backgroundColor;
-      background-color: $bodyColor;
-      path {
-        fill: $backgroundColor !important;
-      }
-    }
+    gap: 0.5rem;
   }
 }
 
 // FUNCTIONAL STYLES ****************************************************
 
 ::-webkit-scrollbar {
+  // TODO add custom styling instead of hide
   display: none;
 }
 
@@ -402,6 +240,7 @@ sup {
   font-size: 4rem;
   letter-spacing: -0.2rem;
   line-height: 0.9;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -410,32 +249,91 @@ sup {
   line-height: 0.9;
 }
 
-.separate-row:not(:empty) {
-  padding-bottom: 0.6rem;
-  border-bottom: 0.08rem solid $bodyColor;
+.subsubtitle {
+  font-size: 1.3rem;
+  letter-spacing: -0.01rem;
 }
 
-.link-image {
-  span {
-    display: none;
-    z-index: 999;
-    position: fixed;
-    right: 0.6rem;
-    top: 20%;
-    max-width: min(500px, calc(100% - 20px));
+.highlight {
+  width: fit-content;
+  background: $bodyColor;
+  color: $backgroundColor;
+}
+
+.pill {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid $bodyColor;
+  border-radius: 0;
+  width: fit-content;
+  font-size: 1rem;
+  text-decoration: none;
+
+  > * {
+    text-decoration: none;
   }
 
   @media (hover: hover) {
-    &:hover span {
-      display: block;
-      img {
-        width: 100%;
+    &:hover,
+    &:hover * {
+      color: $backgroundColor;
+      background-color: $bodyColor;
+      path {
+        fill: $backgroundColor !important;
       }
     }
   }
 }
 
-// LAYOUT UTILITY STYLES ****************************************************
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-header {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    min-width: 6rem;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .dropdown-options {
+    z-index: 1000;
+    display: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0.3rem 0 0 0;
+    position: absolute;
+    border: 1px solid $bodyColor;
+    background-color: $backgroundColor;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+
+    li {
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border-bottom: 1px solid $bodyColor;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $bodyColor;
+          color: $backgroundColor;
+        }
+      }
+    }
+  }
+
+  &.is-open .dropdown-options {
+    display: block;
+  }
+}
+
+// LAYOUT STYLES ****************************************************
 
 .background-canvas {
   position: absolute;
@@ -443,7 +341,13 @@ sup {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -100;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  background: $backgroundColor;
 }
 
 .top-nav {
@@ -451,58 +355,36 @@ sup {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   z-index: 10;
 }
 
-.nav-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
-}
-
-.content-overlay {
-  max-width: 600px;
-  margin: 4rem auto 2rem;
-  padding: 1rem;
-  height: calc(100vh - 6rem);
-  background: rgba(255, 255, 255);
-  backdrop-filter: blur(5px);
-  border: 1px solid #1e1cd8;
+.page-content {
+  position: relative;
+  max-width: 700px;
+  height: calc(100vh - 5rem);
+  margin: 3rem auto 2rem;
+  padding: 0.5rem;
+  background: $backgroundColor;
+  border: 1px solid $bodyColor;
   overflow-y: auto;
-  transition: opacity 0.2s ease;
   z-index: 50;
 }
 
-.ambient-display {
+.ambient-content {
   position: absolute;
+  max-width: 700px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
-  z-index: 10;
-}
+  z-index: 0;
 
-.ambient-time {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.ambient-message {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-// ABOUT PAGE STYLES ****************************************************
-
-.about-links {
-  a {
-    margin-right: 0.6rem;
+  .ambient-message {
+    font-size: 1.2rem;
+    font-style: italic;
   }
 }

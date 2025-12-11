@@ -34,24 +34,31 @@ const WritingList = () => {
   return (
     <section>
       <div className="subtitle">Table of Contents</div>
-      {visiblePosts.map(({ node }) => (
-        <details key={node.id} className="accordion-item">
-          <summary className="accordion-summary">
-            <span className="accordion-title">{node.frontmatter.title}</span>
-            <span className="accordion-date">{node.frontmatter.updated}</span>
-          </summary>
+      <div className="details-group">
+        {visiblePosts.map(({ node }) => (
+          <details key={node.id}>
+            <summary>
+              <div className="subsubtitle">{node.frontmatter.title}</div>
+              <div>{node.frontmatter.updated}</div>
+            </summary>
 
-          <div className="accordion-content">
-            <p>{node.frontmatter.description}</p>
-            <Link to={node.frontmatter.permalink}>→ Read Entry</Link>
-          </div>
-        </details>
-      ))}
+            <div>
+              <div className="details-description">
+                {node.frontmatter.description}
+              </div>
+
+              <div className="pill bold">
+                <Link to={node.frontmatter.permalink}>Read More</Link>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
 
       {visibleCount < posts.length && (
         <button
           onClick={() => setVisibleCount((prev) => prev + 5)}
-          className="show-more-btn"
+          className="link-button"
         >
           Show More ({posts.length - visibleCount} remaining)
         </button>

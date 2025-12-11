@@ -45,49 +45,33 @@ const Layout = ({ children }) => {
     return () => clearInterval(timer);
   }, []);
 
-  // useEffect(() => {
-  //   const handleResize = () => setScreenSize(window.innerWidth);
-
-  //   if (contentRef.current) contentRef.current.style.opacity = "0";
-
-  //   const timeout = setTimeout(() => {
-  //     if (contentRef.current) contentRef.current.style.opacity = "1";
-  //   }, 100);
-
-  //   setScreenSize(window.innerWidth);
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //     clearTimeout(timeout);
-  //   };
-  // }, [isAmbient]);
-
   return (
-    <main style={{ position: "relative", overflow: "hidden" }}>
-      {/* 1. Full Screen Background */}
+    <main>
       <div className="background-canvas">
         <ShimmerCanvas />
       </div>
 
       {/* 2. Top Nav / Retract Toggle */}
       <nav className="top-nav">
-        <button onClick={() => setIsAmbient(!isAmbient)} className="nav-button">
+        <button
+          onClick={() => setIsAmbient(!isAmbient)}
+          className="link-button"
+        >
           From the Desk of Lawrence Wang
         </button>
       </nav>
 
       {/* 3. Main Content Overlay */}
       {!isAmbient && (
-        <div className="content-overlay" ref={contentRef}>
+        <div className="page-content" ref={contentRef}>
           {React.cloneElement(children)}
         </div>
       )}
 
       {/* 4. Ambient Mode Display */}
-      <div className="ambient-display">
-        <div className="title ambient-time">{currentTime}</div>
-        <div className="ambient-message">Snow is falling upward.</div>
+      <div className="ambient-content">
+        <div className="highlight subtitle">{currentTime}</div>
+        <div className="italic">Snow is falling upward.</div>
       </div>
     </main>
   );

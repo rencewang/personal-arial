@@ -24,7 +24,7 @@ const PillBlock = ({ name, link, image }) => (
 );
 
 const About = () => (
-  <>
+  <section>
     <div className="subtitle">Regarding</div>
 
     {[
@@ -42,7 +42,7 @@ const About = () => (
       </>
     ))}
     <br />
-    <div className="about-links">
+    <div>
       Software Engineer, ART19 <br />
       B.S. Computer Science and Economics, Yale University <br />
       B.A. Political Science, Yale University <br />
@@ -63,6 +63,6 @@ const About = () => (
         LinkedIn
       </a>
     </div>
-  </>
+  </section>
 );
 export default About;

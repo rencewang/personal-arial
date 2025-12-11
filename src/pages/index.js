@@ -7,11 +7,11 @@ import Seo from "@/components/Seo";
 
 const Index = () => {
   return (
-    <div className="index-single-column">
+    <>
       <WritingList />
       <ProjectList />
       <About />
-    </div>
+    </>
   );
 };
 
