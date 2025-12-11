@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-import ShimmerCanvas from "@/components/ShimmerCanvas";
+import ShimmerCanvas from "./ShimmerCanvas";
 
-import "@/styles/general.scss";
+import "../styles/general.scss";
 
 const Layout = ({ children }) => {
   const contentRef = useRef();
@@ -38,9 +38,9 @@ const Layout = ({ children }) => {
   const [currentTime, setCurrentTime] = useState(getAmbientString);
 
   useEffect(() => {
-    // const timer = setInterval(() => {
-    //   setCurrentTime(getAmbientString());
-    // }, 1000);
+    const timer = setInterval(() => {
+      setCurrentTime(getAmbientString());
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);

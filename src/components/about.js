@@ -1,7 +1,7 @@
 import React from "react";
 
-import { interestArray } from "@/content/index/index";
-import InterestMap from "@/components/InterestMap";
+import { interestArray } from "../content/index/index";
+import InterestMap from "./InterestMap";
 
 const About = () => (
   <section>
@@ -12,7 +12,7 @@ const About = () => (
           paddingTop: "0.2rem",
         }}
       >
-        I am a pragmatist. I have a lot of questions. I observe structures and
+        I am a pragmatist. I have a lot of questions. I analyze structures and
         narratives. I drift between optimizating and wandering. I wish I could
         believe, resist vice, and{" "}
         <a

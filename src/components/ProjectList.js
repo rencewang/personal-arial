@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import projects from "@/content/projects/projects";
+import projects from "../content/projects/projects";
 
 const ProjectList = () => {
   const [visibleCount, setVisibleCount] = useState(5);

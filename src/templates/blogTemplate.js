@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { graphql, Link } from "gatsby";
 
-import Seo from "@/components/Seo";
-import Dropdown from "@/components/Dropdown";
+import Seo from "../components/Seo";
+import Dropdown from "../components/Dropdown";
 
 const PostNav = ({ post, label }) =>
   post && (
@@ -19,7 +19,7 @@ const BlogTemplate = ({ data, pageContext }) => {
   const { next, previous } = pageContext;
 
   const fontSizeOptions = { Small: "1rem", Medium: "1.5rem", Large: "2rem" };
-  const [contentFontSize, setContentFontSize] = useState("Large");
+  const [contentFontSize, setContentFontSize] = useState("Medium");
 
   const contentStyle = useMemo(
     () => ({ fontSize: fontSizeOptions[contentFontSize] }),

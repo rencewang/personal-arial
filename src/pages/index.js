@@ -1,9 +1,9 @@
 import React from "react";
 
-import WritingList from "@/components/WritingList";
-import About from "@/components/About";
-import ProjectList from "@/components/ProjectList";
-import Seo from "@/components/Seo";
+import WritingList from "../components/WritingList";
+import About from "../components/About";
+import ProjectList from "../components/ProjectList";
+import Seo from "../components/Seo";
 
 const Index = () => {
   return (
