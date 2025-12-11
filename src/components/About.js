@@ -5,7 +5,7 @@ import InterestMap from "./InterestMap";
 
 const About = () => (
   <section>
-    <div className="subtitle">About</div>
+    <div className="subtitle">Regarding</div>
     <div className="details-group">
       <div
         style={{
