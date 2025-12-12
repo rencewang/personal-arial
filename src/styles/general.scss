@@ -76,7 +76,8 @@ html {
 a,
 .link-button {
   display: inline-block;
-  text-decoration: underline 1px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.15rem;
   cursor: pointer;
   border: none;
@@ -163,7 +164,8 @@ details {
 
     @media (hover: hover) {
       &:hover {
-        text-decoration: underline 1px;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
         text-underline-offset: 0.15rem;
       }
     }
