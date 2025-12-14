@@ -77,12 +77,16 @@ a,
 .link-button {
   display: inline-block;
   text-decoration: underline;
+  -webkit-text-decoration: underline;
   text-decoration-thickness: 1px;
+  -webkit-text-decoration-thickness: 1px;
   text-underline-offset: 0.15rem;
+  -webkit-text-underline-offset: 0.15rem;
   cursor: pointer;
   border: none;
   padding: 0;
   background: transparent;
+  font: inherit;
 
   &:not(:last-of-type) {
     margin-right: 0.5rem;

@@ -139,12 +139,6 @@ export const interestArray = [
     y: -0.6,
   },
   {
-    name: "Swiftian magic",
-    link: null,
-    x: -0.9,
-    y: -0.9,
-  },
-  {
     name: "tea",
     link: null,
     x: -0.2,

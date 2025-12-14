@@ -12,8 +12,8 @@ const About = () => (
           paddingTop: "0.2rem",
         }}
       >
-        I am a pragmatist. I have a lot of questions about structures and
-        narratives. I drift between optimizating and wandering. I wish I could{" "}
+        I am a pragmatist. I have questions about structures and narratives. I
+        drift between optimizating and wandering. I wish I could{" "}
         <a
           href="https://open.spotify.com/track/04mAOoQNsXmDJlyupJwmkO?si=0428688ca3b94a9b"
           target="_blank"
